@@ -54,7 +54,7 @@ jobs:
           cc_test_reporter_id: "${{ secrets.CC_TEST_REPORTER_ID }}"
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Ruby & RubyGems
         uses: ruby/setup-ruby@v1

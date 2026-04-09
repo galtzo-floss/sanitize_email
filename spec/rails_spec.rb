@@ -1,13 +1,16 @@
 RSpec.describe Rails do
-  expected_rails_version = ENV.fetch("RAILS_MAJOR_MINOR", nil)
-  actual_rails_version = "#{described_class::VERSION::MAJOR}.#{described_class::VERSION::MINOR}"
-  if expected_rails_version.nil?
-    it "has Rails Version (default, 7.2) matching actual #{actual_rails_version}" do
+  let(:expected_rails_version) { ENV.fetch("RAILS_MAJOR_MINOR", nil) }
+  let(:actual_rails_version) { "#{described_class::VERSION::MAJOR}.#{described_class::VERSION::MINOR}" }
+
+  env_rails_version = ENV.fetch("RAILS_MAJOR_MINOR", nil)
+  desc_rails_version = "#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}"
+  if env_rails_version.nil?
+    it "has Rails Version (default, 7.2) matching actual #{desc_rails_version}" do
       # When not otherwise set, Rails should be 7.2
       expect(actual_rails_version).to match("7.2")
     end
   else
-    it "has Rails Version (custom from ENV, #{expected_rails_version}) matching actual #{actual_rails_version}" do
+    it "has Rails Version (custom from ENV, #{env_rails_version}) matching actual #{desc_rails_version}" do
       expect(actual_rails_version).to eq(expected_rails_version)
     end
   end

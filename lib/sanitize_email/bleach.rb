@@ -8,6 +8,7 @@ module SanitizeEmail
   #   and does so when appropriate.
   class Bleach
     extend SanitizeEmail::Deprecation
+
     attr_accessor :overridden_addresses # TODO: Just a stub, not implemented
 
     class << self

@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
     "CONTRIBUTING.md",
     "LICENSE.txt",
     "README.md",
-    "SECURITY.md"
+    "SECURITY.md",
   ]
   spec.executables = spec.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   spec.licenses = ["MIT"]

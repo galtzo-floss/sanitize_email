@@ -8,17 +8,17 @@
   "lib/sanitize_email/config.rb:393256477": [
     [13, 7, 21, "ThreadSafety/ClassAndModuleAttributes: Avoid mutating class and module attributes.", 622027168],
     [64, 5, 781, "Style/ClassMethodsDefinitions: Use `class << self` to define a class method.", 2938516222],
-    [65, 13, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127],
-    [70, 10, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127],
-    [71, 9, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127],
-    [75, 10, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127],
-    [80, 9, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127],
-    [80, 34, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127],
+    [65, 13, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127],
+    [70, 10, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127],
+    [71, 9, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127],
+    [75, 10, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127],
+    [80, 9, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127],
+    [80, 34, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127],
     [85, 5, 499, "Style/ClassMethodsDefinitions: Use `class << self` to define a class method.", 1704626160],
-    [86, 17, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127],
-    [94, 38, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127],
+    [86, 17, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127],
+    [94, 38, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127],
     [98, 5, 87, "Style/ClassMethodsDefinitions: Use `class << self` to define a class method.", 453471793],
-    [99, 7, 7, "ThreadSafety/InstanceVariableInClassMethod: Avoid instance variables in class methods.", 651502127]
+    [99, 7, 7, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 651502127]
   ],
   "lib/sanitize_email/deprecation.rb:3676790890": [
     [11, 7, 35, "ThreadSafety/ClassAndModuleAttributes: Avoid mutating class and module attributes.", 3751377571]
@@ -32,10 +32,10 @@
     [65, 5, 233, "Style/ClassMethodsDefinitions: Use `class << self` to define a class method.", 2880787383],
     [73, 5, 386, "Style/ClassMethodsDefinitions: Use `class << self` to define a class method.", 1085137330]
   ],
-  "spec/rails_spec.rb:4154426561": [
-    [26, 7, 16, "RSpec/MultipleExpectations: Example has too many expectations [8/1].", 3524538235],
-    [37, 7, 23, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1651527717],
-    [57, 9, 16, "RSpec/MultipleExpectations: Example has too many expectations [8/1].", 3524538235]
+  "spec/rails_spec.rb:4254360390": [
+    [29, 7, 16, "RSpec/MultipleExpectations: Example has too many expectations [8/1].", 3524538235],
+    [40, 7, 23, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1651527717],
+    [60, 9, 16, "RSpec/MultipleExpectations: Example has too many expectations [8/1].", 3524538235]
   ],
   "spec/sanitize_email_spec.rb:1544212409": [
     [19, 11, 16, "RSpec/ContextWording: Context description should match /^when\\b/, /^with\\b/, or /^without\\b/.", 4266815955],
@@ -81,8 +81,8 @@
     [404, 7, 44, "RSpec/MultipleExpectations: Example has too many expectations [3/1].", 1308784480],
     [418, 7, 57, "RSpec/MultipleExpectations: Example has too many expectations [2/1].", 3903999862],
     [423, 7, 30, "RSpec/MultipleExpectations: Example has too many expectations [2/1].", 3853297158],
-    [434, 7, 170, "RSpec/RepeatedExample: Don't repeat examples within an example group.", 982775935],
-    [441, 7, 234, "RSpec/RepeatedExample: Don't repeat examples within an example group.", 4222897050],
+    [434, 7, 170, "RSpec/RepeatedExample: Don't repeat examples within an example group. Repeated on line(s) 441.", 982775935],
+    [441, 7, 234, "RSpec/RepeatedExample: Don't repeat examples within an example group. Repeated on line(s) 434.", 4222897050],
     [449, 7, 42, "RSpec/MultipleExpectations: Example has too many expectations [2/1].", 3776510226],
     [470, 7, 19, "RSpec/MultipleExpectations: Example has too many expectations [8/1].", 3032080240],
     [484, 7, 22, "RSpec/MultipleExpectations: Example has too many expectations [8/1].", 3267814569],

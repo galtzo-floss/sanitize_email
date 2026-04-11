@@ -26,47 +26,91 @@ RSpec.describe Rails do
         block_is_expected.to not_raise_error
       end
 
-      it "sends email" do
+      it "has the original from address" do
         expect(mail_delivery).to have_from("roadside-bananas@example.com")
-        expect(mail_delivery).to have_reply_to("jingle-berry@example.com")
-        expect(mail_delivery).to have_to("vonnegut@example.com")
-        expect(mail_delivery).to have_cc("charlie@example.org")
-        expect(mail_delivery).to have_bcc("candy-mountain@example.org")
-        expect(mail_delivery).to have_body_text("Hello. Good Day!")
-        expect(mail_delivery).not_to have_to_username("vonnegut")
-        expect(mail_delivery).to have_subject("Your Roadside Bananas")
       end
 
-      context "when sanitary" do
-        before do
-          configure_sanitize_email(
-            {
-              engage: true,
-              sanitized_to: "to@sanitize_email.org",
-              sanitized_cc: "cc@sanitize_email.org",
-              sanitized_bcc: "bcc@sanitize_email.org",
-              use_actual_email_prepended_to_subject: true,
-              use_actual_environment_prepended_to_subject: true,
-              use_actual_email_as_sanitized_user_name: true,
-            },
-            false,
-          )
-        end
+      it "has the original reply-to address" do
+        expect(mail_delivery).to have_reply_to("jingle-berry@example.com")
+      end
 
-        it "does not raise error" do
-          block_is_expected.to not_raise_error
-        end
+      it "has the original to address" do
+        expect(mail_delivery).to have_to("vonnegut@example.com")
+      end
 
-        it "sends email" do
-          expect(mail_delivery).to have_from("roadside-bananas@example.com")
-          expect(mail_delivery).to have_reply_to("jingle-berry@example.com")
-          expect(mail_delivery).to have_to("to@sanitize_email.org")
-          expect(mail_delivery).to have_cc("cc@sanitize_email.org")
-          expect(mail_delivery).to have_bcc("bcc@sanitize_email.org")
-          expect(mail_delivery).to have_body_text("Hello. Good Day!")
-          expect(mail_delivery).to have_to_username("vonnegut at example.com")
-          expect(mail_delivery).to have_subject("(vonnegut at example.com)  Your Roadside Bananas")
-        end
+      it "has the original cc address" do
+        expect(mail_delivery).to have_cc("charlie@example.org")
+      end
+
+      it "has the original bcc address" do
+        expect(mail_delivery).to have_bcc("candy-mountain@example.org")
+      end
+
+      it "has the original body text" do
+        expect(mail_delivery).to have_body_text("Hello. Good Day!")
+      end
+
+      it "does not sanitize the to username" do
+        expect(mail_delivery).not_to have_to_username("vonnegut")
+      end
+
+      it "has the original subject" do
+        expect(mail_delivery).to have_subject("Your Roadside Bananas")
+      end
+    end
+
+    context "when sanitary with mailer" do
+      subject(:mail_delivery) { HelloMailer.bonjour.deliver }
+
+      before do
+        configure_sanitize_email(
+          {
+            engage: true,
+            sanitized_to: "to@sanitize_email.org",
+            sanitized_cc: "cc@sanitize_email.org",
+            sanitized_bcc: "bcc@sanitize_email.org",
+            use_actual_email_prepended_to_subject: true,
+            use_actual_environment_prepended_to_subject: true,
+            use_actual_email_as_sanitized_user_name: true,
+          },
+          false,
+        )
+      end
+
+      it "does not raise error" do
+        block_is_expected.to not_raise_error
+      end
+
+      it "has the original from address" do
+        expect(mail_delivery).to have_from("roadside-bananas@example.com")
+      end
+
+      it "has the original reply-to address" do
+        expect(mail_delivery).to have_reply_to("jingle-berry@example.com")
+      end
+
+      it "has the sanitized to address" do
+        expect(mail_delivery).to have_to("to@sanitize_email.org")
+      end
+
+      it "has the sanitized cc address" do
+        expect(mail_delivery).to have_cc("cc@sanitize_email.org")
+      end
+
+      it "has the sanitized bcc address" do
+        expect(mail_delivery).to have_bcc("bcc@sanitize_email.org")
+      end
+
+      it "has the original body text" do
+        expect(mail_delivery).to have_body_text("Hello. Good Day!")
+      end
+
+      it "prepends the original to username" do
+        expect(mail_delivery).to have_to_username("vonnegut at example.com")
+      end
+
+      it "prepends the original to address to the subject" do
+        expect(mail_delivery).to have_subject("(vonnegut at example.com)  Your Roadside Bananas")
       end
     end
   end

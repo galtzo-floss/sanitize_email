@@ -7,8 +7,16 @@ module SanitizeEmail
   # Provides tools that allow methods to be deprecated with new releases of the gem.
   # See http://www.seejohncode.com/2012/01/09/deprecating-methods-in-ruby/
   module Deprecation
+    DEPRECATE_IN_SILENCE_MUTEX = Mutex.new
+
     class << self
-      attr_accessor :deprecate_in_silence
+      def deprecate_in_silence
+        DEPRECATE_IN_SILENCE_MUTEX.synchronize { @deprecate_in_silence }
+      end
+
+      def deprecate_in_silence=(value)
+        DEPRECATE_IN_SILENCE_MUTEX.synchronize { @deprecate_in_silence = value }
+      end
     end
 
     @deprecate_in_silence = false

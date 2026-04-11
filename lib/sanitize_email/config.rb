@@ -9,9 +9,7 @@ module SanitizeEmail
   class Config
     extend SanitizeEmail::Deprecation
 
-    class << self
-      attr_accessor :config
-    end
+    CONFIG_MUTEX = Mutex.new
 
     DEFAULTS = {
       # Specify the BCC addresses for the messages
@@ -60,43 +58,62 @@ module SanitizeEmail
       activation_proc: proc { false },
     }.freeze
 
-    @config ||= DEFAULTS.dup
-    def self.configure
-      yield @config
+    INIT_KEYS = [:sanitized_to, :sanitized_cc, :sanitized_bcc, :good_list, :bad_list].freeze
+    @config = DEFAULTS.dup
 
-      # Gracefully handle deprecated config values.
-      # Actual deprecation warnings are thrown in the top SanitizeEmail module
-      #   thanks to our use of dynamic methods.
-      if @config[:local_environments] && defined?(Rails)
-        @config[:activation_proc] = proc do
-          SanitizeEmail.local_environments.include?(Rails.env)
+    class << self
+      def config
+        CONFIG_MUTEX.synchronize { @config }
+      end
+
+      def config=(value)
+        CONFIG_MUTEX.synchronize { @config = value }
+      end
+
+      def configure
+        sanitized_recipients = nil
+
+        CONFIG_MUTEX.synchronize do
+          yield @config
+
+          # Gracefully handle deprecated config values.
+          # Actual deprecation warnings are thrown in the top SanitizeEmail module
+          #   thanks to our use of dynamic methods.
+          if @config[:local_environments] && defined?(Rails)
+            @config[:activation_proc] = proc do
+              SanitizeEmail.local_environments.include?(Rails.env)
+            end
+          end
+          if @config[:sanitized_recipients]
+            sanitized_recipients = @config[:sanitized_recipients]
+            @config[:sanitized_to] = sanitized_recipients
+          end
+        end
+
+        # calling it to trigger the deprecation warning.
+        SanitizeEmail.sanitized_recipients if sanitized_recipients
+        config_force_sanitize_deprecation_warning
+      end
+
+      def config_force_sanitize_deprecation_warning
+        force_sanitize = CONFIG_MUTEX.synchronize { @config[:force_sanitize] }
+        return if force_sanitize.nil?
+
+        deprecation_warning_message(
+          <<-DEPRECATION,
+                SanitizeEmail::Config.config[:force_sanitize] is deprecated.
+                Please use SanitizeEmail.force_sanitize or SanitizeEmail.sanitary instead.
+                Refer to https://github.com/pboling/sanitize_email/wiki for examples.
+        DEPRECATION
+        )
+        SanitizeEmail.force_sanitize = force_sanitize
+      end
+
+      def to_init
+        CONFIG_MUTEX.synchronize do
+          @config.select { |key, _value| INIT_KEYS.include?(key) }
         end
       end
-      if @config[:sanitized_recipients]
-        # calling it to trigger the deprecation warning.
-        # Won't actually be set with any value,
-        # because we are still inside the configure block.
-        SanitizeEmail.sanitized_recipients
-        @config[:sanitized_to] = @config[:sanitized_recipients]
-      end
-      config_force_sanitize_deprecation_warning
-    end
-
-    def self.config_force_sanitize_deprecation_warning
-      return if @config[:force_sanitize].nil?
-      deprecation_warning_message(
-        <<-DEPRECATION,
-              SanitizeEmail::Config.config[:force_sanitize] is deprecated.
-              Please use SanitizeEmail.force_sanitize or SanitizeEmail.sanitary instead.
-              Refer to https://github.com/pboling/sanitize_email/wiki for examples.
-      DEPRECATION
-      )
-      SanitizeEmail.force_sanitize = @config[:force_sanitize]
-    end
-
-    INIT_KEYS = [:sanitized_to, :sanitized_cc, :sanitized_bcc, :good_list, :bad_list].freeze
-    def self.to_init
-      @config.select { |key, _value| INIT_KEYS.include?(key) }
     end
   end
 end

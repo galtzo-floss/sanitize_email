@@ -15,6 +15,8 @@ require_relative "sanitize_email/overridden_addresses"
 require_relative "sanitize_email/bleach"
 
 module SanitizeEmail
+  FORCE_SANITIZE_MUTEX = Mutex.new
+
   # Error is raised when a block parameter is required and not provided to a method
   class MissingBlockParameter < StandardError; end
 
@@ -54,7 +56,13 @@ module SanitizeEmail
   class << self
     extend SanitizeEmail::Deprecation
 
-    attr_accessor :force_sanitize
+    def force_sanitize
+      FORCE_SANITIZE_MUTEX.synchronize { @force_sanitize }
+    end
+
+    def force_sanitize=(value)
+      FORCE_SANITIZE_MUTEX.synchronize { @force_sanitize = value }
+    end
 
     def [](key)
       return unless key.respond_to?(:to_sym)

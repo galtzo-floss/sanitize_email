@@ -46,18 +46,18 @@ appraise "unlocked_deps" do
   eval_gemfile "modular/documentation.gemfile"
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/style.gemfile"
-  eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
+  eval_gemfile "rails_7_2.gemfile"
 end
 
 appraise "head" do
-  eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
+  eval_gemfile "rails_7_2.gemfile"
 end
 
 appraise "current" do
-  eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
+  eval_gemfile "rails_7_2.gemfile"
 end
 
 appraise "dep-heads" do
@@ -67,64 +67,46 @@ end
 
 appraise "ruby-2-4" do
   eval_gemfile "modular/x_std_libs/r2.4/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "5.2"
   eval_gemfile "rails_5_2.gemfile"
 end
 
 appraise "ruby-2-5" do
   eval_gemfile "modular/x_std_libs/r2.6/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "6.0"
   eval_gemfile "rails_6_0.gemfile"
 end
 
 appraise "ruby-2-6" do
   eval_gemfile "modular/x_std_libs/r2.6/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "6.1"
   eval_gemfile "rails_6_1.gemfile"
 end
 
 appraise "ruby-2-7" do
   eval_gemfile "modular/x_std_libs/r2/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "7.0"
   eval_gemfile "rails_7_0.gemfile"
 end
 
 appraise "ruby-3-0" do
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "7.1"
   eval_gemfile "rails_7_1.gemfile"
 end
 
 appraise "ruby-3-1" do
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "7.2"
   eval_gemfile "rails_7_2.gemfile"
 end
 
 appraise "ruby-3-2" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "8.0"
   eval_gemfile "rails_8_0.gemfile"
 end
 
 appraise "ruby-3-3" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "8.0"
   eval_gemfile "rails_8_0.gemfile"
 end
 
 appraise "ruby-3-4" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
-  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
-  ENV["RAILS_MAJOR_MINOR"] = "8.0"
   eval_gemfile "rails_8_0.gemfile"
 end
 
@@ -135,8 +117,8 @@ end
 appraise "coverage" do
   eval_gemfile "modular/coverage.gemfile"
   eval_gemfile "modular/optional.gemfile"
-  eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
+  eval_gemfile "rails_7_2.gemfile"
 end
 
 appraise "style" do

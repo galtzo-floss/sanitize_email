@@ -33,6 +33,8 @@ jobs:
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     env: # $BUNDLE_GEMFILE must be set at job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/Appraisal.root.gemfile
+      KJ_FRAMEWORK_MATRIX_GEM: ${{ matrix.KJ_FRAMEWORK_MATRIX_GEM || '' }}
+      RAILS_MAJOR_MINOR: ${{ matrix.RAILS_MAJOR_MINOR || '' }}
     strategy:
       matrix:
         include:
@@ -40,6 +42,8 @@ jobs:
           # truffleruby-22.3 (targets Ruby 3.0 compatibility)
           - ruby: "truffleruby-22.3"
             appraisal: "ruby-3-0"
+            KJ_FRAMEWORK_MATRIX_GEM: "rails"
+            RAILS_MAJOR_MINOR: "7.1"
             exec_cmd: "kettle-test"
             rubygems: default
             bundler: default

@@ -9,7 +9,7 @@
 
 # 📧 SanitizeEmail
 
-[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
+[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
 
 `if ci_badges.map(&:color).detect { it != "green"}` ☝️ [let me know][🖼️galtzo-floss], as I may have missed the [discord notification][🖼️galtzo-floss].
 
@@ -77,14 +77,14 @@ not practical for the current toolchain.
 
 | Federated [DVCS][💎d-in-dvcs] Repository | Status | Issues | PRs | Wiki | CI | Discussions |
 |-------------------------------------------------|-----------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
-| 🧪 [pboling/sanitize_email on GitLab][📜src-gl] | The Truth | [💚][🤝gl-issues] | [💚][🤝gl-pulls] | [💚][📜gl-wiki] | 🐭 Tiny Matrix | ➖ |
-| 🧊 [pboling/sanitize_email on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate]) | [💚][🤝cb-issues] | [💚][🤝cb-pulls] | ➖ | ⭕️ No Matrix | ➖ |
-| 🐙 [pboling/sanitize_email on GitHub][📜src-gh] | Another Mirror | [💚][🤝gh-issues] | [💚][🤝gh-pulls] | [💚][📜gh-wiki] | 💯 Full Matrix | [💚][gh-discussions] |
+| 🧪 [galtzo-floss/sanitize_email on GitLab][📜src-gl] | The Truth | [💚][🤝gl-issues] | [💚][🤝gl-pulls] | [💚][📜gl-wiki] | 🐭 Tiny Matrix | ➖ |
+| 🧊 [galtzo-floss/sanitize_email on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate]) | [💚][🤝cb-issues] | [💚][🤝cb-pulls] | ➖ | ⭕️ No Matrix | ➖ |
+| 🐙 [galtzo-floss/sanitize_email on GitHub][📜src-gh] | Another Mirror | [💚][🤝gh-issues] | [💚][🤝gh-pulls] | [💚][📜gh-wiki] | 💯 Full Matrix | [💚][gh-discussions] |
 | 🎮️ [Discord Server][✉️discord-invite] | [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
 
 </details>
 
-[gh-discussions]: https://github.com/pboling/sanitize_email/discussions
+[gh-discussions]: https://github.com/galtzo-floss/sanitize_email/discussions
 
 ### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/sanitize_email)](https://tidelift.com/subscription/pkg/rubygems-sanitize_email?utm_source=rubygems-sanitize_email&utm_medium=referral&utm_campaign=readme)
 
@@ -222,16 +222,16 @@ chat rooms and mailing lists agrees to follow the [![Contributor Covenant 2.1][�
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/pboling/sanitize_email/-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/galtzo-floss/sanitize_email/-/graphs/main][🚎contributors-gl]
 
 <details>
  <summary>⭐️ Star History</summary>
 
-<a href="https://star-history.com/pboling/sanitize_email&Date">
+<a href="https://star-history.com/galtzo-floss/sanitize_email&Date">
  <picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date&theme=dark" />
- <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date" />
- <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date" />
+ <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/sanitize_email&type=Date&theme=dark" />
+ <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/sanitize_email&type=Date" />
+ <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=galtzo-floss/sanitize_email&type=Date" />
  </picture>
 </a>
 
@@ -281,7 +281,7 @@ See [LICENSE.md][📄license] for the official copyright notice.
 - Copyright (c) 2009 Peter H. Boling
 - Copyright (c) 2012 David Morton
 - Copyright (c) 2012 Harry Lascelles
-- Copyright (c) 2012-2018, 2022, 2024, 2026 Peter Boling
+- Copyright (c) 2012-2018, 2022, 2024, 2026 Peter H. Boling
 - Copyright (c) 2013 Adrien Siami
 - Copyright (c) 2013 Chris Altman
 - Copyright (c) 2014 Scott Rocher
@@ -338,12 +338,12 @@ Thanks for RTFM. ☺️
 [✉️ruby-friends]: https://app.daily.dev/squads/rubyfriends
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
-[⛳️gem-namespace]: https://github.com/pboling/sanitize_email/tree/main/gems/sanitize_email
+[⛳️gem-namespace]: https://github.com/galtzo-floss/sanitize_email/tree/main/gems/sanitize_email
 [⛳️namespace-img]: https://img.shields.io/badge/namespace-SanitizeEmail-3C2D2D.svg?style=square&logo=ruby&logoColor=white
 [⛳️gem-name]: https://bestgems.org/gems/sanitize_email
 [⛳️name-img]: https://img.shields.io/badge/name-sanitize__email-3C2D2D.svg?style=square&logo=rubygems&logoColor=red
-[⛳️tag-img]: https://img.shields.io/github/tag/pboling/sanitize_email.svg
-[⛳️tag]: https://github.com/pboling/sanitize_email/releases
+[⛳️tag-img]: https://img.shields.io/github/tag/galtzo-floss/sanitize_email.svg
+[⛳️tag]: https://github.com/galtzo-floss/sanitize_email/releases
 [🚂maint-blog]: http://www.railsbling.com/tags/sanitize_email
 [🚂maint-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
 [🚂maint-contact]: http://www.railsbling.com/contact
@@ -378,68 +378,66 @@ Thanks for RTFM. ☺️
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
 [🚂railsbling]: http://www.railsbling.com
 [📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
-[📜src-gl]: https://gitlab.com/pboling/sanitize_email/-/tree/main/gems/sanitize_email
+[📜src-gl]: https://gitlab.com/galtzo-floss/sanitize_email/-/tree/main/gems/sanitize_email
 [📜src-cb-img]: https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&logo=CodeBerg&logoColor=blue
-[📜src-cb]: https://codeberg.org/pboling/sanitize_email/src/branch/main/gems/sanitize_email
+[📜src-cb]: https://codeberg.org/galtzo-floss/sanitize_email/src/branch/main/gems/sanitize_email
 [📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
-[📜src-gh]: https://github.com/pboling/sanitize_email/tree/main/gems/sanitize_email
+[📜src-gh]: https://github.com/galtzo-floss/sanitize_email/tree/main/gems/sanitize_email
 [📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜docs-head-rd-img]: https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
-[📜gl-wiki]: https://gitlab.com/pboling/sanitize_email/-/wikis/home
-[📜gh-wiki]: https://github.com/pboling/sanitize_email/wiki
+[📜gl-wiki]: https://gitlab.com/galtzo-floss/sanitize_email/-/wikis/home
+[📜gh-wiki]: https://github.com/galtzo-floss/sanitize_email/wiki
 [📜gl-wiki-img]: https://img.shields.io/badge/wiki-gitlab-943CD2.svg?style=for-the-badge&logo=gitlab&logoColor=white
 [📜gh-wiki-img]: https://img.shields.io/badge/wiki-github-943CD2.svg?style=for-the-badge&logo=github&logoColor=white
 [👽dl-rank]: https://bestgems.org/gems/sanitize_email
 [👽dl-ranki]: https://img.shields.io/gem/rd/sanitize_email.svg
 [👽version]: https://bestgems.org/gems/sanitize_email
 [👽versioni]: https://img.shields.io/gem/v/sanitize_email.svg
-[🏀qlty-mnt]: https://qlty.sh/gh/pboling/projects/sanitize_email
-[🏀qlty-mnti]: https://qlty.sh/gh/pboling/projects/sanitize_email/maintainability.svg
-[🏀qlty-cov]: https://qlty.sh/gh/pboling/projects/sanitize_email/metrics/code?sort=coverageRating
-[🏀qlty-covi]: https://qlty.sh/gh/pboling/projects/sanitize_email/coverage.svg
-[🏀codecov]: https://codecov.io/gh/pboling/sanitize_email
-[🏀codecovi]: https://codecov.io/gh/pboling/sanitize_email/graph/badge.svg
-[🏀coveralls]: https://coveralls.io/github/pboling/sanitize_email?branch=main
-[🏀coveralls-img]: https://coveralls.io/repos/github/pboling/sanitize_email/badge.svg?branch=main
-[🖐codeQL]: https://github.com/pboling/sanitize_email/security/code-scanning
-[🖐codeQL-img]: https://github.com/pboling/sanitize_email/actions/workflows/codeql-analysis.yml/badge.svg
-[🚎ruby-2.4-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-2.4.yml
-[🚎ruby-2.5-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-2.5.yml
-[🚎ruby-2.6-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-2.6.yml
-[🚎ruby-2.7-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-2.7.yml
-[🚎ruby-3.0-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.0.yml
-[🚎ruby-3.1-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.1.yml
-[🚎ruby-3.2-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.2.yml
-[🚎ruby-3.3-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.3.yml
-[🚎ruby-3.4-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.4.yml
-[🚎jruby-9.2-wf]: https://github.com/pboling/sanitize_email/actions/workflows/jruby-9.2.yml
-[🚎jruby-9.3-wf]: https://github.com/pboling/sanitize_email/actions/workflows/jruby-9.3.yml
-[🚎jruby-9.4-wf]: https://github.com/pboling/sanitize_email/actions/workflows/jruby-9.4.yml
-[🚎truby-22.3-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-22.3.yml
-[🚎truby-23.0-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-23.0.yml
-[🚎truby-23.1-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-23.1.yml
-[🚎truby-24.2-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-24.2.yml
-[🚎truby-25.0-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-25.0.yml
-[🚎2-cov-wf]: https://github.com/pboling/sanitize_email/actions/workflows/coverage.yml
-[🚎2-cov-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/coverage.yml/badge.svg
-[🚎3-hd-wf]: https://github.com/pboling/sanitize_email/actions/workflows/heads.yml
-[🚎3-hd-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/heads.yml/badge.svg
-[🚎5-st-wf]: https://github.com/pboling/sanitize_email/actions/workflows/style.yml
-[🚎5-st-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/style.yml/badge.svg
-[🚎9-t-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffle.yml
-[🚎9-t-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/truffle.yml/badge.svg
-[🚎10-j-wf]: https://github.com/pboling/sanitize_email/actions/workflows/jruby.yml
-[🚎10-j-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/jruby.yml/badge.svg
-[🚎11-c-wf]: https://github.com/pboling/sanitize_email/actions/workflows/current.yml
-[🚎11-c-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/current.yml/badge.svg
-[🚎12-crh-wf]: https://github.com/pboling/sanitize_email/actions/workflows/dep-heads.yml
-[🚎12-crh-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/dep-heads.yml/badge.svg
-[🚎13-🔒️-wf]: https://github.com/pboling/sanitize_email/actions/workflows/locked_deps.yml
-[🚎13-🔒️-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/locked_deps.yml/badge.svg
-[🚎14-🔓️-wf]: https://github.com/pboling/sanitize_email/actions/workflows/unlocked_deps.yml
-[🚎14-🔓️-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/unlocked_deps.yml/badge.svg
-[🚎15-🪪-wf]: https://github.com/pboling/sanitize_email/actions/workflows/license-eye.yml
-[🚎15-🪪-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/license-eye.yml/badge.svg
+[🏀qlty-mnt]: https://qlty.sh/gh/galtzo-floss/projects/sanitize_email
+[🏀qlty-mnti]: https://qlty.sh/gh/galtzo-floss/projects/sanitize_email/maintainability.svg
+[🏀qlty-cov]: https://qlty.sh/gh/galtzo-floss/projects/sanitize_email/metrics/code?sort=coverageRating
+[🏀qlty-covi]: https://qlty.sh/gh/galtzo-floss/projects/sanitize_email/coverage.svg
+[🏀codecov]: https://codecov.io/gh/galtzo-floss/sanitize_email
+[🏀codecovi]: https://codecov.io/gh/galtzo-floss/sanitize_email/graph/badge.svg
+[🏀coveralls]: https://coveralls.io/github/galtzo-floss/sanitize_email?branch=main
+[🏀coveralls-img]: https://coveralls.io/repos/github/galtzo-floss/sanitize_email/badge.svg?branch=main
+[🚎ruby-2.4-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-2.4.yml
+[🚎ruby-2.5-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-2.5.yml
+[🚎ruby-2.6-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-2.6.yml
+[🚎ruby-2.7-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-2.7.yml
+[🚎ruby-3.0-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-3.0.yml
+[🚎ruby-3.1-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-3.1.yml
+[🚎ruby-3.2-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-3.2.yml
+[🚎ruby-3.3-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-3.3.yml
+[🚎ruby-3.4-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/ruby-3.4.yml
+[🚎jruby-9.2-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/jruby-9.2.yml
+[🚎jruby-9.3-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/jruby-9.3.yml
+[🚎jruby-9.4-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/jruby-9.4.yml
+[🚎truby-22.3-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/truffleruby-22.3.yml
+[🚎truby-23.0-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/truffleruby-23.0.yml
+[🚎truby-23.1-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/truffleruby-23.1.yml
+[🚎truby-24.2-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/truffleruby-24.2.yml
+[🚎truby-25.0-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/truffleruby-25.0.yml
+[🚎2-cov-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/coverage.yml
+[🚎2-cov-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/coverage.yml/badge.svg
+[🚎3-hd-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/heads.yml
+[🚎3-hd-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/heads.yml/badge.svg
+[🚎5-st-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/style.yml
+[🚎5-st-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/style.yml/badge.svg
+[🚎9-t-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/truffle.yml
+[🚎9-t-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/truffle.yml/badge.svg
+[🚎10-j-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/jruby.yml
+[🚎10-j-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/jruby.yml/badge.svg
+[🚎11-c-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/current.yml
+[🚎11-c-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/current.yml/badge.svg
+[🚎12-crh-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/dep-heads.yml
+[🚎12-crh-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/dep-heads.yml/badge.svg
+[🚎13-🔒️-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/locked_deps.yml
+[🚎13-🔒️-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/locked_deps.yml/badge.svg
+[🚎14-🔓️-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/unlocked_deps.yml
+[🚎14-🔓️-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/unlocked_deps.yml/badge.svg
+[🚎15-🪪-wf]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/license-eye.yml
+[🚎15-🪪-wfi]: https://github.com/galtzo-floss/sanitize_email/actions/workflows/license-eye.yml/badge.svg
 [💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.5i]: https://img.shields.io/badge/Ruby-2.5-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.6i]: https://img.shields.io/badge/Ruby-2.6-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
@@ -463,34 +461,34 @@ Thanks for RTFM. ☺️
 [💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
-[🤝gh-issues]: https://github.com/pboling/sanitize_email/issues
-[🤝gh-pulls]: https://github.com/pboling/sanitize_email/pulls
-[🤝gl-issues]: https://gitlab.com/pboling/sanitize_email/-/issues
-[🤝gl-pulls]: https://gitlab.com/pboling/sanitize_email/-/merge_requests
-[🤝cb-issues]: https://codeberg.org/pboling/sanitize_email/issues
-[🤝cb-pulls]: https://codeberg.org/pboling/sanitize_email/pulls
+[🤝gh-issues]: https://github.com/galtzo-floss/sanitize_email/issues
+[🤝gh-pulls]: https://github.com/galtzo-floss/sanitize_email/pulls
+[🤝gl-issues]: https://gitlab.com/galtzo-floss/sanitize_email/-/issues
+[🤝gl-pulls]: https://gitlab.com/galtzo-floss/sanitize_email/-/merge_requests
+[🤝cb-issues]: https://codeberg.org/galtzo-floss/sanitize_email/issues
+[🤝cb-pulls]: https://codeberg.org/galtzo-floss/sanitize_email/pulls
 [🤝cb-donate]: https://donate.codeberg.org/
-[🤝contributing]: https://github.com/pboling/sanitize_email/blob/main/CONTRIBUTING.md
-[🏀codecov-g]: https://codecov.io/gh/pboling/sanitize_email/graph/badge.svg
+[🤝contributing]: https://github.com/galtzo-floss/sanitize_email/blob/main/CONTRIBUTING.md
+[🏀codecov-g]: https://codecov.io/gh/galtzo-floss/sanitize_email/graph/badge.svg
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: https://github.com/pboling/sanitize_email/graphs/contributors
-[🖐contributors-img]: https://contrib.rocks/image?repo=pboling/sanitize_email
-[🚎contributors-gl]: https://gitlab.com/pboling/sanitize_email/-/graphs/main
-[🪇conduct]: https://github.com/pboling/sanitize_email/blob/main/CODE_OF_CONDUCT.md
+[🖐contributors]: https://github.com/galtzo-floss/sanitize_email/graphs/contributors
+[🖐contributors-img]: https://contrib.rocks/image?repo=galtzo-floss/sanitize_email
+[🚎contributors-gl]: https://gitlab.com/galtzo-floss/sanitize_email/-/graphs/main
+[🪇conduct]: https://github.com/galtzo-floss/sanitize_email/blob/main/CODE_OF_CONDUCT.md
 [🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
 [📌semver]: https://semver.org/spec/v2.0.0.html
 [📌semver-img]: https://img.shields.io/badge/semver-2.0.0-259D6C.svg?style=flat
 [📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
 [📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
-[📌changelog]: https://github.com/pboling/sanitize_email/blob/main/CHANGELOG.md
+[📌changelog]: https://github.com/galtzo-floss/sanitize_email/blob/main/CHANGELOG.md
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-34495e.svg?style=flat
 [📌gitmoji]: https://gitmoji.dev
 [📌gitmoji-img]: https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 [🧮kloc-img]: https://img.shields.io/badge/KLOC-0.274-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
-[🔐security]: https://github.com/pboling/sanitize_email/blob/main/SECURITY.md
+[🔐security]: https://github.com/galtzo-floss/sanitize_email/blob/main/SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
 [📄license]: LICENSE.md
@@ -504,7 +502,7 @@ Thanks for RTFM. ☺️
 [🚎yard-current]: http://rubydoc.info/gems/sanitize_email
 [🚎yard-head]: https://sanitize-email.galtzo.com
 [💎stone_checksums]: https://github.com/galtzo-floss/stone_checksums
-[💎SHA_checksums]: https://gitlab.com/pboling/sanitize_email/-/tree/main/checksums
+[💎SHA_checksums]: https://gitlab.com/galtzo-floss/sanitize_email/-/tree/main/checksums
 [💎rlts]: https://github.com/rubocop-lts/rubocop-lts
 [💎rlts-img]: https://img.shields.io/badge/code_style_&_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white
 [💎appraisal2]: https://github.com/appraisal-rb/appraisal2

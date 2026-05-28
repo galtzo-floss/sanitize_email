@@ -13,7 +13,7 @@ Copyright (c) 2009-2010 pboling
 Copyright (c) 2009 Peter H. Boling
 Copyright (c) 2012 David Morton
 Copyright (c) 2012 Harry Lascelles
-Copyright (c) 2012-2018, 2022, 2024, 2026 Peter Boling
+Copyright (c) 2012-2018, 2022, 2024, 2026 Peter H. Boling
 Copyright (c) 2013 Adrien Siami
 Copyright (c) 2013 Chris Altman
 Copyright (c) 2014 Scott Rocher

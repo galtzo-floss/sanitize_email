@@ -159,6 +159,67 @@ workflows:
   # Include VCR/WebMock recording modular gemfiles in generated Appraisals.
   # Enable only for projects that actually require recording support.
   recording: false
+  preset: framework
+  framework_matrix:
+    dimension: rails
+    gem: rails
+    gemfile_pattern: "rails_{version}.gemfile"
+    workflow: false
+    versions:
+      - label: "5.2"
+        slug: "5_2"
+        requirement: "~> 5.2.8.1"
+        standard_appraisal: "ruby-2-4"
+        env:
+          RAILS_MAJOR_MINOR: "5.2"
+      - label: "6.0"
+        slug: "6_0"
+        requirement: "~> 6.0.6.1"
+        standard_appraisal: "ruby-2-5"
+        env:
+          RAILS_MAJOR_MINOR: "6.0"
+      - label: "6.1"
+        slug: "6_1"
+        requirement: "~> 6.1.7.10"
+        standard_appraisal: "ruby-2-6"
+        env:
+          RAILS_MAJOR_MINOR: "6.1"
+      - label: "7.0"
+        slug: "7_0"
+        requirement: "~> 7.0.8.6"
+        standard_appraisal: "ruby-2-7"
+        env:
+          RAILS_MAJOR_MINOR: "7.0"
+      - label: "7.1"
+        slug: "7_1"
+        requirement: "~> 7.1.5"
+        standard_appraisal: "ruby-3-0"
+        env:
+          RAILS_MAJOR_MINOR: "7.1"
+      - label: "7.2"
+        slug: "7_2"
+        requirement: "~> 7.2.2"
+        standard_appraisal: "ruby-3-1"
+        env:
+          RAILS_MAJOR_MINOR: "7.2"
+      - label: "8.0"
+        slug: "8_0"
+        requirement: "~> 8.0.0"
+        standard_appraisal: "ruby-3-2"
+        env:
+          RAILS_MAJOR_MINOR: "8.0"
+      - label: "8.0"
+        slug: "8_0"
+        requirement: "~> 8.0.0"
+        standard_appraisal: "ruby-3-3"
+        env:
+          RAILS_MAJOR_MINOR: "8.0"
+      - label: "8.0"
+        slug: "8_0"
+        requirement: "~> 8.0.0"
+        standard_appraisal: "ruby-3-4"
+        env:
+          RAILS_MAJOR_MINOR: "8.0"
 
 # Framework matrix workflows.
 # When your gem tests against multiple versions of a framework (Rails,
@@ -440,6 +501,8 @@ tokens:
 patterns:
   - path: "certs/**"
     strategy: raw_copy
+  - path: "gemfiles/rails_*.gemfile"
+    strategy: keep_destination
 
 # Per-file configuration (nested directory structure)
 # Only files that need overrides belong here. Everything else defaults to merge.

@@ -63,38 +63,65 @@ end
 
 appraise "ruby-2-4" do
   eval_gemfile "modular/x_std_libs/r2.4/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "5.2"
+  eval_gemfile "rails_5_2.gemfile"
 end
 
 appraise "ruby-2-5" do
   eval_gemfile "modular/x_std_libs/r2.6/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "6.0"
+  eval_gemfile "rails_6_0.gemfile"
 end
 
 appraise "ruby-2-6" do
   eval_gemfile "modular/x_std_libs/r2.6/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "6.1"
+  eval_gemfile "rails_6_1.gemfile"
 end
 
 appraise "ruby-2-7" do
   eval_gemfile "modular/x_std_libs/r2/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "7.0"
+  eval_gemfile "rails_7_0.gemfile"
 end
 
 appraise "ruby-3-0" do
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "7.1"
+  eval_gemfile "rails_7_1.gemfile"
 end
 
 appraise "ruby-3-1" do
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "7.2"
+  eval_gemfile "rails_7_2.gemfile"
 end
 
 appraise "ruby-3-2" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "8.0"
+  eval_gemfile "rails_8_0.gemfile"
 end
 
 appraise "ruby-3-3" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "8.0"
+  eval_gemfile "rails_8_0.gemfile"
 end
 
 appraise "ruby-3-4" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  ENV["KJ_FRAMEWORK_MATRIX_GEM"] = "rails"
+  ENV["RAILS_MAJOR_MINOR"] = "8.0"
+  eval_gemfile "rails_8_0.gemfile"
 end
 
 appraise "audit" do
@@ -199,68 +226,4 @@ appraise "rails-5-1" do
   gem "railties", "~> 5.1.7"
   gem "nokogiri"
   #   gem "rspec-rails", "~> 4.0" # For Rails 5.0 & 5.1
-end
-
-appraise "rails-5-2" do
-  # Load order is very important with combustion!
-  gem "combustion", "~> 1.4"
-
-  gem "actionmailer", "~> 5.2.8.1"
-  gem "railties", "~> 5.2.8.1"
-  gem "nokogiri"
-  #   gem "rspec-rails", "~> 5.0" # For Rails 5.2 & Rails 6.0
-end
-
-appraise "rails-6-0" do
-  # Load order is very important with combustion!
-  gem "combustion", "~> 1.4"
-
-  gem "actionmailer", "~> 6.0.6.1"
-  gem "railties", "~> 6.0.6.1"
-  #   gem "rspec-rails", "~> 5.0" # For Rails 5.2 & Rails 6.0
-end
-
-appraise "rails-6-1" do
-  # Load order is very important with combustion!
-  gem "combustion", "~> 1.4"
-
-  gem "actionmailer", "~> 6.1.7.10"
-  gem "railties", "~> 6.1.7.10"
-  #   gem "rspec-rails", "~> 6.0" # For Rails 6.1 & Rails 7.0 - 7.1
-end
-
-appraise "rails-7-0" do
-  # Load order is very important with combustion!
-  gem "combustion", "~> 1.4"
-
-  gem "actionmailer", "~> 7.0.8.6"
-  gem "railties", "~> 7.0.8.6"
-  #   gem "rspec-rails", "~> 6.0" # For Rails 6.1 & Rails 7.0 - 7.1
-end
-
-appraise "rails-7-1" do
-  # Load order is very important with combustion!
-  gem "combustion", "~> 1.4"
-
-  gem "actionmailer", "~> 7.1.5"
-  gem "railties", "~> 7.1.5"
-  #   gem "rspec-rails", "~> 6.0" # For Rails 6.1 & Rails 7.0 - 7.1
-end
-
-appraise "rails-7-2" do
-  # Load order is very important with combustion!
-  gem "combustion", "~> 1.5"
-
-  gem "actionmailer", "~> 7.2.2"
-  gem "railties", "~> 7.2.2"
-  #   gem "rspec-rails", "~> 6.0" # For Rails 6.1 & Rails 7.0 - 7.1
-end
-
-appraise "rails-8-0" do
-  # Load order is very important with combustion!
-  gem "combustion", "~> 1.5"
-
-  gem "actionmailer", "~> 8.0.0"
-  gem "railties", "~> 8.0.0"
-  #   gem "rspec-rails", "~> 6.0" # For Rails 6.1 & Rails 7.0 - 7.1
 end

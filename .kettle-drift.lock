@@ -4,7 +4,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         149,
-        182
+        243
       ]
     }
   ],
@@ -13,7 +13,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         148,
-        181
+        242
       ]
     }
   ],
@@ -21,8 +21,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        232,
-        273
+        293,
+        334
       ]
     }
   ],
@@ -30,8 +30,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        224,
-        265
+        285,
+        326
       ]
     }
   ],
@@ -39,8 +39,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        225,
-        266
+        286,
+        327
       ]
     }
   ],
@@ -49,7 +49,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         134,
-        174
+        235
       ]
     }
   ],
@@ -58,7 +58,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         130,
-        170
+        231
       ]
     }
   ],
@@ -66,8 +66,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        239,
-        280
+        300,
+        341
       ]
     }
   ],
@@ -76,7 +76,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         129,
-        169
+        230
       ]
     }
   ],
@@ -84,8 +84,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        218,
-        259
+        279,
+        320
       ]
     }
   ],
@@ -94,7 +94,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         125,
-        165
+        226
       ]
     }
   ],
@@ -102,8 +102,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        217,
-        258
+        278,
+        319
       ]
     }
   ],
@@ -111,8 +111,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        235,
-        276
+        296,
+        337
       ]
     }
   ],
@@ -121,7 +121,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         123,
-        163
+        224
       ]
     }
   ],
@@ -129,8 +129,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        228,
-        269
+        289,
+        330
       ]
     }
   ],
@@ -138,8 +138,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        210,
-        251
+        271,
+        312
       ]
     }
   ],
@@ -147,8 +147,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        211,
-        252
+        272,
+        313
       ]
     }
   ],
@@ -157,7 +157,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         124,
-        164
+        225
       ]
     }
   ],
@@ -166,7 +166,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         133,
-        173
+        234
       ]
     }
   ],
@@ -174,8 +174,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        212,
-        253
+        273,
+        314
       ]
     }
   ],
@@ -183,8 +183,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        231,
-        272
+        292,
+        333
       ]
     }
   ],
@@ -192,8 +192,8 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        221,
-        262
+        282,
+        323
       ]
     }
   ],
@@ -202,7 +202,7 @@
       "file": ".kettle-jem.yml",
       "lines": [
         128,
-        168
+        229
       ]
     }
   ],
@@ -210,8 +210,47 @@
     {
       "file": ".kettle-jem.yml",
       "lines": [
-        238,
-        279
+        299,
+        340
+      ]
+    }
+  ],
+  "- label: \"8.0\"\nslug: \"8_0\"": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        205,
+        211,
+        217
+      ]
+    }
+  ],
+  "ENV[\"KJ_FRAMEWORK_MATRIX_GEM\"] = \"rails\"\nENV[\"RAILS_MAJOR_MINOR\"] = \"8.0\"": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        108,
+        115,
+        122
+      ]
+    }
+  ],
+  "ENV[\"RAILS_MAJOR_MINOR\"] = \"8.0\"\neval_gemfile \"rails_8_0.gemfile\"": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        109,
+        116,
+        123
+      ]
+    }
+  ],
+  "RAILS_MAJOR_MINOR: \"8.0\"\n- label: \"8.0\"": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        210,
+        216
       ]
     }
   ],
@@ -232,6 +271,34 @@
         43,
         50,
         57
+      ]
+    }
+  ],
+  "eval_gemfile \"modular/x_std_libs/r2.6/libs.gemfile\"\nENV[\"KJ_FRAMEWORK_MATRIX_GEM\"] = \"rails\"": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        72,
+        79
+      ]
+    }
+  ],
+  "eval_gemfile \"modular/x_std_libs/r3.1/libs.gemfile\"\nENV[\"KJ_FRAMEWORK_MATRIX_GEM\"] = \"rails\"": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        93,
+        100
+      ]
+    }
+  ],
+  "eval_gemfile \"modular/x_std_libs/r3/libs.gemfile\"\nENV[\"KJ_FRAMEWORK_MATRIX_GEM\"] = \"rails\"": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        107,
+        114,
+        121
       ]
     }
   ],
@@ -256,8 +323,8 @@
     {
       "file": "Appraisals",
       "lines": [
-        158,
-        169
+        185,
+        196
       ]
     }
   ],
@@ -265,8 +332,18 @@
     {
       "file": "Appraisals",
       "lines": [
-        190,
-        200
+        217,
+        227
+      ]
+    }
+  ],
+  "slug: \"8_0\"\nrequirement: \"~> 8.0.0\"": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        206,
+        212,
+        218
       ]
     }
   ]

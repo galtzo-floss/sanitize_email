@@ -4,6 +4,6 @@ source "https://gem.coop"
 
 gemspec :path => "../"
 
-eval_gemfile("modular/style.gemfile")
+eval_gemfile("modular/x_std_libs/r2.4/libs.gemfile")
 
-eval_gemfile("modular/x_std_libs.gemfile")
+eval_gemfile("rails_5_2.gemfile")

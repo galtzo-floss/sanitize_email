@@ -8,7 +8,8 @@ RSpec.describe Rails do
 
   env_rails_version = ENV.fetch("RAILS_MAJOR_MINOR", nil)
   desc_rails_version = "#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}"
-  if env_rails_version.nil?
+  appraisal_gemfile = ENV.fetch("BUNDLE_GEMFILE", "").include?("/gemfiles/ruby_")
+  if env_rails_version.nil? || !appraisal_gemfile
     it "has Rails Version (default, 7.2) matching actual #{desc_rails_version}" do
       # When not otherwise set, Rails should be 7.2
       expect(actual_rails_version).to match("7.2")

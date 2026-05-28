@@ -1,227 +1,32 @@
-# 📧 sanitize_email
+[![Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0][🖼️galtzo-floss-i]][🖼️galtzo-floss] [![ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5][🖼️ruby-lang-i]][🖼️ruby-lang] [![pboling Logo by Aboling0, CC BY-SA 4.0][🖼️pboling-i]][🖼️pboling]
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/gem/v/sanitize_email.svg)](https://rubygems.org/gems/sanitize_email)
-[![Downloads Today](https://img.shields.io/gem/rd/sanitize_email.svg)](https://github.com/pboling/sanitize_email)
-[![Depfu][🔑depfui]][🔑depfu]
-[![CodeCov][🖇codecov-img♻️]][🖇codecov]
-[![Test Coverage][🔑cc-covi]][🔑cc-cov]
-[![Maintainability][🔑cc-mnti]][🔑cc-mnt]
-[![CI Supported Build][🚎s-wfi]][🚎s-wf]
-[![CI Unsupported Build][🚎us-wfi]][🚎us-wf]
-[![CI Style Build][🚎st-wfi]][🚎st-wf]
-[![CI Coverage Build][🚎cov-wfi]][🚎cov-wf]
-[![CI Heads Build][🚎hd-wfi]][🚎hd-wf]
-[![CI Ancient Build][🚎an-wfi]][🚎an-wf]
+[🖼️galtzo-floss-i]: https://logos.galtzo.com/assets/images/galtzo-floss/avatar-192px.svg
+[🖼️galtzo-floss]: https://discord.gg/3qme4XHNKN
+[🖼️ruby-lang-i]: https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg
+[🖼️ruby-lang]: https://www.ruby-lang.org/
+[🖼️pboling-i]: https://logos.galtzo.com/assets/images/pboling/avatar-192px.svg
+[🖼️pboling]: https://github.com/pboling
 
-[🖇codecov-img♻️]: https://codecov.io/gh/pboling/sanitize_email/graph/badge.svg?token=selEoMrZzA
-[🖇codecov]: https://codecov.io/gh/pboling/sanitize_email
-[🚎s-wf]: https://github.com/pboling/sanitize_email/actions/workflows/supported.yml
-[🚎s-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/supported.yml/badge.svg
-[🚎us-wf]: https://github.com/pboling/sanitize_email/actions/workflows/unsupported.yml
-[🚎us-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/unsupported.yml/badge.svg
-[🚎st-wf]: https://github.com/pboling/sanitize_email/actions/workflows/style.yml
-[🚎st-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/style.yml/badge.svg
-[🚎cov-wf]: https://github.com/pboling/sanitize_email/actions/workflows/coverage.yml
-[🚎cov-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/coverage.yml/badge.svg
-[🚎hd-wf]: https://github.com/pboling/sanitize_email/actions/workflows/heads.yml
-[🚎hd-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/heads.yml/badge.svg
-[🚎an-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ancient.yml
-[🚎an-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/ancient.yml/badge.svg
+# 📧 SanitizeEmail
 
------
+[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
 
-[![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
-[![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor]
-[![Polar Shield][🖇polar-img]][🖇polar]
-[![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi]
-[![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
+`if ci_badges.map(&:color).detect { it != "green"}` ☝️ [let me know][🖼️galtzo-floss], as I may have missed the [discord notification][🖼️galtzo-floss].
 
-[⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
-[⛳liberapay]: https://liberapay.com/pboling/donate
-[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
-[🖇sponsor]: https://github.com/sponsors/pboling
-[🖇polar-img]: https://polar.sh/embed/seeks-funding-shield.svg?org=pboling
-[🖇polar]: https://polar.sh/pboling
-[🖇kofi-img]: https://img.shields.io/badge/buy%20me%20coffee-donate-yellow.svg
-[🖇kofi]: https://ko-fi.com/O5O86SNP4
-[🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
-[🖇patreon]: https://patreon.com/galtzo
+---
 
-[comment]: <> ( 🔑 KEYED LINKS )
+`if ci_badges.map(&:color).all? { it == "green"}` 👇️ send money so I can do more of this. FLOSS maintenance is now my full-time job.
 
-[🔑cc-mnt]: https://codeclimate.com/github/pboling/sanitize_email/maintainability
-[🔑cc-mnti]: https://api.codeclimate.com/v1/badges/65af4948d859903a0372/maintainability
-[🔑cc-cov]: https://codeclimate.com/github/pboling/sanitize_email/test_coverage
-[🔑cc-covi]: https://api.codeclimate.com/v1/badges/65af4948d859903a0372/test_coverage
-[🔑depfu]: https://depfu.com/github/pboling/sanitize_email
-[🔑depfui]: https://badges.depfu.com/badges/bba430e8f19a2ba3273fb20d5e8c82d6/count.svg
+[![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate at ko-fi.com][🖇kofi-img]][🖇kofi]
 
-This gem allows you to override your mail delivery settings, globally or in a local context.
-It is like a Ruby encrusted condom for your email server,
-just in case it decides to have intercourse with other servers via sundry mail protocols.
+<details>
+ <summary>👣 How will this project approach the September 2025 hostile takeover of RubyGems? 🚑️</summary>
 
-Seriously though, this gem solves similar problems as the excellent [mailcatcher](https://mailcatcher.me/) gem,
-and `mailcatcher` solves those problems far more easily.
+I've summarized my thoughts in [this blog post](https://dev.to/galtzo/hostile-takeover-of-rubygems-my-thoughts-5hlo).
 
-In addition, this gem solves problems that `mailcatcher` does not solve.  I recommend using both!
+</details>
 
-To make an analogy, `mailcatcher` is akin to `webmock`, entirely preventing interaction with your real live mail server,
-while this gem allows you to effectively use your real live (production!) mail server, while
-intercepting and modifying recipients on the way out, so that testing emails go to safe locations.
-
-It is a bit like using the "test" Visa credit card number `4701322211111234` with a real payment gateway.
-
-## Encryption
-
-Making special note of this use case because it is important for companies working on HIPAA-compliant products.
-When you are sending emails through an encrypted email provider, e.g. [Paubox](https://www.paubox.com/),
-testing your email in the aforementioned `mailcatcher` may not be enough.
-
-If you want to test all the way through Paubox's system, but have the email go to a safe testing account address,
-then this is the gem for you.
-
-## Compatibility
-
-- ⚙️ Compatible with all versions of Ruby >= 2.3, plus JRuby and Truffleruby.
-- ⚙️ Compatible with all Ruby web Frameworks (Hanami, Roda, Sinatra, Rails).
-- ⚙️ Compatible with all versions of Rails from 3.0 - 7.1+.
-- ⚙️ Compatible with scripted usage of Mail gem outside a web framework.
-- ⚙️ Compatible with [`sendgrid-actionmailer`](https://github.com/eddiezane/sendgrid-actionmailer)'s support for personalizations, and will override email addresses there according to the configuration.
-- ⚙️ If this gem is not compatible with your use case, and you'd like it to be, I'd like to hear about it!
-
-It was a slog getting (very nearly) the entire compatibility matrix working with Github Actions, [appraisal](https://github.com/thoughtbot/appraisal), and [combustion](https://github.com/pat/combustion), and I'm very interested in hearing about ways to improve it!
-
-## 🛞 DVCS
-
-This project does not trust any one version control system,
-so it abides the principles of ["Distributed Version Control Systems"][💎d-in-dvcs]
-
-Find this project on:
-
-| Any            | Of               | These          | DVCS           |
-|----------------|------------------|----------------|----------------|
-| [🐙hub][🐙hub] | [🧊berg][🧊berg] | [🛖hut][🛖hut] | [🧪lab][🧪lab] |
-
-[comment]: <> ( DVCS LINKS )
-
-[💎d-in-dvcs]: https://railsbling.com/posts/dvcs/put_the_d_in_dvcs/
-
-[🧊berg]: https://codeberg.org/pboling/sanitize_email
-[🐙hub]: https://gitlab.com/pboling/sanitize_email
-[🛖hut]: https://sr.ht/~galtzo/pboling/sanitize_email
-[🧪lab]: https://gitlab.com/pboling/sanitize_email
-
-<!--
-Numbering rows and badges in each row as a visual "database" lookup,
-    as the table is extremely dense, and it can be very difficult to find anything
-Putting one on each row here, to document the emoji that should be used, and for ease of copy/paste.
-
-row #s:
-1️⃣
-2️⃣
-3️⃣
-4️⃣
-5️⃣
-6️⃣
-7️⃣
-
-badge #s:
-⛳️
-🖇
-🏘
-🚎
-🖐
-🧮
-📗
-
-appended indicators:
-♻️ / 🔑 - Tagged URLs need to be updated from SAAS integration. Find / Replace is insufficient.
--->
-
-|     | Project                        | bundle add sanitize_email                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|:----|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1️⃣ | name, license, docs, standards | [![RubyGems.org][⛳️name-img]][⛳️gem] [![License: MIT][🖇src-license-img]][🖇src-license] [![RubyDoc.info][🚎yard-img]][🚎yard] [![YARD Documentation](http://inch-ci.org/github/pboling/sanitize_email.svg)][🚎yard] [![SemVer 2.0.0][🧮semver-img]][🧮semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                                                                                                                  |
-| 2️⃣ | version & activity             | [![Gem Version][⛳️version-img]][⛳️gem] [![Total Downloads][🖇DL-total-img]][⛳️gem] [![Download Rank][🏘DL-rank-img]][⛳️gem] [![Source Code][🚎src-main-img]][🚎src-main] [![Open PRs][🖐prs-o-img]][🖐prs-o] [![Closed PRs][🧮prs-c-img]][🧮prs-c]                                                                                                                                                                                                  |
-| 3️⃣ | maintenance & linting          | [![Helpers][🖇triage-help-img]][🖇triage-help] [![Depfu][🔑depfui]][🔑depfu] [![Contributors][🚎contributors-img]][🚎contributors]                                                                                                                                                                                                                                                                            |
-| 4️⃣ | coverage & security            | [![CodeCov][🖇codecov-img♻️]][🖇codecov] [![Coveralls][🏘coveralls-img]][🏘coveralls] [![Security Policy][🚎sec-pol-img]][🚎sec-pol] [![CodeQL][🖐codeQL-img]][🖐codeQL]                                                                                                                                                                                                                                |
-| 5️⃣ | resources                      | [![Get help on Codementor][🖇codementor-img]][🖇codementor] [![Chat][🏘chat-img]][🏘chat] [![Blog][🚎blog-img]][🚎blog] [![Wiki][🖐wiki-img]][🖐wiki]                                                                                                                                                                                                                                                                                               |
-| 6️⃣ | `...` 💖                       | [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay] [![Sponsor Me][🖇sponsor-img]][🖇sponsor] [![Follow Me on LinkedIn][🖇linkedin-img]][🖇linkedin] [![Find Me on WellFound:][✌️wellfound-img]][✌️wellfound] [![Find Me on CrunchBase][💲crunchbase-img]][💲crunchbase] [![My LinkTree][🌳linktree-img]][🌳linktree] [![Follow Me on Ruby.Social][🐘ruby-mast-img]][🐘ruby-mast] [![Tweet @ Peter][🐦tweet-img]][🐦tweet] [💻][coderme] [🌏][aboutme] |
-
-<!--
-The link tokens in the following sections should be kept ordered by the row and badge numbering scheme
--->
-
-<!-- 1️⃣ name, license, docs -->
-[⛳️gem]: https://rubygems.org/gems/sanitize_email
-[⛳️name-img]: https://img.shields.io/badge/name-sanitize__email-brightgreen.svg?style=flat
-[🖇src-license]: https://opensource.org/licenses/MIT
-[🖇src-license-img]: https://img.shields.io/badge/License-MIT-green.svg
-[🚎yard]: https://www.rubydoc.info/gems/sanitize_email
-[🚎yard-img]: https://img.shields.io/badge/documentation-rubydoc-brightgreen.svg?style=flat
-[🧮semver]: http://semver.org/
-[🧮semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
-[📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
-[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
-
-<!-- 2️⃣ version & activity -->
-[⛳️version-img]: http://img.shields.io/gem/v/sanitize_email.svg
-[🖇DL-total-img]: https://img.shields.io/gem/dt/sanitize_email.svg
-[🏘DL-rank-img]: https://img.shields.io/gem/rt/sanitize_email.svg
-[🚎src-main]: https://gitlab.com/pboling/sanitize_email
-[🚎src-main-img]: https://img.shields.io/badge/source-gitlab-brightgreen.svg?style=flat
-[🖐prs-o]: https://gitlab.com/pboling/sanitize_email/-/merge_requests
-[🖐prs-o-img]: https://img.shields.io/github/issues-pr/pboling/sanitize_email
-[🧮prs-c]: https://github.com/pboling/sanitize_email/pulls?q=is%3Apr+is%3Aclosed
-[🧮prs-c-img]: https://img.shields.io/github/issues-pr-closed/pboling/sanitize_email
-
-<!-- 3️⃣ maintenance & linting -->
-[🖇triage-help]: https://www.codetriage.com/pboling/sanitize_email
-[🖇triage-help-img]: https://www.codetriage.com/pboling/sanitize_email/badges/users.svg
-[🚎contributors]: https://gitlab.com/pboling/sanitize_email/-/graphs/main
-[🚎contributors-img]: https://img.shields.io/github/contributors-anon/pboling/sanitize_email
-
-<!-- 4️⃣ coverage & security -->
-[🖇codecov-img♻️]: https://codecov.io/gh/pboling/sanitize_email/graph/badge.svg?token=Joire8DbSW
-[🖇codecov]: https://codecov.io/gh/pboling/sanitize_email
-[🏘coveralls]: https://coveralls.io/github/pboling/sanitize_email?branch=main
-[🏘coveralls-img]: https://coveralls.io/repos/github/pboling/sanitize_email/badge.svg?branch=main
-[🚎sec-pol]: https://gitlab.com/pboling/sanitize_email/-/blob/main/SECURITY.md
-[🚎sec-pol-img]: https://img.shields.io/badge/security-policy-brightgreen.svg?style=flat
-[🖐codeQL]: https://github.com/pboling/sanitize_email/security/code-scanning
-[🖐codeQL-img]: https://github.com/pboling/sanitize_email/actions/workflows/codeql-analysis.yml/badge.svg
-
-<!-- 5️⃣ resources -->
-[🖇codementor]: https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github
-[🖇codementor-img]: https://cdn.codementor.io/badges/get_help_github.svg
-[🏘chat]: https://gitter.im/pboling/sanitize_email
-[🏘chat-img]: https://img.shields.io/gitter/room/pboling/sanitize_email.svg
-[🚎blog]: http://www.railsbling.com/tags/sanitize_email/
-[🚎blog-img]: https://img.shields.io/badge/blog-railsbling-brightgreen.svg?style=flat
-[🖐wiki]: https://gitlab.com/pboling/sanitize_email/-/wikis/home
-[🖐wiki-img]: https://img.shields.io/badge/wiki-examples-brightgreen.svg?style=flat
-
-<!-- 6️⃣ spread 💖 -->
-[🐦tweet-img]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow%20%40galtzo
-[🐦tweet]: http://twitter.com/galtzo
-[🚎blog]: http://www.railsbling.com/tags/sanitize_email/
-[🚎blog-img]: https://img.shields.io/badge/blog-railsbling-brightgreen.svg?style=flat
-[🖇linkedin]: http://www.linkedin.com/in/peterboling
-[🖇linkedin-img]: https://img.shields.io/badge/PeterBoling-blue?style=plastic&logo=linkedin
-[✌️wellfound]: https://angel.co/u/peter-boling
-[✌️wellfound-img]: https://img.shields.io/badge/peter--boling-orange?style=plastic&logo=wellfound
-[💲crunchbase]: https://www.crunchbase.com/person/peter-boling
-[💲crunchbase-img]: https://img.shields.io/badge/peter--boling-purple?style=plastic&logo=crunchbase
-[🐘ruby-mast]: https://ruby.social/@galtzo
-[🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https%3A%2F%2Fruby.social&style=plastic&logo=mastodon&label=Ruby%20%40galtzo
-[🌳linktree]: https://linktr.ee/galtzo
-[🌳linktree-img]: https://img.shields.io/badge/galtzo-purple?style=plastic&logo=linktree
-
-<!-- Maintainer Contact Links -->
-[aboutme]: https://about.me/peter.boling
-[coderme]: https://coderwall.com/Peter%20Boling
-
-## Summary
+## 🌻 Synopsis
 
 It's particularly helpful when you want to prevent the delivery of email (e.g. in development/test environments) or alter the to/cc/bcc (e.g. in staging or demo environments) of all email generated from your application.
 
@@ -234,157 +39,91 @@ It's particularly helpful when you want to prevent the delivery of email (e.g. i
 * solves common problems in ruby web applications that use email
 * provides test helpers and spec matchers to assist with testing email content delivery
 
-## Working Locally with Production Data
+## 💡 Info you can shake a stick at
 
-1. Have a production site with live data
-2. Dump the live data and securely transfer it to another machine (e.g. rync -e ssh)
-3. Import it into a development database
-4. Test features which send out email (registration/signup, order placement, etc.)
-5. Emails get sent (in real-life!) but to sanitized email recipients
-6. Verify what they look like when sent
-7. Iterate on email content design
-8. No risk of emailing production addresses
+| Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Works with JRuby | [![JRuby 9.2 Compat][💎jruby-9.2i]][🚎jruby-9.2-wf] [![JRuby 9.3 Compat][💎jruby-9.3i]][🚎jruby-9.3-wf] <br/> [![JRuby 9.4 Compat][💎jruby-9.4i]][🚎jruby-9.4-wf] [![JRuby current Compat][💎jruby-c-i]][🚎10-j-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]|
+| Works with Truffle Ruby | [![Truffle Ruby 22.3 Compat][💎truby-22.3i]][🚎truby-22.3-wf] [![Truffle Ruby 23.0 Compat][💎truby-23.0i]][🚎truby-23.0-wf] [![Truffle Ruby 23.1 Compat][💎truby-23.1i]][🚎truby-23.1-wf] <br/> [![Truffle Ruby 24.2 Compat][💎truby-24.2i]][🚎truby-24.2-wf] [![Truffle Ruby 25.0 Compat][💎truby-25.0i]][🚎truby-25.0-wf] [![Truffle Ruby current Compat][💎truby-c-i]][🚎9-t-wf]|
+| Works with MRI Ruby 4 | [![Ruby 4.0 Compat][💎ruby-4.0i]][🚎11-c-wf] [![Ruby current Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]|
+| Works with MRI Ruby 3 | [![Ruby 3.0 Compat][💎ruby-3.0i]][🚎ruby-3.0-wf] [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎ruby-3.1-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎ruby-3.2-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎ruby-3.3-wf] [![Ruby 3.4 Compat][💎ruby-3.4i]][🚎ruby-3.4-wf]|
+| Works with MRI Ruby 2 | [![Ruby 2.4 Compat][💎ruby-2.4i]][🚎ruby-2.4-wf] [![Ruby 2.5 Compat][💎ruby-2.5i]][🚎ruby-2.5-wf] [![Ruby 2.6 Compat][💎ruby-2.6i]][🚎ruby-2.6-wf] [![Ruby 2.7 Compat][💎ruby-2.7i]][🚎ruby-2.7-wf]|
+| Support & Community | [![Join Me on Daily.dev's RubyFriends][✉️ruby-friends-img]][✉️ruby-friends] [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor] |
+| Source | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on CodeBerg.org][📜src-cb-img]][📜src-cb] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc] |
+| Documentation | [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![YARD on Galtzo.com][📜docs-head-rd-img]][🚎yard-head] [![Maintainer Blog][🚂maint-blog-img]][🚂maint-blog] [![GitLab Wiki][📜gl-wiki-img]][📜gl-wiki] [![GitHub Wiki][📜gh-wiki-img]][📜gh-wiki] |
+| Compliance | [![License: MIT][📄license-img]][📄license] [![Apache license compatibility: Category A][📄license-compat-img]][📄license-compat] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver] |
+| Style | [![Enforced Code Style Linter][💎rlts-img]][💎rlts] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog] [![Gitmoji Commits][📌gitmoji-img]][📌gitmoji] [![Compatibility appraised by: appraisal2][💎appraisal2-img]][💎appraisal2] |
+| Maintainer 🎖️ | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact Maintainer][🚂maint-contact-img]][🚂maint-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto] |
+| `...` 💖 | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme] [🧊][💖🧊berg] [🐙][💖🐙hub] [🛖][💖🛖hut] [🧪][💖🧪lab] |
 
-## Re-routing Email on a Staging or QA Server
+### Compatibility
 
-Another very important use case for me is to transparently re-route email generated from a staging or QA server to an appropriate person.  For example, it's common for us to set up a staging server for a client to use to view our progress and test out new features.  It's important for any email that is generated from our web application be delivered to the client's inbox so that they can review the content and ensure that it's acceptable.  `dotenv` or `direnv` allows each developer to configure the local behavior specifically for them via ENV vars.
+Compatible with MRI Ruby 2.3.0+, and concordant releases of JRuby, and TruffleRuby.
+CI workflows and Appraisals are generated for MRI Ruby 2.4+.
+This test floor is configured by `ruby.test_minimum` in `.kettle-jem.yml` and
+may be higher than the gem's runtime compatibility floor when legacy Rubies are
+not practical for the current toolchain.
 
-## Testing Email from a Hot Production Server
+| 🚚 _Amazing_ test matrix was brought to you by | 🔎 appraisal2 🔎 and the color 💚 green 💚 |
+|------------------------------------------------|--------------------------------------------------------|
+| 👟 Check it out! | ✨ [github.com/appraisal-rb/appraisal2][💎appraisal2] ✨ |
 
-If you install this gem on a production server (which I don't always do), you can load up script/console and override the to/cc/bcc on all emails for the duration of your console session.  This allows you to poke and prod a live production instance, and route all email to your own inbox for inspection.  The best part is that this can all be accomplished without changing a single line of your application code.
 
-## Monitoring all email sent by server to a backup account
 
-You may want to add a BCC automatically (e.g. to account-history@my-company.com) to every email sent by your system, for customer service purposes, and this gem allows that.  Note that this may not be a good idea for all systems, for many reasons, e.g security!
+### Federated DVCS
 
-## Using with a test suite as an alternative to the heavy email_spec
+<details markdown="1">
+ <summary>Find this repo on federated forges (Coming soon!)</summary>
 
-[email_spec](https://github.com/bmabey/email-spec) is a great gem, with awesome rspec matchers and helpers, but it has an undeclared dependency on ActionMailer. Sad face.
+| Federated [DVCS][💎d-in-dvcs] Repository | Status | Issues | PRs | Wiki | CI | Discussions |
+|-------------------------------------------------|-----------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
+| 🧪 [pboling/sanitize_email on GitLab][📜src-gl] | The Truth | [💚][🤝gl-issues] | [💚][🤝gl-pulls] | [💚][📜gl-wiki] | 🐭 Tiny Matrix | ➖ |
+| 🧊 [pboling/sanitize_email on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate]) | [💚][🤝cb-issues] | [💚][🤝cb-pulls] | ➖ | ⭕️ No Matrix | ➖ |
+| 🐙 [pboling/sanitize_email on GitHub][📜src-gh] | Another Mirror | [💚][🤝gh-issues] | [💚][🤝gh-pulls] | [💚][📜gh-wiki] | 💯 Full Matrix | [💚][gh-discussions] |
+| 🎮️ [Discord Server][✉️discord-invite] | [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
 
-SanitizeEmail comes with some lightweight RspecMatchers covering most of what email_spec can do.  It will help you test email functionality.  It is useful when you are creating a gem to handle email features, or are writing a simple Ruby script, and don't want to pull in le Rails.  SanitizeEmail has two dependencies, `mail` gem, and `version_gem`.  Your Mail system just needs to conform to `mail` gem's `register_interceptor` API.
+</details>
 
-## Install Like a Boss
+[gh-discussions]: https://github.com/pboling/sanitize_email/discussions
 
-In Gemfile:
+### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/sanitize_email)](https://tidelift.com/subscription/pkg/rubygems-sanitize_email?utm_source=rubygems-sanitize_email&utm_medium=referral&utm_campaign=readme)
 
-       gem 'sanitize_email'
+Available as part of the Tidelift Subscription.
 
-Then:
+<details markdown="1">
+ <summary>Need enterprise-level guarantees?</summary>
 
-       bundle install
+The maintainers of this and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact packages you use.
 
-## Setup with Ruby
+[![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]
 
-_keep scrolling for Rails, but read this for a better understanding of Magic_
+- 💡Subscribe for support guarantees covering _all_ your FLOSS dependencies
+- 💡Tidelift is part of [Sonar][🏙️entsup-tidelift-sonar]
+- 💡Tidelift pays maintainers to maintain the software you depend on!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] subscription is "[never gonna let you down][🧮kloc]", and *supports* open source maintainers
 
-There are three ways SanitizeEmail can be turned on; in order of precedence they are:
+Alternatively:
 
-1. Only useful for local context.  Inside a method where you will be sending an email, set `SanitizeEmail.force_sanitize = true` just prior to delivering it.  Also useful in the console.
+- [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite]
+- [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork]
+- [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]
 
-        SanitizeEmail.force_sanitize = true # by default it is nil
+</details>
 
-2. If SanitizeEmail seems to not be sanitizing you have probably not registered the interceptor.  SanitizeEmail tries to do this for you. *Note*: If you are working in an environment that has a Mail or Mailer class that uses the register_interceptor API, the interceptor will already have been registered by SanitizeEmail:
+## ✨ Installation
 
-        # The gem will probably have already done this for you, but some really old versions of Rails may need you to do this manually:
-        Mail.register_interceptor(SanitizeEmail::Bleach)
+Install the gem and add to the application's Gemfile by executing:
 
-   Once registered, SanitizeEmail needs to be engaged:
+```console
+bundle add sanitize_email
+```
 
-        # in config/initializers/sanitize_email.rb
-        SanitizeEmail::Config.configure { |config| config[:engage] = true }
+If bundler is not being used to manage dependencies, install the gem by executing:
 
-3. If you don't need to compute anything, then don't use this option, go with the previous option.
+```console
+gem install sanitize_email
+```
 
-        SanitizeEmail::Config.configure { |config| config[:activation_proc] = proc { true } } # by default :activation_proc is false
-
-### Examples
-
-#### Only allow email to a specific domain
-
-This works by ensuring that all recipients have the "allowed" domain.
-In other words, none of the recipients have a domain other than the allowed domain.
-
-        allowed_domain = "example.com"
-        # NOTE: you may need to check CC and BCC also, depending on your use case...
-        SanitizeEmail::Config.configure do |config|
-          config[:activation_proc] =
-            ->(message) do
-              !Array(message.to).any? { |recipient| Mail::Address.new(recipient).domain != allowed_domain }
-            end
-        end
-
-### Notes
-
-Number 1, above, is the method used by the SanitizeEmail.sanitary block.
-If installed but not configured, sanitize_email DOES NOTHING.  Until configured the defaults leave it turned off.
-
-### Troubleshooting
-
-IMPORTANT: You may need to setup your own register_interceptor.  If sanitize_email doesn't seem to be working for you find your Mailer/Mail class and try this:
-
-        # in config/initializers/sanitize_email.rb
-        Mail.register_interceptor(SanitizeEmail::Bleach)
-        SanitizeEmail::Config.configure { |config| config[:engage] = true }
-
-If that causes an error you will know why sanitize_email doesn't work.
-Otherwise it will start working according to the rest of the configuration.
-
-## Setup With Rails
-
-Create an initializer, if you are using rails, or otherwise configure:
-
-        SanitizeEmail::Config.configure do |config|
-          config[:sanitized_to] = "to@sanitize_email.org"
-          config[:sanitized_cc] = "cc@sanitize_email.org"
-          config[:sanitized_bcc] = "bcc@sanitize_email.org"
-          # run/call whatever logic should turn sanitize_email on and off in this Proc:
-          config[:activation_proc] = proc { %w(development test).include?(Rails.env) }
-          config[:use_actual_email_prepended_to_subject] = true         # or false
-          config[:use_actual_environment_prepended_to_subject] = true   # or false
-          config[:use_actual_email_as_sanitized_user_name] = true       # or false
-        end
-
-Keep in mind, this is ruby (and possibly rails), so you can add conditionals or utilize different environment.rb files to customize these settings on a per-environment basis.
-
-## Override the override
-
-But wait there's more:
-
-Let's say you have a method in your model that you can call to test the signup email. You want to be able to test sending it to any user at any time... but you don't want the user to ACTUALLY get the email, even in production. A dilemma, yes?  Not anymore!
-
-To override the environment based switch use `force_sanitize`, which is normally `nil`, and ignored by default. When set to `true` or `false` it will turn sanitization on or off:
-
-       SanitizeEmail.force_sanitize = true
-
-When testing your email in a console, you can manipulate how email will be handled in this way.
-
-There are also two methods that take a block and turn SanitizeEmail on or off (see section on Thread Safety below):
-
-Regardless of the Config settings of SanitizeEmail you can do a local override to force unsanitary email in any environment.
-
-       SanitizeEmail.unsanitary do
-         Mail.deliver do
-           from "from@example.org"
-           to "to@example.org" # Will actually be sent to the specified address, not sanitized
-           reply_to "reply_to@example.org"
-           subject "subject"
-         end
-       end
-
-Regardless of the Config settings of SanitizeEmail you can do a local override to send sanitary email in any environment.
-You have access to all the same configuration options in the parameter hash as you can set in the actual
-`SanitizeEmail.configure` block.
-
-        SanitizeEmail.sanitary(sanitized_to: "boo@example.com") do # these config options are merged with the globals
-          Mail.deliver do
-            from "from@example.org"
-            to "to@example.org" # Will actually be sent to the override addresses, in this case: boo@example.com
-            reply_to "reply_to@example.org"
-            subject "subject"
-          end
-        end
-
-## Configuration Options
+## ⚙️ Configuration
 
 As used in the "Description" column below, `engaged` means: `SanitizeEmail.activate?(message) # => true`.
 This happens in a few different ways, and two of them are in the config below (`engage` and `activation_proc`).
@@ -403,337 +142,382 @@ This happens in a few different ways, and two of them are in the config below (`
 | engage                                      | [Boolean, nil]                       | Boolean will turn engage or disengage this gem, while `nil` ignores this setting and instead checks `activation_proc`                  |
 | activation_proc                             | [Proc, Lambda, #call]                | When checked, due to `engage: nil`, the result will either engage or disengage this gem                                                |
 
-## Thread Safety
-
-So long as you don't change the config after initializing it at runtime, you'll be fine.
-Like many Ruby tools' config objects, it is a single config object, shared by all threads.
-The helpers like `sanitary`, `unsanitary`, `janitor`, and `force_sanitize`
-are intended to be used in single threaded environments,
-like a test suite, or a console session.
-
-I doubt I'll ever have a need for runtime reconfiguration of the config,
-so I doubt I'll ever have a reason to make it "more" thread safe than it is now, but PRs are welcome!
-
-## Use sanitize_email in your test suite!
-
-### rspec
-
-In your `spec_helper.rb`:
+## 🔧 Basic Usage
 
 
-       require "sanitize_email"
-       # rspec matchers are *not* loaded by default in sanitize_email, as it is not primarily a gem for test suites.
-       require "sanitize_email/rspec_matchers"
+## 🦷 FLOSS Funding
 
-       SanitizeEmail::Config.configure do |config|
-         config[:sanitized_to] = "sanitize_email@example.org"
-         config[:sanitized_cc] = "sanitize_email@example.org"
-         config[:sanitized_bcc] = "sanitize_email@example.org"
-         # run/call whatever logic should turn sanitize_email on and off in this Proc.
-         # config[:activation_proc] =      Proc.new { true }
-         # Since this configuration is *inside* the spec_helper, it might be assumed that we always want to sanitize.  If we don't want to it can be easily manipulated with SanitizeEmail.unsanitary and SanitizeEmail.sanitary block helpers.
-         # Thus instead of using the Proc (slower) we just engage it always:
-         config[:engage] = true
-         config[:use_actual_email_prepended_to_subject] = true         # or false
-         config[:use_actual_environment_prepended_to_subject] = true   # or false
-         config[:use_actual_email_as_sanitized_user_name] = true       # or false
-       end
+While pboling tools are free software and will always be, the project would benefit immensely from some funding.
+Raising a monthly budget of... "dollars" would make the project more sustainable.
 
-       # If your mail system is not one that sanitize_email automatically configures an interceptor for (ActionMailer, Mail)
-       # then you will need to do the equivalent for whatever Mail system you are using.
+We welcome both individual and corporate sponsors! We also offer a
+wide array of funding channels to account for your preferences.
+Currently, [GitHub Sponsors][🖇sponsor], and [Liberapay][⛳liberapay] are our preferred funding platforms.
 
-       RSpec.configure do |config|
-         # ...
-         # From sanitize_email gem
-         config.include(SanitizeEmail::RspecMatchers)
-       end
+**If you're working in a company that's making significant use of pboling tools we'd
+appreciate it if you suggest to your company to become a pboling sponsor.**
 
-       context "an email test" do
-         subject { Mail.deliver(@message_hash) }
-         it { should have_to("sanitize_email@example.org") }
-       end
+You can support the development of pboling tools via
+[GitHub Sponsors][🖇sponsor],
+[Liberapay][⛳liberapay],
+[PayPal][🖇paypal],
+and [Tidelift][🏙️entsup-tidelift].
 
-#### have_* matchers
+| 📍 NOTE |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| If doing a sponsorship in the form of donation is problematic for your company <br/> from an accounting standpoint, we'd recommend the use of Tidelift, <br/> where you can get a support-like subscription instead. |
 
-These will look for an email address in any of the following mail attributes:
 
-       [:from, :to, :cc, :bcc, :subject, :reply_to]
+### Another way to support open-source
 
-Example:
+I’m driven by a passion to foster a thriving open-source community – a space where people can tackle complex problems, no matter how small. Revitalizing libraries that have fallen into disrepair, and building new libraries focused on solving real-world challenges, are my passions. I was recently affected by layoffs, and the tech jobs market is unwelcoming. I’m reaching out here because your support would significantly aid my efforts to provide for my family, and my farm (11 🐔 chickens, 2 🐶 dogs, 3 🐰 rabbits, 8 🐈‍ cats).
 
-       context "the subject line must have the email address sanitize_email@example.org" do
-         subject { Mail.deliver(@message_hash) }
-         it { should have_subject("sanitize_email@example.org") }
-       end
+If you work at a company that uses my work, please encourage them to support me as a corporate sponsor. My work on gems you use might show up in `bundle fund`.
 
-#### be_* matchers
+I’m developing a new library, [floss_funding][🖇floss-funding-gem], designed to empower open-source developers like myself to get paid for the work we do, in a sustainable way. Please give it a look.
 
-These will look for a matching string in any of the following attributes:
+**[Floss-Funding.dev][🖇floss-funding.dev]: 👉️ No network calls. 👉️ No tracking. 👉️ No oversight. 👉️ Minimal crypto hashing. 💡 Easily disabled nags**
 
-       [:from, :to, :cc, :bcc, :subject, :reply_to]
+ [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS efforts using Patreon][🖇patreon-img]][🖇patreon]
 
-Example:
+## 🔐 Security
 
-       context "the subject line must have the string 'foobarbaz'" do
-         subject { Mail.deliver(@message_hash) }
-         it { should be_subject("foobarbaz") }
-       end
-
-#### have_to_username matcher
-
-The `username` in the `:to` field is when the `:to` field is formatted like this:
-
-`"Peter Boling" <sanitize_email@example.org>`
-
-Example:
-
-       context "the to field must have the username 'Peter Boling'" do
-         subject { Mail.deliver(@message_hash) }
-         it { should have_to_username("Peter Boling") }
-       end
-
-#### have_sanitized_to_header matcher
-
-Matches any part of the value of the first sanitized to header (`"X-Sanitize-Email-To"`),
-which could be formatted like this:
-
-`"Peter Boling" <sanitize_email@example.org>`
-
-NOTE: It won't match subsequent headers like `"X-Sanitize-Email-To-2"`, or `"X-Sanitize-Email-To-3"`.
-
-Example:
-
-       context "the first 'X-Sanitize-Email-To' header must have the username 'Peter Boling'" do
-         subject { Mail.deliver(@message_hash) }
-         it { should have_sanitized_to_header("Peter Boling") }
-       end
-
-#### have_cc_username matcher
-
-The `username` in the `:cc` field is when the `:c` field is formatted like this:
-
-`"Peter Boling" <sanitize_email@example.org>`
-
-Example:
-
-       context "the cc field must have the username 'Peter Boling'" do
-         subject { Mail.deliver(@message_hash) }
-         it { should have_cc_username("Peter Boling") }
-       end
-
-#### have_sanitized_cc_header matcher
-
-Matches any part of the value of the first sanitized cc header (`"X-Sanitize-Email-Cc"`),
-which could be formatted like this:
-
-`"Peter Boling" <sanitize_email@example.org>`
-
-NOTE: It won't match subsequent headers like `"X-Sanitize-Email-Cc-2"`, or `"X-Sanitize-Email-Cc-3"`.
-
-Example:
-
-       context "the first 'X-Sanitize-Email-Cc' header must have the username 'Peter Boling'" do
-         subject { Mail.deliver(@message_hash) }
-         it { should have_sanitized_cc_header("Peter Boling") }
-       end
-
-### non-rspec (Test::Unit, mini-test, etc)
-
-In your setup file:
-
-       require "sanitize_email"
-       # test helpers are *not* loaded by default in sanitize_email, as it is not primarily a gem for test suites.
-       require "sanitize_email/test_helpers"
-
-       SanitizeEmail::Config.configure do |config|
-         config[:sanitized_to] = "sanitize_email@example.org"
-         config[:sanitized_cc] = "sanitize_email@example.org"
-         config[:sanitized_bcc] = "sanitize_email@example.org"
-         # run/call whatever logic should turn sanitize_email on and off in this Proc.
-         # config[:activation_proc] =      Proc.new { true }
-         # Since this configuration is *inside* the spec_helper, it might be assumed that we always want to sanitize.  If we don't want to it can be easily manipulated with SanitizeEmail.unsanitary and SanitizeEmail.sanitary block helpers.
-         # Thus instead of using the Proc (slower) we just engage it always:
-         config[:engage] = true
-         config[:use_actual_email_prepended_to_subject] = true         # or false
-         config[:use_actual_environment_prepended_to_subject] = true   # or false
-         config[:use_actual_email_as_sanitized_user_name] = true       # or false
-       end
-
-       # If your mail system is not one that sanitize_email automatically configures an interceptor for (ActionMailer, Mail)
-       # then you will need to do the equivalent for whatever Mail system you are using.
-
-       # You need to know what to do here... somehow get the methods into rhw scope of your tests.
-       # Something like this maybe?
-       include SanitizeEmail::TestHelpers
-       # Look here to see what it gives you:
-       # https://github.com/pboling/sanitize_email/blob/master/lib/sanitize_email/test_helpers.rb
-
-## Deprecations
-
-Sometimes things get deprecated (meaning they still work, but are noisy about it).  If this happens to you, and you like your head in the sand, call this number:
-
-       SanitizeEmail::Deprecation.deprecate_in_silence = true
-
-## Authors
-
-Peter Boling is the original author of the code, and current maintainer.
-
-Thanks to John Trupiano for turning Peter's original Rails plugin into the initial cut of this gem!
+See [SECURITY.md][🔐security].
 
 ## 🤝 Contributing
 
-See [CONTRIBUTING.md][🤝contributing]
+If you need some ideas of where to help, you could work on adding more code coverage,
+or if it is already 💯 (see [below](#code-coverage)) check [issues][🤝gh-issues] or [PRs][🤝gh-pulls],
+or use the gem and think about how it could be better.
 
-[🤝contributing]: CONTRIBUTING.md
+We [![Keep A Changelog][📗keep-changelog-img]][📗keep-changelog] so if you make changes, remember to update it.
 
-### You can help!
+See [CONTRIBUTING.md][🤝contributing] for more detailed instructions.
 
-Take a look at the `reek` list which is the file called `REEK` and start fixing things.
+### 🚀 Release Instructions
 
-To refresh the `reek` list:
-
-`bundle exec reek > REEK`
-
-Then follow these instructions:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Make some fixes.
-4. Commit your changes (`git commit -am 'Added some feature'`)
-5. Push to the branch (`git push origin my-new-feature`)
-6. Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-7. Create new Pull Request.
-
-## 🌈 Contributors
-
-[![Contributors][🌈contrib-rocks-img]][🐙hub-contrib]
-
-Contributor tiles (GitHub only) made with [contributors-img][🌈contrib-rocks].
-
-Learn more about, or become one of, our 🎖 contributors on:
-
-| Any                                 | Of                                    | These                               | DVCS                                |
-|-------------------------------------|---------------------------------------|-------------------------------------|-------------------------------------|
-| [🐙hub contributors][🐙hub-contrib] | [🧊berg contributors][🧊berg-contrib] | [🛖hut contributors][🛖hut-contrib] | [🧪lab contributors][🧪lab-contrib] |
-
-[comment]: <> ( DVCS CONTRIB LINKS )
-
-[🌈contrib-rocks]: https://contrib.rocks
-[🌈contrib-rocks-img]: https://contrib.rocks/image?repo=pboling/sanitize_email
-
-[🧊berg-contrib]: https://codeberg.org/pboling/sanitize_email/activity
-[🐙hub-contrib]: https://github.com/pboling/sanitize_email/graphs/contributors
-[🛖hut-contrib]: https://git.sr.ht/~galtzo/sanitize_email/log/
-[🧪lab-contrib]: https://gitlab.com/pboling/sanitize_email/-/graphs/main?ref_type=heads
-
-## Star History
-
-<a href="https://star-history.com/#pboling/sanitize_email&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date" />
- </picture>
-</a>
-
-## Running Specs
-
-The basic compatibility matrix:
-
-       appraisal install
-       appraisal rake test
-
-NOTE: `appraisal install` uses the standard Gemfile, and thus adds a bunch of gems
-we do not need in each of our appraisal gemfiles.
-
-Instead we can do one of:
-
-       BUNDLE_GEMFILE=gemfiles/vanilla.gemfile appraisal generate
-       BUNDLE_GEMFILE=gemfiles/vanilla.gemfile appraisal update
-
-NOTE: This results in bad paths to the gemspec from each of the appraisal `gemfiles/rails_*_*.gemfile` files.
-`gemspec path: "../../"` needs to be replaced with `gemspec path: "../"` in each Appraisal gemfile.
-
-It is unlikely to be possible to install all of the supported Rubies & Railsies in a single container...
-See the various github action workflows for more inspiration on running certain oldies.
+See [CONTRIBUTING.md][🤝contributing].
 
 ### Code Coverage
 
-[![Coverage Graph][🔑codecov-g]][🖇codecov]
+<details markdown="1">
+<summary>Coverage service badges</summary>
 
-[🔑codecov-g]: https://codecov.io/gh/pboling/sanitize_email/graphs/tree.svg?token=Joire8DbSW
+[![Coverage Graph][🏀codecov-g]][🏀codecov]
 
-## 🪇 Code of Conduct
+[![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls]
 
-Everyone interacting in this project's codebases, issue trackers,
-chat rooms and mailing lists is expected to follow the [code of conduct][🪇conduct].
+[![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov]
 
-[🪇conduct]: CODE_OF_CONDUCT.md
+</details>
+
+### 🪇 Code of Conduct
+
+Everyone interacting with this project's codebases, issue trackers,
+chat rooms and mailing lists agrees to follow the [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct].
+
+## 🌈 Contributors
+
+[![Contributors][🖐contributors-img]][🖐contributors]
+
+Made with [contributors-img][🖐contrib-rocks].
+
+Also see GitLab Contributors: [https://gitlab.com/pboling/sanitize_email/-/graphs/main][🚎contributors-gl]
+
+<details>
+ <summary>⭐️ Star History</summary>
+
+<a href="https://star-history.com/pboling/sanitize_email&Date">
+ <picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date&theme=dark" />
+ <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date" />
+ <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=pboling/sanitize_email&type=Date" />
+ </picture>
+</a>
+
+</details>
 
 ## 📌 Versioning
 
-This Library adheres to [Semantic Versioning 2.0.0][📌semver].
-Violations of this scheme should be reported as bugs.
-Specifically, if a minor or patch version is released that breaks backward compatibility,
-a new version should be immediately released that restores compatibility.
-Breaking changes to the public API will only be introduced with new major versions.
+This library follows [![Semantic Versioning 2.0.0][📌semver-img]][📌semver] for its public API where practical.
+For most applications, prefer the [Pessimistic Version Constraint][📌pvc] with two digits of precision.
+
+For example:
+
+```ruby
+spec.add_dependency("sanitize_email", "~> 2.0")
+```
+
+<details markdown="1">
+<summary>📌 Is "Platform Support" part of the public API? More details inside.</summary>
+
+Dropping support for a platform can be a breaking change for affected users.
+If a release changes supported platforms, it should be called out clearly in the changelog and versioned with that impact in mind.
 
 To get a better understanding of how SemVer is intended to work over a project's lifetime,
 read this article from the creator of SemVer:
 
 - ["Major Version Numbers are Not Sacred"][📌major-versions-not-sacred]
 
-As a result of this policy, you can (and should) specify a dependency on these libraries using
-the [Pessimistic Version Constraint][📌pvc] with two digits of precision.
+</details>
 
-For example:
-
-       spec.add_dependency("sanitize_email", "~> 2.0")
-
-[comment]: <> ( 📌 VERSIONING LINKS )
-
-[📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
-[📌semver]: http://semver.org/
-[📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
-
-## References
-
-* [Source Code](http://github.com/pboling/sanitize_email)
-* [Gem Release Announcement](http://blog.smartlogicsolutions.com/2009/04/25/reintroducing-sanitize_email-work-with-production-email-without-fear/)
-* [Peter's Original Writeup](http://galtzo.blogspot.com/2008/11/sanitize-email-never-worry-about.html)
-* [Using sanitize_email to Preview HTML Emails Locally](http://blog.smartlogicsolutions.com/2009/04/30/using-sanitize-email-to-preview-html-emails-locally/)
+See [CHANGELOG.md][📌changelog] for a list of releases.
 
 ## 📄 License
 
 The gem is available as open source under the terms of
-the [MIT License][📄license] [![License: MIT][📄license-img]][📄license-ref].
-See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright-notice-explainer].
-
-[comment]: <> ( 📄 LEGAL LINKS )
-
-[📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
-[📄license]: LICENSE.txt
-[📄license-ref]: https://opensource.org/licenses/MIT
-[📄license-img]: https://img.shields.io/badge/License-MIT-green.svg
+the [MIT](MIT.md) [![License: MIT][📄license-img]][📄license-ref].
 
 ### © Copyright
 
-* Copyright (c) 2009 [John Trupiano](http://smartlogicsolutions.com/wiki/John_Trupiano) of [SmartLogic Solutions, LLC](http://www.smartlogicsolutions.com)
-* Copyright (c) 2008 - 2018, 2020, 2022, 2024 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
+See [LICENSE.md][📄license] for the official copyright notice.
 
-[railsbling]: http://www.railsbling.com
-[peterboling]: http://www.peterboling.com
+<details markdown="1">
+<summary>Copyright holders</summary>
 
-## 🤑 One more thing
+- Copyright (c) 2008 Peter Boling
+- Copyright (c) 2009 John Trupiano
+- Copyright (c) 2009-2010 pboling
+- Copyright (c) 2009 Peter H. Boling
+- Copyright (c) 2012 David Morton
+- Copyright (c) 2012 Harry Lascelles
+- Copyright (c) 2012-2018, 2022, 2024, 2026 Peter Boling
+- Copyright (c) 2013 Adrien Siami
+- Copyright (c) 2013 Chris Altman
+- Copyright (c) 2014 Scott Rocher
+- Copyright (c) 2017 Marcus Ilgner
+- Copyright (c) 2018 Bernardo Galindo
+- Copyright (c) 2024-2025 joeyparis
 
-You made it to the bottom of the page,
-so perhaps you'll indulge me for another 20 seconds.
-I maintain many dozens of gems, including this one,
-because I want Ruby to be a great place for people to solve problems, big and small.
-Please consider supporting my efforts via the giant yellow link below,
-or one of the others at the head of this README.
+</details>
 
-[![Buy me a latte][🖇buyme-img]][🖇buyme]
+## 🤑 A request for help
 
+Maintainers have teeth and need to pay their dentists.
+After getting laid off in an RIF in March, and encountering difficulty finding a new one,
+I began spending most of my time building open source tools.
+I'm hoping to be able to pay for my kids' health insurance this month,
+so if you value the work I am doing, I need your support.
+Please consider sponsoring me or the project.
+
+To join the community or get help 👇️ Join the Discord.
+
+[![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite]
+
+To say "thanks!" ☝️ Join the Discord or 👇️ send money.
+
+[![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal]
+
+### Please give the project a star ⭐ ♥.
+
+Thanks for RTFM. ☺️
+
+[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&color=a51611&style=flat
+[⛳liberapay-bottom-img]: https://img.shields.io/liberapay/goal/pboling.svg?style=for-the-badge&logo=liberapay&color=a51611
+[⛳liberapay]: https://liberapay.com/pboling/donate
+[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
+[🖇sponsor-bottom-img]: https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&logo=github
+[🖇sponsor]: https://github.com/sponsors/pboling
+[🖇polar-img]: https://img.shields.io/badge/polar-donate-a51611.svg?style=flat
+[🖇polar]: https://polar.sh/pboling
+[🖇kofi-img]: https://img.shields.io/badge/ko--fi-%E2%9C%93-a51611.svg?style=flat
+[🖇kofi]: https://ko-fi.com/pboling
+[🖇patreon-img]: https://img.shields.io/badge/patreon-donate-a51611.svg?style=flat
+[🖇patreon]: https://patreon.com/galtzo
+[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-a51611.svg?style=flat
 [🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
 [🖇buyme]: https://www.buymeacoffee.com/pboling
+[🖇paypal-img]: https://img.shields.io/badge/donate-paypal-a51611.svg?style=flat&logo=paypal
+[🖇paypal-bottom-img]: https://img.shields.io/badge/donate-paypal-a51611.svg?style=for-the-badge&logo=paypal&color=0A0A0A
+[🖇paypal]: https://www.paypal.com/paypalme/peterboling
+[🖇floss-funding.dev]: https://floss-funding.dev
+[🖇floss-funding-gem]: https://github.com/galtzo-floss/floss_funding
+[✉️discord-invite]: https://discord.gg/3qme4XHNKN
+[✉️discord-invite-img-ftb]: https://img.shields.io/discord/1373797679469170758?style=for-the-badge&logo=discord
+[✉️ruby-friends-img]: https://img.shields.io/badge/daily.dev-%F0%9F%92%8E_Ruby_Friends-0A0A0A?style=for-the-badge&logo=dailydotdev&logoColor=white
+[✉️ruby-friends]: https://app.daily.dev/squads/rubyfriends
+
+[✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
+[⛳️gem-namespace]: https://github.com/pboling/sanitize_email/tree/main/gems/sanitize_email
+[⛳️namespace-img]: https://img.shields.io/badge/namespace-SanitizeEmail-3C2D2D.svg?style=square&logo=ruby&logoColor=white
+[⛳️gem-name]: https://bestgems.org/gems/sanitize_email
+[⛳️name-img]: https://img.shields.io/badge/name-sanitize__email-3C2D2D.svg?style=square&logo=rubygems&logoColor=red
+[⛳️tag-img]: https://img.shields.io/github/tag/pboling/sanitize_email.svg
+[⛳️tag]: https://github.com/pboling/sanitize_email/releases
+[🚂maint-blog]: http://www.railsbling.com/tags/sanitize_email
+[🚂maint-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
+[🚂maint-contact]: http://www.railsbling.com/contact
+[🚂maint-contact-img]: https://img.shields.io/badge/Contact-Maintainer-0093D0.svg?style=flat&logo=rubyonrails&logoColor=red
+[💖🖇linkedin]: http://www.linkedin.com/in/peterboling
+[💖🖇linkedin-img]: https://img.shields.io/badge/LinkedIn-Profile-0B66C2?style=flat&logo=newjapanprowrestling
+[💖✌️wellfound]: https://wellfound.com/u/peter-boling
+[💖✌️wellfound-img]: https://img.shields.io/badge/peter--boling-orange?style=flat&logo=wellfound
+[💖💲crunchbase]: https://www.crunchbase.com/person/peter-boling
+[💖💲crunchbase-img]: https://img.shields.io/badge/peter--boling-purple?style=flat&logo=crunchbase
+[💖🐘ruby-mast]: https://ruby.social/@galtzo
+[💖🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https://ruby.social&style=flat&logo=mastodon&label=Ruby%20@galtzo
+[💖🦋bluesky]: https://bsky.app/profile/galtzo.com
+[💖🦋bluesky-img]: https://img.shields.io/badge/@galtzo.com-0285FF?style=flat&logo=bluesky&logoColor=white
+[💖🌳linktree]: https://linktr.ee/galtzo
+[💖🌳linktree-img]: https://img.shields.io/badge/galtzo-purple?style=flat&logo=linktree
+[💖💁🏼‍♂️devto]: https://dev.to/galtzo
+[💖💁🏼‍♂️devto-img]: https://img.shields.io/badge/dev.to-0A0A0A?style=flat&logo=devdotto&logoColor=white
+[💖💁🏼‍♂️aboutme]: https://about.me/peter.boling
+[💖💁🏼‍♂️aboutme-img]: https://img.shields.io/badge/about.me-0A0A0A?style=flat&logo=aboutme&logoColor=white
+[💖🧊berg]: https://codeberg.org/pboling
+[💖🐙hub]: https://github.org/pboling
+[💖🛖hut]: https://sr.ht/~galtzo/
+[💖🧪lab]: https://gitlab.com/pboling
+[👨🏼‍🏫expsup-upwork]: https://www.upwork.com/freelancers/~014942e9b056abdf86?mp_source=share
+[👨🏼‍🏫expsup-upwork-img]: https://img.shields.io/badge/UpWork-13544E?style=for-the-badge&logo=Upwork&logoColor=white
+[👨🏼‍🏫expsup-codementor]: https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github
+[👨🏼‍🏫expsup-codementor-img]: https://img.shields.io/badge/CodeMentor-Get_Help-1abc9c?style=for-the-badge&logo=CodeMentor&logoColor=white
+[🏙️entsup-tidelift]: https://tidelift.com/subscription/pkg/rubygems-sanitize_email?utm_source=rubygems-sanitize_email&utm_medium=referral&utm_campaign=readme
+[🏙️entsup-tidelift-img]: https://img.shields.io/badge/Tidelift_and_Sonar-Enterprise_Support-FD3456?style=for-the-badge&logo=sonar&logoColor=white
+[🏙️entsup-tidelift-sonar]: https://blog.tidelift.com/tidelift-joins-sonar
+[💁🏼‍♂️peterboling]: http://www.peterboling.com
+[🚂railsbling]: http://www.railsbling.com
+[📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
+[📜src-gl]: https://gitlab.com/pboling/sanitize_email/-/tree/main/gems/sanitize_email
+[📜src-cb-img]: https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&logo=CodeBerg&logoColor=blue
+[📜src-cb]: https://codeberg.org/pboling/sanitize_email/src/branch/main/gems/sanitize_email
+[📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
+[📜src-gh]: https://github.com/pboling/sanitize_email/tree/main/gems/sanitize_email
+[📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
+[📜docs-head-rd-img]: https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
+[📜gl-wiki]: https://gitlab.com/pboling/sanitize_email/-/wikis/home
+[📜gh-wiki]: https://github.com/pboling/sanitize_email/wiki
+[📜gl-wiki-img]: https://img.shields.io/badge/wiki-gitlab-943CD2.svg?style=for-the-badge&logo=gitlab&logoColor=white
+[📜gh-wiki-img]: https://img.shields.io/badge/wiki-github-943CD2.svg?style=for-the-badge&logo=github&logoColor=white
+[👽dl-rank]: https://bestgems.org/gems/sanitize_email
+[👽dl-ranki]: https://img.shields.io/gem/rd/sanitize_email.svg
+[👽version]: https://bestgems.org/gems/sanitize_email
+[👽versioni]: https://img.shields.io/gem/v/sanitize_email.svg
+[🏀qlty-mnt]: https://qlty.sh/gh/pboling/projects/sanitize_email
+[🏀qlty-mnti]: https://qlty.sh/gh/pboling/projects/sanitize_email/maintainability.svg
+[🏀qlty-cov]: https://qlty.sh/gh/pboling/projects/sanitize_email/metrics/code?sort=coverageRating
+[🏀qlty-covi]: https://qlty.sh/gh/pboling/projects/sanitize_email/coverage.svg
+[🏀codecov]: https://codecov.io/gh/pboling/sanitize_email
+[🏀codecovi]: https://codecov.io/gh/pboling/sanitize_email/graph/badge.svg
+[🏀coveralls]: https://coveralls.io/github/pboling/sanitize_email?branch=main
+[🏀coveralls-img]: https://coveralls.io/repos/github/pboling/sanitize_email/badge.svg?branch=main
+[🖐codeQL]: https://github.com/pboling/sanitize_email/security/code-scanning
+[🖐codeQL-img]: https://github.com/pboling/sanitize_email/actions/workflows/codeql-analysis.yml/badge.svg
+[🚎ruby-2.4-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-2.4.yml
+[🚎ruby-2.5-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-2.5.yml
+[🚎ruby-2.6-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-2.6.yml
+[🚎ruby-2.7-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-2.7.yml
+[🚎ruby-3.0-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.0.yml
+[🚎ruby-3.1-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.1.yml
+[🚎ruby-3.2-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.2.yml
+[🚎ruby-3.3-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.3.yml
+[🚎ruby-3.4-wf]: https://github.com/pboling/sanitize_email/actions/workflows/ruby-3.4.yml
+[🚎jruby-9.2-wf]: https://github.com/pboling/sanitize_email/actions/workflows/jruby-9.2.yml
+[🚎jruby-9.3-wf]: https://github.com/pboling/sanitize_email/actions/workflows/jruby-9.3.yml
+[🚎jruby-9.4-wf]: https://github.com/pboling/sanitize_email/actions/workflows/jruby-9.4.yml
+[🚎truby-22.3-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-22.3.yml
+[🚎truby-23.0-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-23.0.yml
+[🚎truby-23.1-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-23.1.yml
+[🚎truby-24.2-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-24.2.yml
+[🚎truby-25.0-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffleruby-25.0.yml
+[🚎2-cov-wf]: https://github.com/pboling/sanitize_email/actions/workflows/coverage.yml
+[🚎2-cov-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/coverage.yml/badge.svg
+[🚎3-hd-wf]: https://github.com/pboling/sanitize_email/actions/workflows/heads.yml
+[🚎3-hd-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/heads.yml/badge.svg
+[🚎5-st-wf]: https://github.com/pboling/sanitize_email/actions/workflows/style.yml
+[🚎5-st-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/style.yml/badge.svg
+[🚎9-t-wf]: https://github.com/pboling/sanitize_email/actions/workflows/truffle.yml
+[🚎9-t-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/truffle.yml/badge.svg
+[🚎10-j-wf]: https://github.com/pboling/sanitize_email/actions/workflows/jruby.yml
+[🚎10-j-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/jruby.yml/badge.svg
+[🚎11-c-wf]: https://github.com/pboling/sanitize_email/actions/workflows/current.yml
+[🚎11-c-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/current.yml/badge.svg
+[🚎12-crh-wf]: https://github.com/pboling/sanitize_email/actions/workflows/dep-heads.yml
+[🚎12-crh-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/dep-heads.yml/badge.svg
+[🚎13-🔒️-wf]: https://github.com/pboling/sanitize_email/actions/workflows/locked_deps.yml
+[🚎13-🔒️-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/locked_deps.yml/badge.svg
+[🚎14-🔓️-wf]: https://github.com/pboling/sanitize_email/actions/workflows/unlocked_deps.yml
+[🚎14-🔓️-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/unlocked_deps.yml/badge.svg
+[🚎15-🪪-wf]: https://github.com/pboling/sanitize_email/actions/workflows/license-eye.yml
+[🚎15-🪪-wfi]: https://github.com/pboling/sanitize_email/actions/workflows/license-eye.yml/badge.svg
+[💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-2.5i]: https://img.shields.io/badge/Ruby-2.5-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-2.6i]: https://img.shields.io/badge/Ruby-2.6-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-2.7i]: https://img.shields.io/badge/Ruby-2.7-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-3.0i]: https://img.shields.io/badge/Ruby-3.0-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-3.1i]: https://img.shields.io/badge/Ruby-3.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-3.2i]: https://img.shields.io/badge/Ruby-3.2-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-3.3i]: https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-3.4i]: https://img.shields.io/badge/Ruby-3.4-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-4.0i]: https://img.shields.io/badge/Ruby-4.0-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-c-i]: https://img.shields.io/badge/Ruby-current-CC342D?style=for-the-badge&logo=ruby&logoColor=green
+[💎ruby-headi]: https://img.shields.io/badge/Ruby-HEAD-CC342D?style=for-the-badge&logo=ruby&logoColor=blue
+[💎truby-22.3i]: https://img.shields.io/badge/Truffle_Ruby-22.3-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-23.0i]: https://img.shields.io/badge/Truffle_Ruby-23.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-23.1i]: https://img.shields.io/badge/Truffle_Ruby-23.1-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-24.2i]: https://img.shields.io/badge/Truffle_Ruby-24.2-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-25.0i]: https://img.shields.io/badge/Truffle_Ruby-25.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-c-i]: https://img.shields.io/badge/Truffle_Ruby-current-34BCB1?style=for-the-badge&logo=ruby&logoColor=green
+[💎jruby-9.2i]: https://img.shields.io/badge/JRuby-9.2-FBE742?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-9.3i]: https://img.shields.io/badge/JRuby-9.3-FBE742?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
+[💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
+[🤝gh-issues]: https://github.com/pboling/sanitize_email/issues
+[🤝gh-pulls]: https://github.com/pboling/sanitize_email/pulls
+[🤝gl-issues]: https://gitlab.com/pboling/sanitize_email/-/issues
+[🤝gl-pulls]: https://gitlab.com/pboling/sanitize_email/-/merge_requests
+[🤝cb-issues]: https://codeberg.org/pboling/sanitize_email/issues
+[🤝cb-pulls]: https://codeberg.org/pboling/sanitize_email/pulls
+[🤝cb-donate]: https://donate.codeberg.org/
+[🤝contributing]: https://github.com/pboling/sanitize_email/blob/main/CONTRIBUTING.md
+[🏀codecov-g]: https://codecov.io/gh/pboling/sanitize_email/graph/badge.svg
+[🖐contrib-rocks]: https://contrib.rocks
+[🖐contributors]: https://github.com/pboling/sanitize_email/graphs/contributors
+[🖐contributors-img]: https://contrib.rocks/image?repo=pboling/sanitize_email
+[🚎contributors-gl]: https://gitlab.com/pboling/sanitize_email/-/graphs/main
+[🪇conduct]: https://github.com/pboling/sanitize_email/blob/main/CODE_OF_CONDUCT.md
+[🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg
+[📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
+[📌semver]: https://semver.org/spec/v2.0.0.html
+[📌semver-img]: https://img.shields.io/badge/semver-2.0.0-259D6C.svg?style=flat
+[📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
+[📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
+[📌changelog]: https://github.com/pboling/sanitize_email/blob/main/CHANGELOG.md
+[📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
+[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-34495e.svg?style=flat
+[📌gitmoji]: https://gitmoji.dev
+[📌gitmoji-img]: https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square
+[🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.274-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🔐security]: https://github.com/pboling/sanitize_email/blob/main/SECURITY.md
+[🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
+[📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
+[📄license]: LICENSE.md
+[📄license-ref]: MIT.md
+[📄license-img]: https://img.shields.io/badge/License-MIT-259D6C.svg
+[📄license-compat]: https://www.apache.org/legal/resolved.html#category-a
+[📄license-compat-img]: https://img.shields.io/badge/Apache_Compatible:_Category_A-✓-259D6C.svg?style=flat&logo=Apache
+
+[📄ilo-declaration]: https://www.ilo.org/declaration/lang--en/index.htm
+[📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-259D6C.svg?style=flat
+[🚎yard-current]: http://rubydoc.info/gems/sanitize_email
+[🚎yard-head]: https://sanitize-email.galtzo.com
+[💎stone_checksums]: https://github.com/galtzo-floss/stone_checksums
+[💎SHA_checksums]: https://gitlab.com/pboling/sanitize_email/-/tree/main/checksums
+[💎rlts]: https://github.com/rubocop-lts/rubocop-lts
+[💎rlts-img]: https://img.shields.io/badge/code_style_&_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white
+[💎appraisal2]: https://github.com/appraisal-rb/appraisal2
+[💎appraisal2-img]: https://img.shields.io/badge/appraised_by-appraisal2-34495e.svg?plastic&logo=ruby&logoColor=white
+[💎d-in-dvcs]: https://railsbling.com/posts/dvcs/put_the_d_in_dvcs/
+
+<!-- kettle-jem:metadata:start -->
+| Field | Value |
+|---|---|
+| Package | sanitize_email |
+| Description | Email Condom for your Ruby Server.<br>In Rails, Sinatra, et al, or simply the mail gem: Aids in development, testing, qa, and production troubleshooting of email issues without worrying that emails will get sent to actual live addresses. |
+| Homepage | https://github.com/pboling/sanitize_email |
+| Source | https://github.com/pboling/sanitize_email/tree/v2.0.10 |
+| License | `MIT` |
+| Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/gh/pboling, https://tidelift.com/funding/github/rubygems/sanitize_email, https://www.buymeacoffee.com/pboling |
+<!-- kettle-jem:metadata:end -->

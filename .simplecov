@@ -1,6 +1,9 @@
 require "kettle/soup/cover/config"
 
 SimpleCov.start do
+  track_files "lib/**/*.rb"
+  track_files "lib/**/*.rake"
+  track_files "exe/*.rb"
   add_filter "lib/sanitize_email/mail_ext" # For RSpec Matchers / Testing, not runtime
   add_filter "lib/sanitize_email/rspec_matchers" # For RSpec Matchers / Testing, not runtime
   add_filter "lib/sanitize_email/test_helpers" # For RSpec Matchers / Testing, not runtime

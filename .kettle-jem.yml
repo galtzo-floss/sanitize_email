@@ -84,7 +84,7 @@
 # Set this to a single emoji that represents your gem. Examples: 🪙 🔑 🛠️ 🔮
 # This key is REQUIRED. kettle-jem will abort if it is absent.
 # ENV override: KJ_PROJECT_EMOJI
-project_emoji: "📧"
+project_emoji: 📧
 
 # Engines this project supports.
 # List the Ruby engines that your gem targets. kettle-jem uses this to decide
@@ -97,6 +97,68 @@ engines:
   - ruby
   - jruby
   - truffleruby
+# Ruby version policy.
+ruby:
+  # Lowest MRI Ruby version for generated CI workflows, Appraisals, and
+  # test/development dependency assumptions. This is intentionally separate
+  # from the gemspec required_ruby_version, which describes the published
+  # runtime contract. Effective CI minimum is max(gemspec minimum, this value).
+  test_minimum: "2.4"
+# RubyGems packaging/runtime shape.
+rubygems:
+  # Published runtime Ruby floor used for generated gemspec metadata and README
+  # compatibility text. Omit this to derive the value from the gemspec.
+  min_ruby: "2.3.0"
+# Repository URL topology.
+# This is independent from templates.profile. A gem may use the full template
+# while still living as a sub-project inside a monorepo.
+#
+# Supported values:
+#   standalone          - project URLs point at this gem's own repository
+#   monorepo-subproject - project URLs point at a subdirectory in the repository root
+#
+# ENV override: KJ_REPOSITORY_TOPOLOGY
+repository:
+  topology: "monorepo-subproject"
+# Framework matrix workflows.
+# When your gem tests against multiple versions of a framework (Rails,
+# ActiveRecord, ActiveSupport, etc.), this section configures how
+# kettle-jem generates the CI matrix strategy and gemfile references.
+#
+# preset: controls overall workflow strategy
+#   modern       — Ruby-only matrix (default when absent)
+#   framework    — Ruby × framework-version matrix
+#   legacy-compat — supported / unsupported / ancient workflow split
+#
+# framework_matrix (only used when preset: framework):
+#   dimension   — framework name used in the matrix key and display
+#                 (e.g. activerecord, rails, actionmailer)
+#   gem         — gem name to write into generated framework gemfiles.
+#                 Defaults to dimension when absent.
+#   versions    — ordered list of versions to test against. Entries may be
+#                 strings, or mappings with:
+#                   label       - display value used in CI
+#                   slug        - path-safe value used in gemfile_pattern
+#                   requirement - Bundler requirement written to the gemfile
+#   gemfile_pattern — pattern for gemfile paths; {version} is replaced
+#                     with each version slug (dots replaced by underscores
+#                     when the pattern contains an underscore placeholder).
+#                     Resolved relative to gemfiles/ unless it already contains
+#                     a directory.
+#                     Examples:
+#                       "ar-{version}.x"      → gemfiles/ar-7.0.x
+#                       "rails_{version}"      → gemfiles/rails_7_0.gemfile
+#   Use this when you need a simple 2D matrix: Ruby × one framework gem/version axis.
+#   For deeper or more complex matrices that are better modeled as Appraisals entries,
+#   prefer kettle-jem-appraisals instead.
+#
+workflows:
+  # Default command used by generated test workflows.
+  # ENV override: KJ_EXEC_CMD
+  exec_cmd: kettle-test
+  # Include VCR/WebMock recording modular gemfiles in generated Appraisals.
+  # Enable only for projects that actually require recording support.
+  recording: false
 
 # Framework matrix workflows.
 # When your gem tests against multiple versions of a framework (Rails,
@@ -131,13 +193,61 @@ engines:
 #       - "8.0"
 #     gemfile_pattern: "ar-{version}.x"
 
-# README top logo mode.
-# Controls whether the generated README header includes the GitHub org logo,
-# the project logo, or both after the shared Galtzo and ruby-lang logos.
-# Supported values: org, project, org_and_project
-# Default (when key is absent): org_and_project
+# README top logos.
+# Comma-separated list of optional logo entries for the generated README header.
+# Supported values: related-org, ruby, org, project
+# Default (when key is absent): related-org,ruby,org,project
+# Legacy top_logo_mode values map as:
+#   org => related-org,ruby,org
+#   project => related-org,ruby,project
+#   org_and_project => related-org,ruby,org,project
 readme:
-  top_logo_mode: org
+  top_logos: related-org,ruby,org
+  # Optional package-family README block.
+  # Supported values: structuredmerge
+  # Leave unset for standalone kettle-rb gems and most projects.
+  # package_family: structuredmerge
+  # Sections to preserve from the destination README during template merging.
+  # These section headings (case-insensitive) will keep the destination body
+  # instead of being overwritten by the template. Default when absent:
+  #   - synopsis
+  #   - configuration
+  #   - basic usage
+  #
+  # Built-in aliases (destination → template):
+  #   summary → synopsis, usage → basic usage,
+  #   configuration options → configuration, setup → basic usage
+  #
+  # preserve_sections:
+  #   - synopsis
+  #   - configuration
+  #   - basic usage
+  #   - usage
+  #   - summary
+  #
+  # Glob patterns for additional sections to preserve (e.g. Note:* headings).
+  # Default when absent: ["note:*"]
+  #
+  # preserve_patterns:
+  #   - "note:*"
+  #   - "setup*"
+  #
+  # Custom section aliases (destination heading → canonical template heading).
+  # Merged with built-in aliases above.
+  #
+  # section_aliases:
+  #   howto: basic usage
+  #   options: configuration
+  # README badges managed by the template.
+  badges:
+    # FOSSA license/security status badge.
+    # false - omit the badge (default)
+    # true  - derive project id from the GitHub repository slug
+    # string or mapping project/project_id/slug - explicit FOSSA project id
+    #
+    # Example:
+    # fossa: git+github.com/pboling/example
+    fossa: false
   # Sections to preserve from the destination README during template merging.
   # These section headings (case-insensitive) will keep the destination body
   # instead of being overwritten by the template. Default when absent:
@@ -191,6 +301,20 @@ readme:
 #     are all present, a use-case guide table is added to README and LICENSE.md.
 licenses:
   - MIT
+# Apache SkyWalking Eyes dependency license overrides.
+# Use these when license-eye cannot identify a dependency license from the
+# package metadata or gem contents. Entries render under
+# dependency.licenses in .licenserc.yaml.
+#
+# Supported fields:
+#   name    - dependency name exactly as reported by license-eye
+#   license - SPDX license identifier to assign
+#   version - optional dependency version for a narrower override
+license_eye:
+  dependency_licenses:
+    - name: simplecov-rcov
+      version: 0.3.7
+      license: MIT
 
 # Machine / automation accounts to exclude from generated copyright output.
 #
@@ -212,6 +336,58 @@ machine_users:
 # Divergence is currently measured as the percent of produced files that would
 # change or be added during templating (100 - unchanged-file score).
 min_divergence_threshold:
+# Hostname used for generated YARD documentation links.
+# Defaults to <gem-name>.<author-email-domain>.
+# ENV override: KJ_YARD_HOST
+yard_host: "sanitize-email.galtzo.com"
+# Full URL used for gemspec metadata["homepage_uri"].
+# Defaults to https://sanitize-email.galtzo.com.
+# ENV override: KJ_HOMEPAGE_URI
+homepage_uri: "https://sanitize-email.galtzo.com"
+# Template source inventory.
+# The packaged inventory is the canonical kettle-jem project template. It
+# includes the detailed GitHub Actions workflow set, modular gemfiles,
+# README badges, license files, config files, and support scripts.
+templates:
+  root: packaged
+  apply: true
+  # Template recipe profile.
+  # Supported values:
+  #   full            - full gem template
+  #   monorepo-subgem - smaller sub-project template
+  #   monorepo-root   - repository-root support template
+  #
+  # ENV override: KETTLE_JEM_TEMPLATE_PROFILE
+  profile: "full"
+# Optional kettle-jem plugins.
+# Each entry is a gem name. During bootstrap, kettle-jem ensures each plugin is
+# added as a development dependency so it is available after bin/setup.
+# During bundled templating, kettle-jem requires the plugin and calls
+# `register_kettle_jem_plugin(registrar)` on its top-level handle.
+#
+# Phase callback names currently available:
+#   - config_sync
+#   - dev_container
+#   - github_workflows
+#   - quality_config
+#   - modular_gemfiles
+#   - spec_helper
+#   - environment_templates
+#   - remaining_files
+#   - git_hooks
+#   - license_files
+#   - duplicate_check
+#
+# Phase guarantees:
+#   - All plugin callbacks run during the bundled templating phase, after
+#     bin/setup and bundle install have completed.
+#   - kettle-jem, kettle-dev, and any plugin gems listed here are loadable.
+#   - kettle-jem's parser / merger runtime is available to callbacks.
+#   - `remaining_files` runs after the destination Rakefile, gemspec, README,
+#     and most template-managed files already exist on disk.
+#   - `duplicate_check` runs last, after all template writes are complete.
+plugins:
+  - kettle-drift
 
 # Default merge options
 defaults:
@@ -245,6 +421,7 @@ tokens:
     orcid: "0009-0008-8519-441X"                                # ORCID identifier only, not the full URL. Example: 0000-0001-2345-6789. ENV: KJ_AUTHOR_ORCID
 
   funding:
+    open_collective: "galtzo-floss" # Open Collective slug, true to enable with ENV/.opencollective.yml, false to disable. ENV: OPENCOLLECTIVE_HANDLE or FUNDING_ORG
     patreon: "galtzo"        # Patreon account slug only. Used as https://patreon.com/<value>. ENV: KJ_FUNDING_PATREON
     kofi: "pboling"           # Ko-fi handle/slug only. Used as https://ko-fi.com/<value>. ENV: KJ_FUNDING_KOFI
     paypal: "peterboling"         # PayPal.Me slug only. Used as https://www.paypal.com/paypalme/<value>. ENV: KJ_FUNDING_PAYPAL
@@ -267,8 +444,17 @@ patterns:
 # Per-file configuration (nested directory structure)
 # Only files that need overrides belong here. Everything else defaults to merge.
 files:
+  .rspec:
+    strategy: keep_destination
   AGENTS.md:
     strategy: accept_template
+  Appraisal.root.gemfile:
+    strategy: accept_template
+  Rakefile:
+    strategy: accept_template
+  .github:
+    copilot_instructions.md:
+      strategy: accept_template
   gemfiles:
     modular:
       templating.gemfile:

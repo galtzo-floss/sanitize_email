@@ -2,6 +2,10 @@ RSpec.describe Rails do
   let(:expected_rails_version) { ENV.fetch("RAILS_MAJOR_MINOR", nil) }
   let(:actual_rails_version) { "#{described_class::VERSION::MAJOR}.#{described_class::VERSION::MINOR}" }
 
+  before do
+    sanitize_spec_dryer
+  end
+
   env_rails_version = ENV.fetch("RAILS_MAJOR_MINOR", nil)
   desc_rails_version = "#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}"
   if env_rails_version.nil?

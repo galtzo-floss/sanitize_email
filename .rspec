@@ -1,3 +1,9 @@
---color
 --format progress
+--color
+--order random
 --require rails_helper
+--warnings
+--format html
+--out results/test_results.html
+--format RspecJunitFormatter
+--out results/test_results.xml

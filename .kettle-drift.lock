@@ -1,0 +1,273 @@
+{
+  "#                       \"ar-{version}.x\"      → gemfiles/ar-7.0.x\n#                       \"rails_{version}\"      → gemfiles/rails_7_0.gemfile": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        149,
+        182
+      ]
+    }
+  ],
+  "#                     Examples:\n#                       \"ar-{version}.x\"      → gemfiles/ar-7.0.x": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        148,
+        181
+      ]
+    }
+  ],
+  "#   - \"note:*\"\n#   - \"setup*\"": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        232,
+        273
+      ]
+    }
+  ],
+  "#   - basic usage\n#   - usage": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        224,
+        265
+      ]
+    }
+  ],
+  "#   - usage\n#   - summary": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        225,
+        266
+      ]
+    }
+  ],
+  "#   dimension   — framework name used in the matrix key and display\n#                 (e.g. activerecord, rails, actionmailer)": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        134,
+        174
+      ]
+    }
+  ],
+  "#   framework    — Ruby × framework-version matrix\n#   legacy-compat — supported / unsupported / ancient workflow split": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        130,
+        170
+      ]
+    }
+  ],
+  "#   howto: basic usage\n#   options: configuration": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        239,
+        280
+      ]
+    }
+  ],
+  "#   modern       — Ruby-only matrix (default when absent)\n#   framework    — Ruby × framework-version matrix": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        129,
+        169
+      ]
+    }
+  ],
+  "#   summary → synopsis, usage → basic usage,\n#   configuration options → configuration, setup → basic usage": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        218,
+        259
+      ]
+    }
+  ],
+  "# ActiveRecord, ActiveSupport, etc.), this section configures how\n# kettle-jem generates the CI matrix strategy and gemfile references.": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        125,
+        165
+      ]
+    }
+  ],
+  "# Built-in aliases (destination → template):\n#   summary → synopsis, usage → basic usage,": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        217,
+        258
+      ]
+    }
+  ],
+  "# Custom section aliases (destination heading → canonical template heading).\n# Merged with built-in aliases above.": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        235,
+        276
+      ]
+    }
+  ],
+  "# Framework matrix workflows.\n# When your gem tests against multiple versions of a framework (Rails,": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        123,
+        163
+      ]
+    }
+  ],
+  "# Glob patterns for additional sections to preserve (e.g. Note:* headings).\n# Default when absent: [\"note:*\"]": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        228,
+        269
+      ]
+    }
+  ],
+  "# Sections to preserve from the destination README during template merging.\n# These section headings (case-insensitive) will keep the destination body": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        210,
+        251
+      ]
+    }
+  ],
+  "# These section headings (case-insensitive) will keep the destination body\n# instead of being overwritten by the template. Default when absent:": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        211,
+        252
+      ]
+    }
+  ],
+  "# When your gem tests against multiple versions of a framework (Rails,\n# ActiveRecord, ActiveSupport, etc.), this section configures how": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        124,
+        164
+      ]
+    }
+  ],
+  "# framework_matrix (only used when preset: framework):\n#   dimension   — framework name used in the matrix key and display": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        133,
+        173
+      ]
+    }
+  ],
+  "# instead of being overwritten by the template. Default when absent:\n#   - synopsis": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        212,
+        253
+      ]
+    }
+  ],
+  "# preserve_patterns:\n#   - \"note:*\"": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        231,
+        272
+      ]
+    }
+  ],
+  "# preserve_sections:\n#   - synopsis": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        221,
+        262
+      ]
+    }
+  ],
+  "# preset: controls overall workflow strategy\n#   modern       — Ruby-only matrix (default when absent)": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        128,
+        168
+      ]
+    }
+  ],
+  "# section_aliases:\n#   howto: basic usage": [
+    {
+      "file": ".kettle-jem.yml",
+      "lines": [
+        238,
+        279
+      ]
+    }
+  ],
+  "appraisal: \"dep-heads\"\nexec_cmd: \"kettle-test\"": [
+    {
+      "file": ".github/workflows/dep-heads.yml",
+      "lines": [
+        44,
+        51,
+        58
+      ]
+    }
+  ],
+  "appraisal: \"head\"\nexec_cmd: \"kettle-test\"": [
+    {
+      "file": ".github/workflows/heads.yml",
+      "lines": [
+        43,
+        50,
+        57
+      ]
+    }
+  ],
+  "exec_cmd: \"kettle-test\"\nrubygems: default": [
+    {
+      "file": ".github/workflows/dep-heads.yml",
+      "lines": [
+        52,
+        59
+      ]
+    },
+    {
+      "file": ".github/workflows/heads.yml",
+      "lines": [
+        44,
+        51,
+        58
+      ]
+    }
+  ],
+  "gem \"json\", \">= 1.7.7\", \"~> 1.7\"\n#   gem \"rspec-rails\", \"~> 3.0\" # For Rails 4": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        158,
+        169
+      ]
+    }
+  ],
+  "gem \"nokogiri\"\n#   gem \"rspec-rails\", \"~> 4.0\" # For Rails 5.0 & 5.1": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        190,
+        200
+      ]
+    }
+  ]
+}

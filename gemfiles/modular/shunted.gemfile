@@ -1,0 +1,4 @@
+# <<kettle-jem:generated>> do not edit below this line
+gem "json", ">= 1.7.7" # ruby >= 2.7
+gem "rdoc", ">= 3" # ruby >= 2.6.0
+# <</kettle-jem:generated>>

@@ -24,6 +24,7 @@ module SanitizeEmail
   # This gem must be loaded **after** Rails in order for the Engine/Railtie to register itself automatically.
   # Otherwise, you'd have to manually require what you need from below.
   # Allow non-rails implementations to use this gem
+  # :nocov:
   if defined?(::Rails::VERSION)
     if defined?(::Rails::Engine)
       if ::Rails::VERSION::MAJOR >= 6
@@ -52,6 +53,7 @@ module SanitizeEmail
       warn "SanitizeEmail was unable to detect a compatible Mail class to register an interceptor on."
     end
   end
+  # :nocov:
 
   class << self
     extend SanitizeEmail::Deprecation

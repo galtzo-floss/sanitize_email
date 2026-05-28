@@ -1,0 +1,6 @@
+module SanitizeEmail
+  module Version
+    VERSION: String
+  end
+  VERSION: String
+end

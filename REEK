@@ -1,81 +1,16 @@
-spec/sanitize_email_spec.rb -- 12 warnings:
-  [61, 61]:DuplicateMethodCall: configure_from_options calls 'options[:force_sanitize]' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [59, 59]:DuplicateMethodCall: configure_from_options calls 'options[:local_environments]' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [60, 60]:DuplicateMethodCall: configure_from_options calls 'options[:sanitized_recipients]' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [67, 73, 74, 76, 77, 78, 79]:FeatureEnvy: funky_config refers to 'config' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Feature-Envy.md]
-  [61]:NilCheck: configure_from_options performs a nil-check [https://github.com/troessner/reek/blob/v6.3.0/docs/Nil-Check.md]
-  [46]:TooManyStatements: configure_from_options has approx 13 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [65]:TooManyStatements: funky_config has approx 10 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [135]:TooManyStatements: mail_delivery has approx 8 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [117]:TooManyStatements: mail_delivery_hot_mess has approx 8 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [147]:TooManyStatements: mail_delivery_multiple_recipients has approx 8 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [22]:TooManyStatements: sanitize_spec_dryer has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [46]:UtilityFunction: configure_from_options doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Utility-Function.md]
-lib/sanitize_email/bleach.rb -- 6 warnings:
-  [11]:Attribute: SanitizeEmail::Bleach#overridden_addresses is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [32, 34]:DuplicateMethodCall: SanitizeEmail::Bleach#self.delivering_email calls 'message["personalizations"]' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [32]:NilCheck: SanitizeEmail::Bleach#self.delivering_email performs a nil-check [https://github.com/troessner/reek/blob/v6.3.0/docs/Nil-Check.md]
-  [83, 87]:NilCheck: SanitizeEmail::Bleach#self.sanitize_engaged? performs a nil-check [https://github.com/troessner/reek/blob/v6.3.0/docs/Nil-Check.md]
-  [18]:TooManyStatements: SanitizeEmail::Bleach#self.delivering_email has approx 9 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [77]:TooManyStatements: SanitizeEmail::Bleach#self.sanitize_engaged? has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-lib/sanitize_email/config.rb -- 5 warnings:
-  [13]:Attribute: SanitizeEmail::Config#config is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [86, 94]:DuplicateMethodCall: SanitizeEmail::Config#self.config_force_sanitize_deprecation_warning calls '@config[:force_sanitize]' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [75, 80]:DuplicateMethodCall: SanitizeEmail::Config#self.configure calls '@config[:sanitized_recipients]' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [86]:NilCheck: SanitizeEmail::Config#self.config_force_sanitize_deprecation_warning performs a nil-check [https://github.com/troessner/reek/blob/v6.3.0/docs/Nil-Check.md]
-  [64]:TooManyStatements: SanitizeEmail::Config#self.configure has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-lib/sanitize_email/deprecation.rb -- 2 warnings:
-  [11]:Attribute: SanitizeEmail::Deprecation#deprecate_in_silence is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [19, 30, 41]:DataClump: SanitizeEmail::Deprecation takes parameters ['name', 'replacement'] to 3 methods [https://github.com/troessner/reek/blob/v6.3.0/docs/Data-Clump.md]
-lib/sanitize_email/mail_header_tools.rb -- 3 warnings:
-  [62, 64]:DuplicateMethodCall: SanitizeEmail::MailHeaderTools#self.prepend_custom_subject calls 'message.subject' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [37]:TooManyStatements: SanitizeEmail::MailHeaderTools#self.add_original_addresses_as_headers has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [69]:TooManyStatements: SanitizeEmail::MailHeaderTools#self.update_header has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-lib/sanitize_email/overridden_addresses.rb -- 25 warnings:
-  [28]:Attribute: SanitizeEmail::OverriddenAddresses#bad_list is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [27]:Attribute: SanitizeEmail::OverriddenAddresses#good_list is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [25]:Attribute: SanitizeEmail::OverriddenAddresses#overridden_bcc is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [24]:Attribute: SanitizeEmail::OverriddenAddresses#overridden_cc is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [26]:Attribute: SanitizeEmail::OverriddenAddresses#overridden_personalizations is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [23]:Attribute: SanitizeEmail::OverriddenAddresses#overridden_to is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [31]:Attribute: SanitizeEmail::OverriddenAddresses#sanitized_bcc is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [30]:Attribute: SanitizeEmail::OverriddenAddresses#sanitized_cc is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [29]:Attribute: SanitizeEmail::OverriddenAddresses#sanitized_to is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [22]:Attribute: SanitizeEmail::OverriddenAddresses#tempmail is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [168]:ControlParameter: SanitizeEmail::OverriddenAddresses#sanitize_addresses is controlled by argument 'type' [https://github.com/troessner/reek/blob/v6.3.0/docs/Control-Parameter.md]
-  [55, 57]:DuplicateMethodCall: SanitizeEmail::OverriddenAddresses#initialize calls 'message["personalizations"]' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [187, 192]:DuplicateMethodCall: SanitizeEmail::OverriddenAddresses#remove_duplicates calls 'addr.address' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [187, 192]:DuplicateMethodCall: SanitizeEmail::OverriddenAddresses#remove_duplicates calls 'dedup_addresses.include?(addr.address)' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [185, 189]:DuplicateMethodCall: SanitizeEmail::OverriddenAddresses#remove_duplicates calls 'tempmail[:cc]' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [84, 85, 88, 91]:FeatureEnvy: SanitizeEmail::OverriddenAddresses#personalizations_override refers to 'actual_personalization' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Feature-Envy.md]
-  [153]:NestedIterators: SanitizeEmail::OverriddenAddresses#inject_user_names contains iterators nested 2 deep [https://github.com/troessner/reek/blob/v6.3.0/docs/Nested-Iterators.md]
-  [85, 88, 91]:NestedIterators: SanitizeEmail::OverriddenAddresses#personalizations_override contains iterators nested 2 deep [https://github.com/troessner/reek/blob/v6.3.0/docs/Nested-Iterators.md]
-  [55]:NilCheck: SanitizeEmail::OverriddenAddresses#initialize performs a nil-check [https://github.com/troessner/reek/blob/v6.3.0/docs/Nil-Check.md]
-  [149]:NilCheck: SanitizeEmail::OverriddenAddresses#inject_user_names performs a nil-check [https://github.com/troessner/reek/blob/v6.3.0/docs/Nil-Check.md]
-  [11]:TooManyInstanceVariables: SanitizeEmail::OverriddenAddresses has at least 10 instance variables [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Instance-Variables.md]
-  [134]:TooManyStatements: SanitizeEmail::OverriddenAddresses#address_list_filter has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [98]:TooManyStatements: SanitizeEmail::OverriddenAddresses#override_email has approx 10 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [182]:TooManyStatements: SanitizeEmail::OverriddenAddresses#remove_duplicates has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-  [147]:UtilityFunction: SanitizeEmail::OverriddenAddresses#inject_user_names doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Utility-Function.md]
-lib/sanitize_email/rspec_matchers.rb -- 6 warnings:
-  [69]:UtilityFunction: SanitizeEmail::RspecMatchers#get_cc_usernames doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Utility-Function.md]
-  [94]:UtilityFunction: SanitizeEmail::RspecMatchers#get_fuzzy_body doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Utility-Function.md]
-  [98]:UtilityFunction: SanitizeEmail::RspecMatchers#get_fuzzy_matcher doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Utility-Function.md]
-  [80]:UtilityFunction: SanitizeEmail::RspecMatchers#get_sanitized_cc_header doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Utility-Function.md]
-  [56]:UtilityFunction: SanitizeEmail::RspecMatchers#get_sanitized_to_header doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Utility-Function.md]
-  [45]:UtilityFunction: SanitizeEmail::RspecMatchers#get_to_usernames doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Utility-Function.md]
-lib/sanitize_email/test_helpers.rb -- 6 warnings:
-  [14, 18, 29, 38]:DataClump: SanitizeEmail::TestHelpers takes parameters ['attribute', 'matcher', 'part'] to 4 methods [https://github.com/troessner/reek/blob/v6.3.0/docs/Data-Clump.md]
-  [14, 18, 29, 34, 38]:DataClump: SanitizeEmail::TestHelpers takes parameters ['matcher', 'part'] to 5 methods [https://github.com/troessner/reek/blob/v6.3.0/docs/Data-Clump.md]
-  [30, 30]:FeatureEnvy: SanitizeEmail::TestHelpers#array_matching refers to 'attribute' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Feature-Envy.md]
-  [20, 21]:FeatureEnvy: SanitizeEmail::TestHelpers#string_matching refers to 'attribute' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.3.0/docs/Feature-Envy.md]
-  [30]:ManualDispatch: SanitizeEmail::TestHelpers#array_matching manually dispatches method call [https://github.com/troessner/reek/blob/v6.3.0/docs/Manual-Dispatch.md]
-  [20]:ManualDispatch: SanitizeEmail::TestHelpers#string_matching manually dispatches method call [https://github.com/troessner/reek/blob/v6.3.0/docs/Manual-Dispatch.md]
-lib/sanitize_email.rb -- 6 warnings:
-  [72]:Attribute: SanitizeEmail#force_sanitize is a writable attribute [https://github.com/troessner/reek/blob/v6.3.0/docs/Attribute.md]
-  [94, 95]:DuplicateMethodCall: SanitizeEmail#self.sanitary calls 'SanitizeEmail::Config.config' 2 times [https://github.com/troessner/reek/blob/v6.3.0/docs/Duplicate-Method-Call.md]
-  [17]:IrresponsibleModule: SanitizeEmail has no descriptive comment [https://github.com/troessner/reek/blob/v6.3.0/docs/Irresponsible-Module.md]
-  [46]:ManualDispatch: SanitizeEmail#self.[] manually dispatches method call [https://github.com/troessner/reek/blob/v6.3.0/docs/Manual-Dispatch.md]
-  [68]:ManualDispatch: SanitizeEmail#self.activate? manually dispatches method call [https://github.com/troessner/reek/blob/v6.3.0/docs/Manual-Dispatch.md]
-  [91]:TooManyStatements: SanitizeEmail#self.sanitary has approx 6 statements [https://github.com/troessner/reek/blob/v6.3.0/docs/Too-Many-Statements.md]
-71 total warnings
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-2.5.23/lib/bundler/rubygems_ext.rb:301: warning: already initialized constant Gem::Platform::JAVA
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/4.0.0/rubygems/platform.rb:279: warning: previous definition of JAVA was here
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-2.5.23/lib/bundler/rubygems_ext.rb:302: warning: already initialized constant Gem::Platform::MSWIN
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/4.0.0/rubygems/platform.rb:280: warning: previous definition of MSWIN was here
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-2.5.23/lib/bundler/rubygems_ext.rb:303: warning: already initialized constant Gem::Platform::MSWIN64
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/4.0.0/rubygems/platform.rb:281: warning: previous definition of MSWIN64 was here
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-2.5.23/lib/bundler/rubygems_ext.rb:304: warning: already initialized constant Gem::Platform::MINGW
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/4.0.0/rubygems/platform.rb:282: warning: previous definition of MINGW was here
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-2.5.23/lib/bundler/rubygems_ext.rb:305: warning: already initialized constant Gem::Platform::X64_MINGW
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/4.0.0/rubygems/platform.rb:284: warning: previous definition of X64_MINGW was here
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-2.5.23/lib/bundler/rubygems_ext.rb:307: warning: already initialized constant Gem::Platform::WINDOWS
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/4.0.0/rubygems/platform.rb:286: warning: previous definition of WINDOWS was here
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-2.5.23/lib/bundler/rubygems_ext.rb:308: warning: already initialized constant Gem::Platform::X64_LINUX
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/4.0.0/rubygems/platform.rb:287: warning: previous definition of X64_LINUX was here
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/bundler-2.5.23/lib/bundler/rubygems_ext.rb:309: warning: already initialized constant Gem::Platform::X64_LINUX_MUSL
+/var/home/pboling/.local/share/mise/installs/ruby/4.0.5/lib/ruby/4.0.0/rubygems/platform.rb:288: warning: previous definition of X64_LINUX_MUSL was here

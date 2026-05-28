@@ -8,4 +8,6 @@ eval_gemfile("modular/coverage.gemfile")
 
 eval_gemfile("modular/optional.gemfile")
 
+eval_gemfile("rails_7_2.gemfile")
+
 eval_gemfile("modular/x_std_libs.gemfile")

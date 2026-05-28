@@ -160,6 +160,8 @@ workflows:
   # Enable only for projects that actually require recording support.
   recording: false
   preset: framework
+  standard_appraisal_gemfiles:
+    - rails_7_2.gemfile
   framework_matrix:
     dimension: rails
     gem: rails

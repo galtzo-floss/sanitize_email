@@ -5,3 +5,5 @@ source "https://gem.coop"
 gemspec :path => "../"
 
 eval_gemfile("modular/runtime_heads.gemfile")
+
+eval_gemfile("rails_7_2.gemfile")

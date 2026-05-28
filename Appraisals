@@ -46,19 +46,23 @@ appraise "unlocked_deps" do
   eval_gemfile "modular/documentation.gemfile"
   eval_gemfile "modular/optional.gemfile"
   eval_gemfile "modular/style.gemfile"
+  eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
 end
 
 appraise "head" do
+  eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
 end
 
 appraise "current" do
+  eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
 end
 
 appraise "dep-heads" do
   eval_gemfile "modular/runtime_heads.gemfile"
+  eval_gemfile "rails_7_2.gemfile"
 end
 
 appraise "ruby-2-4" do
@@ -131,6 +135,7 @@ end
 appraise "coverage" do
   eval_gemfile "modular/coverage.gemfile"
   eval_gemfile "modular/optional.gemfile"
+  eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/x_std_libs.gemfile"
 end
 

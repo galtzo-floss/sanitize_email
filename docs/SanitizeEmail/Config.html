@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: SanitizeEmail::Config
+  
+    &mdash; Documentation by YARD 0.9.44
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "SanitizeEmail::Config";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span>
+     &raquo; 
+    <span class="title">Config</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: SanitizeEmail::Config
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">SanitizeEmail::Config</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd><span class='object_link'><a href="Deprecation.html" title="SanitizeEmail::Deprecation (module)">Deprecation</a></span></dd>
+  </dl>
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/sanitize_email/config.rb
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>The API for configuring SanitizeEmail is via <code>SanitizeEmail.config</code><br />
+Available configuration options are listed in the <code>DEFAULTS</code> constant.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="CONFIG_MUTEX-constant" class="">CONFIG_MUTEX =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></pre></dd>
+      
+        <dt id="DEFAULTS-constant" class="">DEFAULTS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='comment'># Specify the BCC addresses for the messages
+</span>  <span class='comment'>#   that go out in &quot;local&quot; environments
+</span>  <span class='label'>sanitized_bcc:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+
+  <span class='comment'># Specify the CC addresses for the messages
+</span>  <span class='comment'>#   that go out in &quot;local&quot; environments
+</span>  <span class='label'>sanitized_cc:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+
+  <span class='comment'># The recipient addresses for the messages,
+</span>  <span class='comment'>#   either as a string (for a single address)
+</span>  <span class='comment'>#   or an array (for multiple addresses)
+</span>  <span class='comment'>#   that go out in &quot;local&quot; environments
+</span>  <span class='label'>sanitized_to:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+
+  <span class='comment'># an allow list
+</span>  <span class='label'>good_list:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+
+  <span class='comment'># a block list
+</span>  <span class='label'>bad_list:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+
+  <span class='label'>environment:</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_env'>env</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+                 <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_env'>env</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+               <span class='kw'>else</span>
+                 <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[UNKNOWN ENVIRONMENT]</span><span class='tstring_end'>&quot;</span></span>
+               <span class='kw'>end</span><span class='comma'>,</span>
+
+  <span class='comment'># Use the &quot;real&quot; email address as the username
+</span>  <span class='comment'>#   for the sanitized email address
+</span>  <span class='comment'># e.g. &quot;real at example.com &lt;sanitized@example.com&gt;&quot;
+</span>  <span class='label'>use_actual_email_as_sanitized_user_name:</span> <span class='kw'>false</span><span class='comma'>,</span>
+
+  <span class='comment'># Prepend the &quot;real&quot; email address onto the Subject line of the message
+</span>  <span class='comment'># e.g. &quot;real at example.com rest of subject&quot;
+</span>  <span class='label'>use_actual_email_prepended_to_subject:</span> <span class='kw'>false</span><span class='comma'>,</span>
+
+  <span class='comment'># Prepend the Rails environment onto the Subject line of the message
+</span>  <span class='comment'># e.g. &quot;[development] rest of subject&quot;
+</span>  <span class='label'>use_actual_environment_prepended_to_subject:</span> <span class='kw'>false</span><span class='comma'>,</span>
+
+  <span class='comment'># True / False turns on or off sanitization,
+</span>  <span class='comment'>#   while nil ignores this setting and checks activation_proc
+</span>  <span class='label'>engage:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+
+  <span class='label'>activation_proc:</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span> <span class='kw'>false</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="INIT_KEYS-constant" class="">INIT_KEYS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:sanitized_to</span><span class='comma'>,</span> <span class='symbol'>:sanitized_cc</span><span class='comma'>,</span> <span class='symbol'>:sanitized_bcc</span><span class='comma'>,</span> <span class='symbol'>:good_list</span><span class='comma'>,</span> <span class='symbol'>:bad_list</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="Deprecation.html" title="SanitizeEmail::Deprecation (module)">Deprecation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Deprecation.html#DEPRECATE_IN_SILENCE_MUTEX-constant" title="SanitizeEmail::Deprecation::DEPRECATE_IN_SILENCE_MUTEX (constant)">Deprecation::DEPRECATE_IN_SILENCE_MUTEX</a></span></p>
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config-class_method" title="config (class method)">.<strong>config</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config=-class_method" title="config= (class method)">.<strong>config=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config_force_sanitize_deprecation_warning-class_method" title="config_force_sanitize_deprecation_warning (class method)">.<strong>config_force_sanitize_deprecation_warning</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configure-class_method" title="configure (class method)">.<strong>configure</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_init-class_method" title="to_init (class method)">.<strong>to_init</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Deprecation.html" title="SanitizeEmail::Deprecation (module)">Deprecation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Deprecation.html#deprecate_in_silence-class_method" title="SanitizeEmail::Deprecation.deprecate_in_silence (method)">deprecate_in_silence</a></span>, <span class='object_link'><a href="Deprecation.html#deprecate_in_silence=-class_method" title="SanitizeEmail::Deprecation.deprecate_in_silence= (method)">deprecate_in_silence=</a></span>, <span class='object_link'><a href="Deprecation.html#deprecated-instance_method" title="SanitizeEmail::Deprecation#deprecated (method)">deprecated</a></span>, <span class='object_link'><a href="Deprecation.html#deprecated_alias-instance_method" title="SanitizeEmail::Deprecation#deprecated_alias (method)">deprecated_alias</a></span>, <span class='object_link'><a href="Deprecation.html#deprecation-instance_method" title="SanitizeEmail::Deprecation#deprecation (method)">deprecation</a></span>, <span class='object_link'><a href="Deprecation.html#deprecation_warning_message-instance_method" title="SanitizeEmail::Deprecation#deprecation_warning_message (method)">deprecation_warning_message</a></span></p>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="config-class_method">
+  
+    .<strong>config</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/config.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config'>config</span>
+  <span class='const'><span class='object_link'><a href="#CONFIG_MUTEX-constant" title="SanitizeEmail::Config::CONFIG_MUTEX (constant)">CONFIG_MUTEX</a></span></span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='ivar'>@config</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="config=-class_method">
+  
+    .<strong>config=</strong>(value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/config.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config='>config=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="#CONFIG_MUTEX-constant" title="SanitizeEmail::Config::CONFIG_MUTEX (constant)">CONFIG_MUTEX</a></span></span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='ivar'>@config</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="config_force_sanitize_deprecation_warning-class_method">
+  
+    .<strong>config_force_sanitize_deprecation_warning</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/config.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config_force_sanitize_deprecation_warning'>config_force_sanitize_deprecation_warning</span>
+  <span class='id identifier rubyid_force_sanitize'>force_sanitize</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#CONFIG_MUTEX-constant" title="SanitizeEmail::Config::CONFIG_MUTEX (constant)">CONFIG_MUTEX</a></span></span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='symbol'>:force_sanitize</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_force_sanitize'>force_sanitize</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_deprecation_warning_message'>deprecation_warning_message</span><span class='lparen'>(</span>
+    <span class='heredoc_beg'>&lt;&lt;-DEPRECATION</span><span class='comma'>,</span>
+<span class='tstring_content'>          SanitizeEmail::Config.config[:force_sanitize] is deprecated.
+          Please use SanitizeEmail.force_sanitize or SanitizeEmail.sanitary instead.
+          Refer to https://github.com/pboling/sanitize_email/wiki for examples.
+</span><span class='heredoc_end'>  DEPRECATION
+</span>  <span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_force_sanitize'><span class='object_link'><a href="../SanitizeEmail.html#force_sanitize-class_method" title="SanitizeEmail.force_sanitize (method)">force_sanitize</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_force_sanitize'>force_sanitize</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="configure-class_method">
+  
+    .<strong>configure</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/config.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_configure'>configure</span>
+  <span class='id identifier rubyid_sanitized_recipients'>sanitized_recipients</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+  <span class='const'><span class='object_link'><a href="#CONFIG_MUTEX-constant" title="SanitizeEmail::Config::CONFIG_MUTEX (constant)">CONFIG_MUTEX</a></span></span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+    <span class='kw'>yield</span> <span class='ivar'>@config</span>
+
+    <span class='comment'># Gracefully handle deprecated config values.
+</span>    <span class='comment'># Actual deprecation warnings are thrown in the top SanitizeEmail module
+</span>    <span class='comment'>#   thanks to our use of dynamic methods.
+</span>    <span class='kw'>if</span> <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='symbol'>:local_environments</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='rparen'>)</span>
+      <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='symbol'>:activation_proc</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span>
+        <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_local_environments'><span class='object_link'><a href="../SanitizeEmail.html#local_environments-class_method" title="SanitizeEmail.local_environments (method)">local_environments</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_env'>env</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='symbol'>:sanitized_recipients</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_sanitized_recipients'>sanitized_recipients</span> <span class='op'>=</span> <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='symbol'>:sanitized_recipients</span><span class='rbracket'>]</span>
+      <span class='ivar'>@config</span><span class='lbracket'>[</span><span class='symbol'>:sanitized_to</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sanitized_recipients'>sanitized_recipients</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># calling it to trigger the deprecation warning.
+</span>  <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sanitized_recipients'><span class='object_link'><a href="../SanitizeEmail.html#sanitized_recipients-class_method" title="SanitizeEmail.sanitized_recipients (method)">sanitized_recipients</a></span></span> <span class='kw'>if</span> <span class='id identifier rubyid_sanitized_recipients'>sanitized_recipients</span>
+  <span class='id identifier rubyid_config_force_sanitize_deprecation_warning'>config_force_sanitize_deprecation_warning</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_init-class_method">
+  
+    .<strong>to_init</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/config.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_init'>to_init</span>
+  <span class='const'><span class='object_link'><a href="#CONFIG_MUTEX-constant" title="SanitizeEmail::Config::CONFIG_MUTEX (constant)">CONFIG_MUTEX</a></span></span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid__value'>_value</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="#INIT_KEYS-constant" title="SanitizeEmail::Config::INIT_KEYS (constant)">INIT_KEYS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu May 28 03:09:54 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.44 (ruby-4.0.5).
+</div>
+
+    </div>
+  </body>
+</html>

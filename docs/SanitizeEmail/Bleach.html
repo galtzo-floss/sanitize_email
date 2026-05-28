@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: SanitizeEmail::Bleach
+  
+    &mdash; Documentation by YARD 0.9.44
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "SanitizeEmail::Bleach";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (B)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span>
+     &raquo; 
+    <span class="title">Bleach</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: SanitizeEmail::Bleach
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">SanitizeEmail::Bleach</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd><span class='object_link'><a href="Deprecation.html" title="SanitizeEmail::Deprecation (module)">Deprecation</a></span></dd>
+  </dl>
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/sanitize_email/bleach.rb
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Determines whether to sanitize the headers of an email,<br />
+  and does so when appropriate.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="Deprecation.html" title="SanitizeEmail::Deprecation (module)">Deprecation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Deprecation.html#DEPRECATE_IN_SILENCE_MUTEX-constant" title="SanitizeEmail::Deprecation::DEPRECATE_IN_SILENCE_MUTEX (constant)">Deprecation::DEPRECATE_IN_SILENCE_MUTEX</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#overridden_addresses-instance_method" title="#overridden_addresses (instance method)">#<strong>overridden_addresses</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>TODO: Just a stub, not implemented.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delivering_email-class_method" title="delivering_email (class method)">.<strong>delivering_email</strong>(message)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>If all recipient addresses are allow-listed the field is left alone.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sanitize_engaged%3F-class_method" title="sanitize_engaged? (class method)">.<strong>sanitize_engaged?</strong>(message)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Will be called by the Hook to determine if an override should occur There are three ways SanitizeEmail can be turned on;   in order of precedence they are:.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Bleach </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Bleach.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Deprecation.html" title="SanitizeEmail::Deprecation (module)">Deprecation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Deprecation.html#deprecate_in_silence-class_method" title="SanitizeEmail::Deprecation.deprecate_in_silence (method)">deprecate_in_silence</a></span>, <span class='object_link'><a href="Deprecation.html#deprecate_in_silence=-class_method" title="SanitizeEmail::Deprecation.deprecate_in_silence= (method)">deprecate_in_silence=</a></span>, <span class='object_link'><a href="Deprecation.html#deprecated-instance_method" title="SanitizeEmail::Deprecation#deprecated (method)">deprecated</a></span>, <span class='object_link'><a href="Deprecation.html#deprecated_alias-instance_method" title="SanitizeEmail::Deprecation#deprecated_alias (method)">deprecated_alias</a></span>, <span class='object_link'><a href="Deprecation.html#deprecation-instance_method" title="SanitizeEmail::Deprecation#deprecation (method)">deprecation</a></span>, <span class='object_link'><a href="Deprecation.html#deprecation_warning_message-instance_method" title="SanitizeEmail::Deprecation#deprecation_warning_message (method)">deprecation_warning_message</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="" title="SanitizeEmail::Bleach (class)">Bleach</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of Bleach.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_deprecation_message'>deprecation_message</span> <span class='kw'>unless</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="overridden_addresses=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="overridden_addresses-instance_method">
+  
+    #<strong>overridden_addresses</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>TODO: Just a stub, not implemented</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_overridden_addresses'>overridden_addresses</span>
+  <span class='ivar'>@overridden_addresses</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="delivering_email-class_method">
+  
+    .<strong>delivering_email</strong>(message)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>If all recipient addresses are allow-listed the field is left alone.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delivering_email'>delivering_email</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sanitize_engaged?'>sanitize_engaged?</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+
+  <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="MailHeaderTools.html" title="SanitizeEmail::MailHeaderTools (module)">MailHeaderTools</a></span></span>
+    <span class='period'>.</span><span class='id identifier rubyid_add_original_addresses_as_headers'>add_original_addresses_as_headers</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="MailHeaderTools.html" title="SanitizeEmail::MailHeaderTools (module)">MailHeaderTools</a></span></span>
+    <span class='period'>.</span><span class='id identifier rubyid_prepend_custom_subject'>prepend_custom_subject</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_overridden'>overridden</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="OverriddenAddresses.html" title="SanitizeEmail::OverriddenAddresses (class)">OverriddenAddresses</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OverriddenAddresses.html#initialize-instance_method" title="SanitizeEmail::OverriddenAddresses#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='op'>=</span> <span class='id identifier rubyid_overridden'>overridden</span><span class='period'>.</span><span class='id identifier rubyid_overridden_to'>overridden_to</span>
+  <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_cc'>cc</span> <span class='op'>=</span> <span class='id identifier rubyid_overridden'>overridden</span><span class='period'>.</span><span class='id identifier rubyid_overridden_cc'>overridden_cc</span>
+  <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_bcc'>bcc</span> <span class='op'>=</span> <span class='id identifier rubyid_overridden'>overridden</span><span class='period'>.</span><span class='id identifier rubyid_overridden_bcc'>overridden_bcc</span>
+
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>personalizations</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_message'>message</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>personalizations</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_message'>message</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>personalizations</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_overridden'>overridden</span><span class='period'>.</span><span class='id identifier rubyid_overridden_personalizations'>overridden_personalizations</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sanitize_engaged?-class_method">
+  
+    .<strong>sanitize_engaged?</strong>(message)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Will be called by the Hook to determine if an override should occur<br />
+There are three ways SanitizeEmail can be turned on;<br />
+  in order of precedence they are:</p>
+
+<ol>
+  <li>
+    <p>SanitizeEmail.force_sanitize = true # by default it is nil<br />
+  Only useful for local context.<br />
+  Inside a method where you will be sending an email, set</p>
+
+    <p>SanitizeEmail.force_sanitize = true</p>
+  </li>
+</ol>
+
+<p>just prior to delivering it.  Also useful in the console.</p>
+
+<ol>
+  <li>
+    <p>If SanitizeEmail seems to not be sanitizing,<br />
+ you have probably not registered the interceptor.<br />
+  SanitizeEmail tries to do this for you.<br />
+  <em>Note</em>: If you are working in an environment that has<br />
+       a Mail or Mailer class that uses the register_interceptor API,<br />
+       the interceptor will already have been registered.<br />
+  The gem will probably have already done this for you,<br />
+  but some really old versions of Rails may need you to do this manually:</p>
+
+    <p>Mail.register_interceptor(SanitizeEmail::Bleach)</p>
+  </li>
+</ol>
+
+<p>Once registered, SanitizeEmail needs to be engaged:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'># in config/initializers/sanitize_email.rb
+</span><span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="SanitizeEmail::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configure'><span class='object_link'><a href="Config.html#configure-class_method" title="SanitizeEmail::Config.configure (method)">configure</a></span></span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_config'>config</span><span class='op'>|</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:engage</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
+</code></pre>
+
+<ol>
+  <li>SanitizeEmail::Config.configure do |config|<br />
+  config[:activation_proc] = Proc.new { true }<br />
+end</li>
+</ol>
+
+<p>If you don’t need to compute anything,<br />
+    then don’t use the Proc, go with the previous option.</p>
+
+<p>Note: Number 1 is the method used by the SanitizeEmail.sanitary block<br />
+Note: Number 2 You may need to setup your own register_interceptor</p>
+
+<p>If installed but not configured, sanitize_email DOES NOTHING.<br />
+Until configured the defaults leave it turned off.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sanitize_engaged?'>sanitize_engaged?</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='comment'># Don&#39;t sanitize the message if it will not be delivered
+</span>  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_perform_deliveries'>perform_deliveries</span>
+
+  <span class='comment'># Has it been forced via the force_sanitize mattr?
+</span>  <span class='id identifier rubyid_forced'>forced</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_force_sanitize'><span class='object_link'><a href="../SanitizeEmail.html#force_sanitize-class_method" title="SanitizeEmail.force_sanitize (method)">force_sanitize</a></span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_forced'>forced</span> <span class='kw'>unless</span> <span class='id identifier rubyid_forced'>forced</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='comment'># Is this particular instance of Bleach engaged
+</span>  <span class='id identifier rubyid_engaged'>engaged</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="SanitizeEmail::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_config'><span class='object_link'><a href="Config.html#config-class_method" title="SanitizeEmail::Config.config (method)">config</a></span></span><span class='lbracket'>[</span><span class='symbol'>:engage</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_engaged'>engaged</span> <span class='kw'>unless</span> <span class='id identifier rubyid_engaged'>engaged</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='comment'># Should we sanitize due to the activation_proc?
+</span>  <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_activate?'><span class='object_link'><a href="../SanitizeEmail.html#activate%3F-class_method" title="SanitizeEmail.activate? (method)">activate?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu May 28 03:09:54 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.44 (ruby-4.0.5).
+</div>
+
+    </div>
+  </body>
+</html>

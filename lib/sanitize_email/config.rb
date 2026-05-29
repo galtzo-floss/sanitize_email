@@ -103,7 +103,7 @@ module SanitizeEmail
           <<-DEPRECATION,
                 SanitizeEmail::Config.config[:force_sanitize] is deprecated.
                 Please use SanitizeEmail.force_sanitize or SanitizeEmail.sanitary instead.
-                Refer to https://github.com/pboling/sanitize_email/wiki for examples.
+                Refer to https://github.com/galtzo-floss/sanitize_email/wiki for examples.
         DEPRECATION
         )
         SanitizeEmail.force_sanitize = force_sanitize

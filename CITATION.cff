@@ -12,9 +12,9 @@ authors:
     orcid: 'https://orcid.org/0009-0008-8519-441X'
 identifiers:
   - type: url
-    value: 'https://github.com/pboling/sanitize_email/tree/main/gems/sanitize_email'
+    value: 'https://github.com/galtzo-floss/sanitize_email/tree/main/gems/sanitize_email'
     description: "sanitize_email"
-repository-code: 'https://github.com/pboling/sanitize_email/tree/main/gems/sanitize_email'
+repository-code: 'https://github.com/galtzo-floss/sanitize_email/tree/main/gems/sanitize_email'
 abstract: >-
   sanitize_email
 license: See license file

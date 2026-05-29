@@ -20,9 +20,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Published generated API documentation, including the YAML-rendered citation
-  page, and refreshed README compatibility guidance for supported Ruby engines
-  and Rails versions.
+- Published generated API documentation
+  - refreshed README Ruby & Rails compatibility guidance
 
 ### Changed
 
@@ -62,7 +61,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ## [2.0.8] - 2024-06-11 ([tag][2.0.8t])
 ### Fixed
-* [#110](https://github.com/pboling/sanitize_email/issues/110) - interceptor not working via Rails 6+ engine (actual fix!)
+* [#110](https://github.com/galtzo-floss/sanitize_email/issues/110) - interceptor not working via Rails 6+ engine (actual fix!)
 
 ## [2.0.7] - 2024-04-25 ([tag][2.0.7t])
 ### Added
@@ -70,7 +69,7 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Changed
 * Documentation is now via yard instead of rdoc
 ### Fixed
-* [#110](https://github.com/pboling/sanitize_email/issues/110) - interceptor not working via Rails 6+ engine
+* [#110](https://github.com/galtzo-floss/sanitize_email/issues/110) - interceptor not working via Rails 6+ engine
 
 ## [2.0.6] - 2024-04-25 ([tag][2.0.6t])
 ### Added
@@ -104,7 +103,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ## [2.0.4] - 2024-03-22 ([tag][2.0.4t])
 ### Added
-* [#74](https://github.com/pboling/sanitize_email/pull/74) Support sanitizing SendGrid personalization fields (@joeyparis)
+* [#74](https://github.com/galtzo-floss/sanitize_email/pull/74) Support sanitizing SendGrid personalization fields (@joeyparis)
 * mail gem dependency (@pboling)
 * version_gem dependency (@pboling)
 * new RSpec Matchers (@pboling)
@@ -117,7 +116,7 @@ Please file a bug if you notice a violation of semantic versioning.
 * Switched from Travis-CI to GitHub Actions
   * Testing for
 ### Fixed
-* [#64](https://github.com/pboling/sanitize_email/issues/64) Automatically dedup recipients in cascading fashion: To > CC > BCC (@pboling)
+* [#64](https://github.com/galtzo-floss/sanitize_email/issues/64) Automatically dedup recipients in cascading fashion: To > CC > BCC (@pboling)
 * Set sanitized email headers with decoded values from Mail gem
 ### Removed
 * Dependency on git in gemspec (@pboling)
@@ -134,13 +133,13 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Changed
 * begin following SemVer for dependency requirements (@pboling)
 ### Fixed
-* [#47](https://github.com/pboling/sanitize_email/pull/47) Don't use #prepend on subject (@mslade-fairfax)
+* [#47](https://github.com/galtzo-floss/sanitize_email/pull/47) Don't use #prepend on subject (@mslade-fairfax)
 ### Removed
 * Ability to install on Ruby 2.2 (@pboling)
 
 ## [2.0.1] - 2018-03-07 ([tag][2.0.1t])
 ### Fixed
-* [#32](https://github.com/pboling/sanitize_email/pull/32) A better fix for the frozen subject bug (@pboling)
+* [#32](https://github.com/galtzo-floss/sanitize_email/pull/32) A better fix for the frozen subject bug (@pboling)
 ### Removed
 * Ruby 2.2 is really no longer supported (@pboling)
 
@@ -307,7 +306,7 @@ Version 1.0.0.rc3 - AUG.08.2012
 Version 1.0.0.rc2 - AUG.08.2012 - botched
 
 * Bug: loading the gem in a rails app broke mailer specs in the app - Fixed
-    * https://github.com/pboling/sanitize_email/issues/4
+    * https://github.com/galtzo-floss/sanitize_email/issues/4
 * Moved MIT-LICENSE to LICENSE, updated years
 * Added Travis-CI for... CI.
 
@@ -353,26 +352,26 @@ Old version?
 * Fixed require paths
 * added about.yml and this CHANGELOG
 
-[Unreleased]: https://github.com/pboling/sanitize_email/compare/v2.0.10...HEAD
-[2.0.10]: https://github.com/pboling/sanitize_email/compare/v2.0.9...v2.0.10
-[2.0.10t]: https://github.com/pboling/sanitize_email/tags/v2.0.10
-[2.0.9]: https://github.com/pboling/sanitize_email/compare/v2.0.8...v2.0.9
-[2.0.9t]: https://github.com/pboling/sanitize_email/tags/v2.0.9
-[2.0.8]: https://github.com/pboling/sanitize_email/compare/v2.0.7...v2.0.8
-[2.0.8t]: https://github.com/pboling/sanitize_email/tags/v2.0.8
-[2.0.7]: https://github.com/pboling/sanitize_email/compare/v2.0.6...v2.0.7
-[2.0.7t]: https://github.com/pboling/sanitize_email/tags/v2.0.7
-[2.0.6]: https://github.com/pboling/sanitize_email/compare/v2.0.5...v2.0.6
-[2.0.6t]: https://github.com/pboling/sanitize_email/tags/v2.0.6
-[2.0.5]: https://github.com/pboling/sanitize_email/compare/v2.0.4...v2.0.5
-[2.0.5t]: https://github.com/pboling/sanitize_email/tags/v2.0.5
-[2.0.4]: https://github.com/pboling/sanitize_email/compare/v2.0.3...v2.0.4
-[2.0.4t]: https://github.com/pboling/sanitize_email/tags/v2.0.4
-[2.0.3]: https://github.com/pboling/sanitize_email/compare/v2.0.2...v2.0.3
-[2.0.3t]: https://github.com/pboling/sanitize_email/tags/v2.0.3
-[2.0.2]: https://github.com/pboling/sanitize_email/compare/v2.0.1...v2.0.2
-[2.0.2t]: https://github.com/pboling/sanitize_email/tags/v2.0.2
-[2.0.1]: https://github.com/pboling/sanitize_email/compare/v2.0.0...v2.0.1
-[2.0.1t]: https://github.com/pboling/sanitize_email/tags/v2.0.1
-[2.0.0]: https://github.com/pboling/sanitize_email/compare/v1.2.2...v2.0.0
-[2.0.0t]: https://github.com/pboling/sanitize_email/tags/v2.0.0
+[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.10...HEAD
+[2.0.10]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.9...v2.0.10
+[2.0.10t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.10
+[2.0.9]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.8...v2.0.9
+[2.0.9t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.9
+[2.0.8]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.7...v2.0.8
+[2.0.8t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.8
+[2.0.7]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.6...v2.0.7
+[2.0.7t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.7
+[2.0.6]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.5...v2.0.6
+[2.0.6t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.6
+[2.0.5]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.4...v2.0.5
+[2.0.5t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.5
+[2.0.4]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.3...v2.0.4
+[2.0.4t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.4
+[2.0.3]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.2...v2.0.3
+[2.0.3t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.3
+[2.0.2]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.1...v2.0.2
+[2.0.2t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.2
+[2.0.1]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.0...v2.0.1
+[2.0.1t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.1
+[2.0.0]: https://github.com/galtzo-floss/sanitize_email/compare/v1.2.2...v2.0.0
+[2.0.0t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.0

@@ -512,8 +512,8 @@ Thanks for RTFM. ☺️
 |---|---|
 | Package | sanitize_email |
 | Description | Email Condom for your Ruby Server.<br>In Rails, Sinatra, et al, or simply the mail gem: Aids in development, testing, qa, and production troubleshooting of email issues without worrying that emails will get sent to actual live addresses. |
-| Homepage | https://github.com/pboling/sanitize_email |
-| Source | https://github.com/pboling/sanitize_email/tree/v2.0.10 |
+| Homepage | https://github.com/galtzo-floss/sanitize_email |
+| Source | https://github.com/galtzo-floss/sanitize_email/tree/v2.0.10 |
 | License | `MIT` |
 | Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/gh/pboling, https://tidelift.com/funding/github/rubygems/sanitize_email, https://www.buymeacoffee.com/pboling |
 <!-- kettle-jem:metadata:end -->

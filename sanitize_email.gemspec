@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
       Email Condom for your Ruby Server.
     In Rails, Sinatra, et al, or simply the mail gem: Aids in development, testing, qa, and production troubleshooting of email issues without worrying that emails will get sent to actual live addresses.
   DESCRIPTION
-  spec.homepage = "https://github.com/pboling/sanitize_email"
+  spec.homepage = "https://github.com/galtzo-floss/sanitize_email"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 2.3.0"
 

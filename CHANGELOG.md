@@ -20,13 +20,26 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- Published generated API documentation, including the YAML-rendered citation
+  page, and refreshed README compatibility guidance for supported Ruby engines
+  and Rails versions.
+
 ### Changed
+
+- Refreshed package metadata, support links, and documentation links for the
+  current `galtzo-floss/sanitize_email` project home.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+- Fixed sanitization of SendGrid ActionMailer `personalizations` headers so the
+  overridden recipient data is written back to the message.
+- Made global sanitization/configuration state updates safer under concurrent
+  access by synchronizing `force_sanitize`, configuration, and deprecation
+  silence state.
 
 ### Security
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sanitize_email (2.0.10)
+    sanitize_email (2.0.11)
       mail (~> 2.0)
       version_gem (~> 1.1, >= 1.1.9)
 
@@ -458,7 +458,7 @@ DEPENDENCIES
   railties (~> 7.2.2)
   rake (~> 13.0)
   rbs (>= 3.0)
-  rdoc (~> 6.11)
+  rdoc (~> 6.11, >= 3)
   reek (~> 6.5)
   require_bench (~> 1.0, >= 1.0.4)
   rspec (>= 3)
@@ -483,4 +483,4 @@ DEPENDENCIES
   yard-yaml (~> 0.1, >= 0.1.2)
 
 BUNDLED WITH
-   2.5.23
+  4.0.12

@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.11] - 2026-05-28
+
+- TAG: [v2.0.11][2.0.11t]
+- COVERAGE: 94.93% -- 262/276 lines in 8 files
+- BRANCH COVERAGE: 80.81% -- 80/99 branches in 8 files
+- 52.27% documented
+
+### Added
+
 - Published generated API documentation
   - refreshed README Ruby & Rails compatibility guidance
 
@@ -27,10 +46,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Refreshed package metadata, support links, and documentation links for the
   current `galtzo-floss/sanitize_email` project home.
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -40,39 +55,63 @@ Please file a bug if you notice a violation of semantic versioning.
   access by synchronizing `force_sanitize`, configuration, and deprecation
   silence state.
 
-### Security
+## [2.0.10] - 2024-11-09
 
-## [2.0.10] - 2024-11-09 ([tag][2.0.10t])
+- TAG: [v2.0.10][2.0.10t]
+
 - COVERAGE:  90.15% -- 247/274 lines in 8 files
 - BRANCH COVERAGE:  71.68% -- 81/113 branches in 8 files
 - 61.73% documented
+
 ### Fixed
+
 * Prefer `require_relative` > `require` internally
   * Better performance, portability, and consistency
   * See: https://github.com/rubocop/rubocop/issues/8748
 
-## [2.0.9] - 2024-11-09 ([tag][2.0.9t])
+## [2.0.9] - 2024-11-09
+
+- TAG: [v2.0.9][2.0.9t]
+
 - COVERAGE:  90.15% -- 247/274 lines in 8 files
 - BRANCH COVERAGE:  71.68% -- 81/113 branches in 8 files
 - 61.73% documented
+
 ### Added
+
 * More & better documentation
 * Rails 8.0 to CI
 
-## [2.0.8] - 2024-06-11 ([tag][2.0.8t])
+## [2.0.8] - 2024-06-11
+
+- TAG: [v2.0.8][2.0.8t]
+
 ### Fixed
+
 * [#110](https://github.com/galtzo-floss/sanitize_email/issues/110) - interceptor not working via Rails 6+ engine (actual fix!)
 
-## [2.0.7] - 2024-04-25 ([tag][2.0.7t])
+## [2.0.7] - 2024-04-25
+
+- TAG: [v2.0.7][2.0.7t]
+
 ### Added
+
 * More documentation
+
 ### Changed
+
 * Documentation is now via yard instead of rdoc
+
 ### Fixed
+
 * [#110](https://github.com/galtzo-floss/sanitize_email/issues/110) - interceptor not working via Rails 6+ engine
 
-## [2.0.6] - 2024-04-25 ([tag][2.0.6t])
+## [2.0.6] - 2024-04-25
+
+- TAG: [v2.0.6][2.0.6t]
+
 ### Added
+
 * Appraisals & Combustion for comprehensive testing across versions of Rails (@pboling)
 * Rails 3.0 to Test Matrix (@pboling)
 * Rails 3.1 to Test Matrix (@pboling)
@@ -83,12 +122,18 @@ Please file a bug if you notice a violation of semantic versioning.
 * Rails 5.0 to Test Matrix (@pboling)
 * Rails 5.1 to Test Matrix (@pboling)
 * More Documentation (@pboling)
+
 ### Fixed
+
 * Compatibility with Rails 3.0, 3.1, 3.2 (@pboling)
 * Compatibility with Rails 6.0, 6.1, 7.0, 7.1 (@pboling)
 
-## [2.0.5] - 2024-04-18 ([tag][2.0.5t])
+## [2.0.5] - 2024-04-18
+
+- TAG: [v2.0.5][2.0.5t]
+
 ### Added
+
 * New RSpec matcher (@pboling)
   * `have_bcc_username`
 * Feature #21 - environment configuration option can now be set to proc / lambda / #call (@pboling)
@@ -96,13 +141,21 @@ Please file a bug if you notice a violation of semantic versioning.
 * Many more tests
   * Confirmed compatibility with [`sendgrid-actionmailer`](https://github.com/eddiezane/sendgrid-actionmailer)
   * Code coverage up to 90%
+
 ### Changed
+
 * Averted deprecation warnings when using Rails 6 (@pboling)
+
 ## Fixed
+
 * Bug #37 - Unable to send email when only CC or BCC present
 
-## [2.0.4] - 2024-03-22 ([tag][2.0.4t])
+## [2.0.4] - 2024-03-22
+
+- TAG: [v2.0.4][2.0.4t]
+
 ### Added
+
 * [#74](https://github.com/galtzo-floss/sanitize_email/pull/74) Support sanitizing SendGrid personalization fields (@joeyparis)
 * mail gem dependency (@pboling)
 * version_gem dependency (@pboling)
@@ -112,48 +165,84 @@ Please file a bug if you notice a violation of semantic versioning.
 * Contributor [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) (@pboling)
 * Security Policy in [SECURITY.md](SECURITY.md) (@pboling)
 * More documentation (@pboling)
+
 ### Changed
+
 * Switched from Travis-CI to GitHub Actions
   * Testing for
+
 ### Fixed
+
 * [#64](https://github.com/galtzo-floss/sanitize_email/issues/64) Automatically dedup recipients in cascading fashion: To > CC > BCC (@pboling)
 * Set sanitized email headers with decoded values from Mail gem
+
 ### Removed
+
 * Dependency on git in gemspec (@pboling)
 * Coveralls development gem dependecy
 
-## [2.0.3] - 2018-09-08 ([tag][2.0.3t])
+## [2.0.3] - 2018-09-08
+
+- TAG: [v2.0.3][2.0.3t]
+
 ### Changed
+
 * Nothing
 
-## [2.0.2] - 2018-09-08 ([tag][2.0.2t])
+## [2.0.2] - 2018-09-08
+
+- TAG: [v2.0.2][2.0.2t]
+
 ### Added
+
 * More and fixed badges (@pboling)
 * Code Coverage reporting (@pboling)
+
 ### Changed
+
 * begin following SemVer for dependency requirements (@pboling)
+
 ### Fixed
+
 * [#47](https://github.com/galtzo-floss/sanitize_email/pull/47) Don't use #prepend on subject (@mslade-fairfax)
+
 ### Removed
+
 * Ability to install on Ruby 2.2 (@pboling)
 
-## [2.0.1] - 2018-03-07 ([tag][2.0.1t])
+## [2.0.1] - 2018-03-07
+
+- TAG: [v2.0.1][2.0.1t]
+
 ### Fixed
+
 * [#32](https://github.com/galtzo-floss/sanitize_email/pull/32) A better fix for the frozen subject bug (@pboling)
+
 ### Removed
+
 * Ruby 2.2 is really no longer supported (@pboling)
 
-## [2.0.0] - 2018-03-07 ([tag][2.0.0t])
+## [2.0.0] - 2018-03-07
+
+- TAG: [v2.0.0][2.0.0t]
+
 ### Added
+
 * Add testing for Rails 5.1 and 5.2 (@pboling)
 * More and fixed badges (@pboling)
+
 ### Changed
+
 * Drop support for MRI Ruby 1.9, 2.0, 2.1, and 2.2 (@pboling)
 * Drop support for JRuby 1.7 and 9.0, while still supporting 9.1 (@pboling)
 * Drop support for Rails 3.0, 3.1, 3.2, 4.0, 4.1, while still supporting 4.2 (@pboling)
+
 ### Fixed
+
 * Frozen subject bug (@pboling)
+
 ### Removed
+
 * Ruby 2.2 is no longer supported (@pboling)
 
 Version 1.2.2 - FEB.20.2017
@@ -352,7 +441,9 @@ Old version?
 * Fixed require paths
 * added about.yml and this CHANGELOG
 
-[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.10...HEAD
+[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.11...HEAD
+[2.0.11]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.10...v2.0.11
+[2.0.11t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.11
 [2.0.10]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.9...v2.0.10
 [2.0.10t]: https://github.com/galtzo-floss/sanitize_email/tags/v2.0.10
 [2.0.9]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.8...v2.0.9

@@ -336,7 +336,7 @@ Thanks for RTFM. ☺️
 [✉️ruby-friends]: https://app.daily.dev/squads/rubyfriends
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
-[⛳️gem-namespace]: https://github.com/galtzo-floss/sanitize_email/tree/main/gems/sanitize_email
+[⛳️gem-namespace]: https://github.com/galtzo-floss/sanitize_email
 [⛳️namespace-img]: https://img.shields.io/badge/namespace-SanitizeEmail-3C2D2D.svg?style=square&logo=ruby&logoColor=white
 [⛳️gem-name]: https://bestgems.org/gems/sanitize_email
 [⛳️name-img]: https://img.shields.io/badge/name-sanitize__email-3C2D2D.svg?style=square&logo=rubygems&logoColor=red
@@ -376,11 +376,11 @@ Thanks for RTFM. ☺️
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
 [🚂railsbling]: http://www.railsbling.com
 [📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
-[📜src-gl]: https://gitlab.com/galtzo-floss/sanitize_email/-/tree/main/gems/sanitize_email
+[📜src-gl]: https://gitlab.com/galtzo-floss/sanitize_email
 [📜src-cb-img]: https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&logo=CodeBerg&logoColor=blue
-[📜src-cb]: https://codeberg.org/galtzo-floss/sanitize_email/src/branch/main/gems/sanitize_email
+[📜src-cb]: https://codeberg.org/galtzo-floss/sanitize_email
 [📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
-[📜src-gh]: https://github.com/galtzo-floss/sanitize_email/tree/main/gems/sanitize_email
+[📜src-gh]: https://github.com/galtzo-floss/sanitize_email
 [📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜docs-head-rd-img]: https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜gl-wiki]: https://gitlab.com/galtzo-floss/sanitize_email/-/wikis/home

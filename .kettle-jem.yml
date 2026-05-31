@@ -119,7 +119,7 @@ rubygems:
 #
 # ENV override: KJ_REPOSITORY_TOPOLOGY
 repository:
-  topology: "monorepo-subproject"
+  topology: "standalone"
 # Framework matrix workflows.
 # When your gem tests against multiple versions of a framework (Rails,
 # ActiveRecord, ActiveSupport, etc.), this section configures how

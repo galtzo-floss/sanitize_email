@@ -28,6 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Fixed generated documentation URLs that incorrectly pointed at a monorepo
+  `gems/sanitize_email` path.
+
 ### Security
 
 ## [2.0.11] - 2026-05-28

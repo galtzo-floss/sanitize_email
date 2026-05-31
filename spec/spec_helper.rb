@@ -16,12 +16,18 @@ end
 
 # External RSpec & related config
 require "kettle/test/rspec"
-require "rspec/pending_for"
 
-# Project-specific RSpec config
-require_relative "config/byebug"
-require_relative "config/rspec/helpers"
-require_relative "config/rspec/rspec_block_is_expected"
-require_relative "config/rspec/rspec_core"
-require_relative "config/rspec/version_gem"
-require_relative "support/matchers"
+# This library
+require "sanitize_email"
+
+RSpec.configure do |config|
+  # Enable flags like --only-failures and --next-failure
+  config.example_status_persistence_file_path = ".rspec_status"
+
+  # Disable RSpec exposing methods globally on `Module` and `main`
+  config.disable_monkey_patching!
+
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+end

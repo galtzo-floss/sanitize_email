@@ -145,17 +145,17 @@ This happens in a few different ways, and two of them are in the config below (`
 
 ## 🦷 FLOSS Funding
 
-While pboling tools are free software and will always be, the project would benefit immensely from some funding.
+While galtzo-floss tools are free software and will always be, the project would benefit immensely from some funding.
 Raising a monthly budget of... "dollars" would make the project more sustainable.
 
 We welcome both individual and corporate sponsors! We also offer a
 wide array of funding channels to account for your preferences.
 Currently, [GitHub Sponsors][🖇sponsor], and [Liberapay][⛳liberapay] are our preferred funding platforms.
 
-**If you're working in a company that's making significant use of pboling tools we'd
-appreciate it if you suggest to your company to become a pboling sponsor.**
+**If you're working in a company that's making significant use of galtzo-floss tools we'd
+appreciate it if you suggest to your company to become a galtzo-floss sponsor.**
 
-You can support the development of pboling tools via
+You can support the development of galtzo-floss tools via
 [GitHub Sponsors][🖇sponsor],
 [Liberapay][⛳liberapay],
 [PayPal][🖇paypal],
@@ -513,7 +513,7 @@ Thanks for RTFM. ☺️
 | Package | sanitize_email |
 | Description | Email Condom for your Ruby Server.<br>In Rails, Sinatra, et al, or simply the mail gem: Aids in development, testing, qa, and production troubleshooting of email issues without worrying that emails will get sent to actual live addresses. |
 | Homepage | https://github.com/galtzo-floss/sanitize_email |
-| Source | https://github.com/galtzo-floss/sanitize_email/tree/v2.0.10 |
+| Source | https://github.com/galtzo-floss/sanitize_email/tree/v2.0.11 |
 | License | `MIT` |
 | Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/gh/pboling, https://tidelift.com/funding/github/rubygems/sanitize_email, https://www.buymeacoffee.com/pboling |
 <!-- kettle-jem:metadata:end -->

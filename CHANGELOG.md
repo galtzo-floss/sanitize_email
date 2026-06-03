@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Serialized TruffleRuby 25.0 Bundler installs in CI to avoid an internal Bundler worker-thread crash.
+
 - Fixed generated documentation URLs that incorrectly pointed at a monorepo
   `gems/sanitize_email` path.
 

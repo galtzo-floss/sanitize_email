@@ -24,6 +24,7 @@ module SanitizerSpecHelpers
       SanitizeEmail::Config::DEFAULTS.dup,
     )
     allow(Rails).to receive(:env).and_return(rails_env)
+    SanitizeEmail::Config.config[:environment] = "[#{rails_env}]"
   end
 
   def configure_sanitize_email(sanitize_hash = {}, register = true)

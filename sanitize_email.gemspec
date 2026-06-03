@@ -1,4 +1,3 @@
-# coding: utf-8
 # frozen_string_literal: true
 
 # kettle-jem:freeze
@@ -82,7 +81,7 @@ Gem::Specification.new do |spec|
     # Public certs for gem signing
     *enumerate_package_files.call("certs"),
     # Signatures
-    *enumerate_package_files.call("sig"),
+    *enumerate_package_files.call("sig")
   ]
 
   # Automatically included with gem package, no need to list again in files.
@@ -96,7 +95,7 @@ Gem::Specification.new do |spec|
     "LICENSE.md",
     "README.md",
     "RUBOCOP.md",
-    "SECURITY.md",
+    "SECURITY.md"
   ]
   spec.rdoc_options += [
     "--title",
@@ -107,7 +106,7 @@ Gem::Specification.new do |spec|
     "^sig/",
     "--line-numbers",
     "--inline-source",
-    "--quiet",
+    "--quiet"
   ]
   spec.bindir = "exe"
   # Listed files are the relative paths from bindir above.
@@ -132,7 +131,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 2.0", ">= 2.0.5")      # ruby >= 2.4
+  spec.add_development_dependency("kettle-dev", "~> 2.0", ">= 2.0.8")      # ruby >= 2.4
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
@@ -145,7 +144,8 @@ Gem::Specification.new do |spec|
 
   # Testing
   spec.add_development_dependency("appraisal2", "~> 3.0", ">= 3.0.6")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
-  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.1")             # ruby >= 2.4
+  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.3")             # ruby >= 2.4
+  spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.1")            # ruby >= 2.4.0, default kettle-test runner
 
   # Releasing
   spec.add_development_dependency("ruby-progressbar", "~> 1.13")                    # ruby >= 0
@@ -161,7 +161,7 @@ Gem::Specification.new do |spec|
   # This means we have no choice but to use the erb that shipped with Ruby 2.3
   # /opt/hostedtoolcache/Ruby/2.3.8/x64/lib/ruby/gems/2.3.0/gems/erb-2.2.2/lib/erb.rb:670:in `prepare_trim_mode': undefined method `match?' for "-":String (NoMethodError)
   # spec.add_development_dependency("erb", ">= 2.2")                                  # ruby >= 2.3.0, not SemVer, old rubies get dropped in a patch.
-  spec.add_development_dependency("gitmoji-regex", "~> 2.0", ">= 2.0.0")            # ruby >= 2.4
+  spec.add_development_dependency("gitmoji-regex", "~> 2.0", ">= 2.0.1")            # ruby >= 2.4
 
   # HTTP recording for deterministic specs
   # In Ruby 3.5 (HEAD) the CGI library has been pared down, so we also need to depend on gem "cgi" for ruby@head
@@ -174,6 +174,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec", ">= 3")
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.5")
   spec.add_development_dependency("rspec-pending_for", "~> 0.1", ">= 0.1.16")
-  spec.add_development_dependency("jar-dependencies", "~> 0.4.1") if RUBY_ENGINE == "jruby"
     spec.add_development_dependency("psych", "< 5.3")
+  spec.add_development_dependency("jar-dependencies", "~> 0.4.1") if RUBY_ENGINE == "jruby"
 end

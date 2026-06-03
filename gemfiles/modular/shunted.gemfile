@@ -1,3 +1,4 @@
 # <<kettle-jem:generated>> do not edit below this line
+gem "psych", "< 5.3" # ruby >= 2.5.0
 gem "rdoc", ">= 3" # ruby >= 2.6.0
 # <</kettle-jem:generated>>

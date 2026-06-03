@@ -6,7 +6,7 @@
 # sanitize_email will then preserve content between those markers across template runs.
 # kettle-jem:unfreeze
 
-# sanitize_email Rakefile v7.0.0 - 2026-05-31
+# sanitize_email Rakefile v7.0.0 - 2026-06-03
 # Ruby 2.3 (Safe Navigation) or higher required
 #
 # See LICENSE.md for license information.
@@ -62,6 +62,7 @@ task :default do
   puts "Default task complete."
 end
 
+# :nocov:
 ### MONOREPO FAMILY TASKS
 if Dir.exist?(File.join(__dir__, "gems")) && Dir.exist?(File.join(__dir__, "workspace-scripts"))
   def family_script_path(script_name)
@@ -120,6 +121,7 @@ if Dir.exist?(File.join(__dir__, "gems")) && Dir.exist?(File.join(__dir__, "work
     end
   end
 end
+# :nocov:
 
 # External gems that define tasks - add here!
 begin

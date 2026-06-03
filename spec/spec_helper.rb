@@ -16,6 +16,8 @@ end
 
 # External RSpec & related config
 require "kettle/test/rspec"
+require_relative "config/rspec/helpers"
+Dir[File.join(__dir__, "support", "**", "*.rb")].sort.each { |file| require file }
 
 # This library
 require "sanitize_email"

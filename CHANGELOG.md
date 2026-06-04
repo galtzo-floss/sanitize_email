@@ -22,6 +22,11 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- Refreshed generated project metadata, support documentation, CI workflows,
+  and development dependency floors from the current kettle-jem template.
+- Updated the TruffleRuby 23.1 CI matrix to use the Rails appraisal compatible
+  with that engine's Ruby 3.2 compatibility target.
+
 ### Deprecated
 
 ### Removed
@@ -34,6 +39,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Fixed generated documentation URLs that incorrectly pointed at a monorepo
   `gems/sanitize_email` path.
+- Preserved the Rails environment activation override in sanitizer specs so
+  test setup matches configured activation behavior.
 
 ### Security
 

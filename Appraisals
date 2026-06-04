@@ -100,6 +100,11 @@ appraise "ruby-3-2" do
   eval_gemfile "rails_8_0.gemfile"
 end
 
+appraise "truffleruby-23-1" do
+  eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  eval_gemfile "rails_7_2.gemfile"
+end
+
 appraise "ruby-3-3" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
   eval_gemfile "rails_8_0.gemfile"

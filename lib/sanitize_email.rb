@@ -117,11 +117,20 @@ module SanitizeEmail
     #
     def sanitary(config_options = {})
       raise MissingBlockParameter, "SanitizeEmail.sanitary must be called with a block" unless block_given?
-      janitor(forcing: true) do
+      forcing =
+        if config_options.key?(:activation_proc) || config_options.key?(:engage)
+          nil
+        else
+          true
+        end
+      janitor(forcing: forcing) do
         original = SanitizeEmail::Config.config.dup
-        SanitizeEmail::Config.config.merge!(config_options)
-        yield
-        SanitizeEmail::Config.config = original
+        begin
+          SanitizeEmail::Config.config.merge!(config_options)
+          yield
+        ensure
+          SanitizeEmail::Config.config = original
+        end
       end
     end
 
@@ -149,6 +158,7 @@ module SanitizeEmail
       original = SanitizeEmail.force_sanitize
       SanitizeEmail.force_sanitize = options[:forcing]
       yield
+    ensure
       SanitizeEmail.force_sanitize = original
     end
 

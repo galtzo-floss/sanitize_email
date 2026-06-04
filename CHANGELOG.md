@@ -28,6 +28,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Honored explicit per-call `activation_proc` and `engage` options in `SanitizeEmail.sanitary`, and restored temporary sanitization state when a delivery raises.
 - Tested TruffleRuby 23.1 CI against Rails 7.2 instead of Rails 8.0, which fails during ActiveJob/ActionMailer initialization on that EOL runtime.
 - Serialized TruffleRuby 25.0 Bundler installs in CI to avoid an internal Bundler worker-thread crash.
 

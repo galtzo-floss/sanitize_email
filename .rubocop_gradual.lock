@@ -1,5 +1,5 @@
 {
-  "lib/sanitize_email.rb:800126004": [
+  "lib/sanitize_email.rb:780418847": [
     [83, 19, 15, "Style/RedundantCondition: Use double pipes `||` instead.", 4044205351]
   ],
   "lib/sanitize_email/config.rb:3329620302": [

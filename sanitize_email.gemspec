@@ -106,7 +106,6 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   # Listed files are the relative paths from bindir above.
   spec.executables = spec.files.grep(%r{^bin/}).map { |f| File.basename(f) }
-
   spec.require_paths = ["lib"]
 
   # Utilities
@@ -166,10 +165,10 @@ Gem::Specification.new do |spec|
   # spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
   # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
   spec.add_development_dependency("appraisal", "~> 2.5")
-  spec.add_development_dependency("jar-dependencies", "~> 0.4.1") if RUBY_ENGINE == "jruby"
   spec.add_development_dependency("psych", "< 5.3")
   spec.add_development_dependency("rdoc", ">= 3")
   spec.add_development_dependency("rspec", ">= 3")
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.5")
   spec.add_development_dependency("rspec-pending_for", "~> 0.1", ">= 0.1.16")
+  spec.add_development_dependency("jar-dependencies", "~> 0.4.1") if RUBY_ENGINE == "jruby"
 end

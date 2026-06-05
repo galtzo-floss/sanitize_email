@@ -24,6 +24,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Refreshed generated project metadata, support documentation, CI workflows,
   and development dependency floors from the current kettle-jem template.
+- Updated generated OpenCollective funding metadata to use the
+  `galtzo-floss` collective.
 - Updated the TruffleRuby 23.1 CI matrix to use the Rails appraisal compatible
   with that engine's Ruby 3.2 compatibility target.
 

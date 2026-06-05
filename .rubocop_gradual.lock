@@ -19,11 +19,6 @@
     [180, 16, 4, "Style/MultilineWhenThen: Do not use `then` for multiline `when` statement.", 2087960114],
     [182, 17, 4, "Style/MultilineWhenThen: Do not use `then` for multiline `when` statement.", 2087960114]
   ],
-  "sanitize_email.gemspec:239777946": [
-    [177, 5, 49, "Gemspec/OrderedDependencies: Dependencies should be sorted in an alphabetical order within their section of the gemspec. Dependency `psych` should appear before `rspec-pending_for`.", 144909467],
-    [177, 5, 49, "Layout/IndentationConsistency: Inconsistent indentation detected.", 144909467],
-    [178, 3, 63, "Gemspec/OrderedDependencies: Dependencies should be sorted in an alphabetical order within their section of the gemspec. Dependency `jar-dependencies` should appear before `psych`.", 2923417174]
-  ],
   "spec/rails_spec.rb:788491492": [
     [79, 58, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
     [81, 16, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]

@@ -26,6 +26,8 @@ Please file a bug if you notice a violation of semantic versioning.
   `version_gem` >= 1.1.10 and `appraisal2` >= 3.0.9.
 - Refreshed generated project metadata, support documentation, CI workflows,
   and development dependency floors from the current kettle-jem template.
+- Refreshed generated README support badges so Ruby 2.3 is listed as
+  supported but untested.
 - Updated generated OpenCollective funding metadata to use the
   `galtzo-floss` collective.
 - Updated the TruffleRuby 23.1 CI matrix to use the Rails appraisal compatible

@@ -2,9 +2,9 @@
 
 source "https://gem.coop"
 
-gem "combustion", "~> 1.4"
 gem "actionmailer", "~> 5.1.7"
-gem "railties", "~> 5.1.7"
+gem "combustion", "~> 1.4"
 gem "nokogiri"
+gem "railties", "~> 5.1.7"
 
-gemspec :path => "../"
+gemspec path: "../"

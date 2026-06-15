@@ -22,22 +22,33 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- Refreshed generated project metadata, support documentation and README
-  badges, funding metadata, documentation URLs, CI workflow pins and matrices,
-  `docs/CNAME`, and development dependency floors from the latest `kettle-jem`
-  template.
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
 
+### Security
+
+## [2.0.12] - 2026-06-14
+
+- TAG: [v2.0.12][2.0.12t]
+- COVERAGE: 94.87% -- 259/273 lines in 7 files
+- BRANCH COVERAGE: 81.19% -- 82/101 branches in 7 files
+- 51.14% documented
+
+### Changed
+
+- Refreshed generated project metadata, support documentation and README
+  badges, funding metadata, documentation URLs, CI workflow pins and matrices,
+  `docs/CNAME`, and development dependency floors from the latest `kettle-jem`
+  template.
+
+### Fixed
+
 - Honored explicit per-call `activation_proc` and `engage` options in `SanitizeEmail.sanitary`, and restored temporary sanitization state when a delivery raises.
 - Preserved the Rails environment activation override in sanitizer specs so
   test setup matches configured activation behavior.
-
-### Security
 
 ## [2.0.11] - 2026-05-28
 
@@ -450,7 +461,9 @@ Old version?
 * Fixed require paths
 * added about.yml and this CHANGELOG
 
-[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.11...HEAD
+[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.12...HEAD
+[2.0.12]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.11...v2.0.12
+[2.0.12t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.12
 [2.0.11]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.10...v2.0.11
 [2.0.11t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.11
 [2.0.10]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.9...v2.0.10

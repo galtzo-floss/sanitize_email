@@ -70,7 +70,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 and <a href="https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html">yes</a>, platform and engine support are part of the <a href="https://github.com/semver/semver/issues/716#issuecomment-869336139">public API</a>.<br>
 Please file a bug if you notice a violation of semantic versioning.</p>
 
-<h2 id="unreleased"><a href="https://github.com/galtzo-floss/sanitize_email/compare/v2.0.11...HEAD">Unreleased</a></h2>
+<h2 id="unreleased"><a href="https://github.com/galtzo-floss/sanitize_email/compare/v2.0.12...HEAD">Unreleased</a></h2>
 
 <h3 id="added">Added</h3>
 
@@ -83,6 +83,34 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 <h3 id="fixed">Fixed</h3>
 
 <h3 id="security">Security</h3>
+
+<h2 id="2012---2026-06-14">
+<a href="https://github.com/galtzo-floss/sanitize_email/compare/v2.0.11...v2.0.12">2.0.12</a> - 2026-06-14</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.12">v2.0.12</a>
+</li>
+  <li>COVERAGE: 94.87% – 259/273 lines in 7 files</li>
+  <li>BRANCH COVERAGE: 81.19% – 82/101 branches in 7 files</li>
+  <li>51.14% documented</li>
+</ul>
+
+<h3 id="changed-1">Changed</h3>
+
+<ul>
+  <li>Refreshed generated project metadata, support documentation and README<br>
+badges, funding metadata, documentation URLs, CI workflow pins and matrices,<br>
+<code>docs/CNAME</code>, and development dependency floors from the latest <code>kettle-jem</code><br>
+template.</li>
+</ul>
+
+<h3 id="fixed-1">Fixed</h3>
+
+<ul>
+  <li>Honored explicit per-call <code>activation_proc</code> and <code>engage</code> options in <code>SanitizeEmail.sanitary</code>, and restored temporary sanitization state when a delivery raises.</li>
+  <li>Preserved the Rails environment activation override in sanitizer specs so<br>
+test setup matches configured activation behavior.</li>
+</ul>
 
 <h2 id="2011---2026-05-28">
 <a href="https://github.com/galtzo-floss/sanitize_email/compare/v2.0.10...v2.0.11">2.0.11</a> - 2026-05-28</h2>
@@ -105,14 +133,14 @@ Please file a bug if you notice a violation of semantic versioning.</p>
   </li>
 </ul>
 
-<h3 id="changed-1">Changed</h3>
+<h3 id="changed-2">Changed</h3>
 
 <ul>
   <li>Refreshed package metadata, support links, and documentation links for the<br>
 current <code>galtzo-floss/sanitize_email</code> project home.</li>
 </ul>
 
-<h3 id="fixed-1">Fixed</h3>
+<h3 id="fixed-2">Fixed</h3>
 
 <ul>
   <li>Fixed sanitization of SendGrid ActionMailer <code>personalizations</code> headers so the<br>
@@ -134,7 +162,7 @@ silence state.</li>
   <li>61.73% documented</li>
 </ul>
 
-<h3 id="fixed-2">Fixed</h3>
+<h3 id="fixed-3">Fixed</h3>
 
 <ul>
   <li>Prefer <code>require_relative</code> &gt; <code>require</code> internally
@@ -172,7 +200,7 @@ silence state.</li>
 </li>
 </ul>
 
-<h3 id="fixed-3">Fixed</h3>
+<h3 id="fixed-4">Fixed</h3>
 
 <ul>
   <li>
@@ -193,13 +221,13 @@ silence state.</li>
   <li>More documentation</li>
 </ul>
 
-<h3 id="changed-2">Changed</h3>
+<h3 id="changed-3">Changed</h3>
 
 <ul>
   <li>Documentation is now via yard instead of rdoc</li>
 </ul>
 
-<h3 id="fixed-4">Fixed</h3>
+<h3 id="fixed-5">Fixed</h3>
 
 <ul>
   <li>
@@ -229,7 +257,7 @@ silence state.</li>
   <li>More Documentation (@pboling)</li>
 </ul>
 
-<h3 id="fixed-5">Fixed</h3>
+<h3 id="fixed-6">Fixed</h3>
 
 <ul>
   <li>Compatibility with Rails 3.0, 3.1, 3.2 (@pboling)</li>
@@ -263,13 +291,13 @@ silence state.</li>
   </li>
 </ul>
 
-<h3 id="changed-3">Changed</h3>
+<h3 id="changed-4">Changed</h3>
 
 <ul>
   <li>Averted deprecation warnings when using Rails 6 (@pboling)</li>
 </ul>
 
-<h2 id="fixed-6">Fixed</h2>
+<h2 id="fixed-7">Fixed</h2>
 
 <ul>
   <li>Bug #37 - Unable to send email when only CC or BCC present</li>
@@ -301,7 +329,7 @@ silence state.</li>
   <li>More documentation (@pboling)</li>
 </ul>
 
-<h3 id="changed-4">Changed</h3>
+<h3 id="changed-5">Changed</h3>
 
 <ul>
   <li>Switched from Travis-CI to GitHub Actions
@@ -311,7 +339,7 @@ silence state.</li>
   </li>
 </ul>
 
-<h3 id="fixed-7">Fixed</h3>
+<h3 id="fixed-8">Fixed</h3>
 
 <ul>
   <li>
@@ -334,7 +362,7 @@ silence state.</li>
 </li>
 </ul>
 
-<h3 id="changed-5">Changed</h3>
+<h3 id="changed-6">Changed</h3>
 
 <ul>
   <li>Nothing</li>
@@ -355,13 +383,13 @@ silence state.</li>
   <li>Code Coverage reporting (@pboling)</li>
 </ul>
 
-<h3 id="changed-6">Changed</h3>
+<h3 id="changed-7">Changed</h3>
 
 <ul>
   <li>begin following SemVer for dependency requirements (@pboling)</li>
 </ul>
 
-<h3 id="fixed-8">Fixed</h3>
+<h3 id="fixed-9">Fixed</h3>
 
 <ul>
   <li>
@@ -382,7 +410,7 @@ silence state.</li>
 </li>
 </ul>
 
-<h3 id="fixed-9">Fixed</h3>
+<h3 id="fixed-10">Fixed</h3>
 
 <ul>
   <li>
@@ -410,7 +438,7 @@ silence state.</li>
   <li>More and fixed badges (@pboling)</li>
 </ul>
 
-<h3 id="changed-7">Changed</h3>
+<h3 id="changed-8">Changed</h3>
 
 <ul>
   <li>Drop support for MRI Ruby 1.9, 2.0, 2.1, and 2.2 (@pboling)</li>
@@ -418,7 +446,7 @@ silence state.</li>
   <li>Drop support for Rails 3.0, 3.1, 3.2, 4.0, 4.1, while still supporting 4.2 (@pboling)</li>
 </ul>
 
-<h3 id="fixed-10">Fixed</h3>
+<h3 id="fixed-11">Fixed</h3>
 
 <ul>
   <li>Frozen subject bug (@pboling)</li>
@@ -724,7 +752,7 @@ silence state.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Thu May 28 23:48:48 2026 by
+  Generated on Sun Jun 14 19:37:55 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

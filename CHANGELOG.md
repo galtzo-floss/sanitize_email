@@ -22,16 +22,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- Raised generated `version_gem` and `appraisal2` dependency floors to
-  `version_gem` >= 1.1.10 and `appraisal2` >= 3.0.9.
-- Refreshed generated project metadata, support documentation, CI workflows,
-  and development dependency floors from the current kettle-jem template.
-- Refreshed generated README support badges so Ruby 2.3 is listed as
-  supported but untested.
-- Updated generated OpenCollective funding metadata to use the
-  `galtzo-floss` collective.
-- Updated the TruffleRuby 23.1 CI matrix to use the Rails appraisal compatible
-  with that engine's Ruby 3.2 compatibility target.
+- Refreshed generated project metadata, support documentation and README
+  badges, funding metadata, documentation URLs, CI workflow pins and matrices,
+  `docs/CNAME`, and development dependency floors from the latest `kettle-jem`
+  template.
 
 ### Deprecated
 
@@ -39,13 +33,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Restored `docs/CNAME` so the generated documentation site keeps its custom domain.
 - Honored explicit per-call `activation_proc` and `engage` options in `SanitizeEmail.sanitary`, and restored temporary sanitization state when a delivery raises.
-- Tested TruffleRuby 23.1 CI against Rails 7.2 instead of Rails 8.0, which fails during ActiveJob/ActionMailer initialization on that EOL runtime.
-- Serialized TruffleRuby 25.0 Bundler installs in CI to avoid an internal Bundler worker-thread crash.
-
-- Fixed generated documentation URLs that incorrectly pointed at a monorepo
-  `gems/sanitize_email` path.
 - Preserved the Rails environment activation override in sanitizer specs so
   test setup matches configured activation behavior.
 

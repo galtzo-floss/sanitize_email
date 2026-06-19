@@ -1,4 +1,4 @@
-name: Current TruffleRuby
+name: JRuby 10.0
 
 permissions:
   contents: read
@@ -33,16 +33,20 @@ jobs:
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     env: # $BUNDLE_GEMFILE must be set at job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/Appraisal.root.gemfile
+      KJ_FRAMEWORK_MATRIX_GEM: ${{ matrix.KJ_FRAMEWORK_MATRIX_GEM || '' }}
+      RAILS_MAJOR_MINOR: ${{ matrix.RAILS_MAJOR_MINOR || '' }}
     strategy:
       matrix:
         include:
-          # NOTE: truffleruby does not support upgrading rubygems.
-          # truffleruby-34.0 (targets Ruby 3.4 compatibility)
-          - ruby: "truffleruby"
-            appraisal: "current"
+          # jruby-10.0 (targets Ruby 3.4 compatibility)
+          - ruby: "jruby-10.0"
+            appraisal: "ruby-3-4"
+            KJ_FRAMEWORK_MATRIX_GEM: "rails"
+            RAILS_MAJOR_MINOR: "8.0"
             exec_cmd: "kettle-test"
             rubygems: default
             bundler: default
+            experimental: true
 
     steps:
       - name: Checkout

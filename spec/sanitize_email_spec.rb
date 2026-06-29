@@ -77,13 +77,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
 
@@ -134,13 +134,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
 
@@ -159,33 +159,33 @@ RSpec.describe SanitizeEmail do
       it "sets the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "sets the original cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@example.org",
+          "cc@example.org"
         )
       end
 
       it "does not set the bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc",
-          "bcc@sanitize_email.org",
+          "bcc@sanitize_email.org"
         )
       end
 
       it "does not prepend the original address to the sanitized username" do
         expect(@email_message).not_to have_to_username(
-          "to at example.org <to@sanitize_email.org>",
+          "to at example.org <to@sanitize_email.org>"
         )
       end
 
       it "does not prepend the original address to the subject by default" do
         expect(@email_message).not_to have_subject(
-          "(to at example.org) original subject",
+          "(to at example.org) original subject"
         )
       end
     end
@@ -210,7 +210,7 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
@@ -233,117 +233,117 @@ RSpec.describe SanitizeEmail do
       it "sets the first sanitized to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to1@example.org",
+          "to1@example.org"
         )
       end
 
       it "does not set a zero-indexed sanitized to header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-To-0",
-          "to1@example.org",
+          "to1@example.org"
         )
       end
 
       it "does not set a one-indexed sanitized to header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-To-1",
-          "to1@example.org",
+          "to1@example.org"
         )
       end
 
       it "sets the second sanitized to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To-2",
-          "to2@example.org",
+          "to2@example.org"
         )
       end
 
       it "sets the third sanitized to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To-3",
-          "to3@example.org",
+          "to3@example.org"
         )
       end
 
       it "sets the first sanitized cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc",
-          "cc1@example.org",
+          "cc1@example.org"
         )
       end
 
       it "does not set a zero-indexed sanitized cc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Cc-0",
-          "cc1@example.org",
+          "cc1@example.org"
         )
       end
 
       it "does not set a one-indexed sanitized cc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Cc-1",
-          "cc1@example.org",
+          "cc1@example.org"
         )
       end
 
       it "sets the second sanitized cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc-2",
-          "cc2@example.org",
+          "cc2@example.org"
         )
       end
 
       it "sets the third sanitized cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc-3",
-          "cc3@example.org",
+          "cc3@example.org"
         )
       end
 
       it "does not set the first sanitized bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc",
-          "bcc1@sanitize_email.org",
+          "bcc1@sanitize_email.org"
         )
       end
 
       it "does not set a zero-indexed sanitized bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc-0",
-          "bcc1@sanitize_email.org",
+          "bcc1@sanitize_email.org"
         )
       end
 
       it "does not set a one-indexed sanitized bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc-1",
-          "bcc1@sanitize_email.org",
+          "bcc1@sanitize_email.org"
         )
       end
 
       it "does not set the second sanitized bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc-2",
-          "bcc2@sanitize_email.org",
+          "bcc2@sanitize_email.org"
         )
       end
 
       it "does not set the third sanitized bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc-3",
-          "bcc3@sanitize_email.org",
+          "bcc3@sanitize_email.org"
         )
       end
 
       it "does not prepend the original address to the sanitized username" do
         expect(@email_message).not_to have_to_username(
-          "to at example.org <to@sanitize_email.org>",
+          "to at example.org <to@sanitize_email.org>"
         )
       end
 
       it "does not prepend the original address to the subject by default" do
         expect(@email_message).not_to have_subject(
-          "(to at example.org) original subject",
+          "(to at example.org) original subject"
         )
       end
     end
@@ -379,7 +379,7 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
@@ -403,47 +403,47 @@ RSpec.describe SanitizeEmail do
       it "sets the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "sets the original cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@example.org",
+          "cc@example.org"
         )
       end
 
       it "does not set headers of bcc" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc",
-          "bcc@sanitize_email.org",
+          "bcc@sanitize_email.org"
         )
       end
 
       it "does not set the overridden to header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-To",
-          "funky@sanitize_email.org",
+          "funky@sanitize_email.org"
         )
       end
 
       it "does not set the overridden cc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@sanitize_email.org",
+          "cc@sanitize_email.org"
         )
       end
 
       it "does not prepend the original address to the sanitized username" do
         expect(@email_message).not_to have_to_username(
-          "to at example.org <to@sanitize_email.org>",
+          "to at example.org <to@sanitize_email.org>"
         )
       end
 
       it "does not prepend the original address to the subject by default" do
         expect(@email_message).not_to have_subject(
-          "(to at example.org) original subject",
+          "(to at example.org) original subject"
         )
       end
     end
@@ -455,8 +455,8 @@ RSpec.describe SanitizeEmail do
             sanitized_to: "to@sanitize_email.org",
             sanitized_cc: nil,
             sanitized_bcc: nil,
-            engage: true,
-          },
+            engage: true
+          }
         )
       end
 
@@ -472,8 +472,8 @@ RSpec.describe SanitizeEmail do
             sanitized_to: "to@sanitize_email.org",
             sanitized_cc: nil,
             sanitized_bcc: "bcc@sanitize_email.org",
-            engage: true,
-          },
+            engage: true
+          }
         )
         mail_delivery_bcc_only
       end
@@ -551,33 +551,33 @@ RSpec.describe SanitizeEmail do
       it "sets the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "same@example.org",
+          "same@example.org"
         )
       end
 
       it "sets the original cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc",
-          "same@example.org",
+          "same@example.org"
         )
       end
 
       it "does not set headers of bcc" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc",
-          "same@example.org",
+          "same@example.org"
         )
       end
 
       it "does not prepend the original address to the sanitized username" do
         expect(@email_message).not_to have_to_username(
-          "same at example.org <same@example.org>",
+          "same at example.org <same@example.org>"
         )
       end
 
       it "does not prepend the original address to the subject by default" do
         expect(@email_message).not_to have_subject(
-          "(same at example.org) original subject",
+          "(same at example.org) original subject"
         )
       end
     end
@@ -586,7 +586,7 @@ RSpec.describe SanitizeEmail do
       it "prepends strings without exception" do
         configure_sanitize_email(
           environment: "{{serverABC}}",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         expect { sanitary_mail_delivery_frozen_strings }.not_to raise_exception
       end
@@ -628,7 +628,7 @@ RSpec.describe SanitizeEmail do
       it "does not add the original to header for the default activation proc" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
@@ -636,7 +636,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         expect { mail_delivery }.not_to raise_exception
       end
@@ -645,7 +645,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery
         expect(@email_message).to have_to("to@example.org")
@@ -655,7 +655,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery
         expect(@email_message).to have_from("from@example.org")
@@ -665,7 +665,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery
         expect(@email_message).to have_reply_to("reply_to@example.org")
@@ -675,7 +675,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery
         expect(@email_message).not_to have_subject("## CHEW-GRUEL ##")
@@ -685,7 +685,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery
         expect(@email_message).to have_subject("original subject")
@@ -695,7 +695,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery
         expect(@email_message).to have_body_text("funky fresh")
@@ -705,12 +705,12 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
     end
@@ -720,7 +720,7 @@ RSpec.describe SanitizeEmail do
         {
           activation_proc: proc { false },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         }
       end
 
@@ -759,7 +759,7 @@ RSpec.describe SanitizeEmail do
       it "does not add the original to header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
     end
@@ -769,7 +769,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { true },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery_multiple_personalizations unless Rails::VERSION::MAJOR == 3
       end
@@ -780,7 +780,7 @@ RSpec.describe SanitizeEmail do
         if Rails::VERSION::MAJOR == 3
           delivery.to raise_exception(
             SanitizeEmail::OverriddenAddresses::MissingRecipients,
-            "Mail version is too old to use personalizations",
+            "Mail version is too old to use personalizations"
           )
         else
           delivery.not_to raise_exception
@@ -819,42 +819,42 @@ RSpec.describe SanitizeEmail do
         it "sets the first original to header" do
           expect(@email_message).to have_header(
             "X-Sanitize-Email-To",
-            "to1@example.org",
+            "to1@example.org"
           )
         end
 
         it "sets the second original to header" do
           expect(@email_message).to have_header(
             "X-Sanitize-Email-To-2",
-            "to2@example.org",
+            "to2@example.org"
           )
         end
 
         it "sets the third original to header" do
           expect(@email_message).to have_header(
             "X-Sanitize-Email-To-3",
-            "to3@example.org",
+            "to3@example.org"
           )
         end
 
         it "sets the first original cc header" do
           expect(@email_message).to have_header(
             "X-Sanitize-Email-Cc",
-            "cc1@example.org",
+            "cc1@example.org"
           )
         end
 
         it "sets the second original cc header" do
           expect(@email_message).to have_header(
             "X-Sanitize-Email-Cc-2",
-            "cc2@example.org",
+            "cc2@example.org"
           )
         end
 
         it "sets the third original cc header" do
           expect(@email_message).to have_header(
             "X-Sanitize-Email-Cc-3",
-            "cc3@example.org",
+            "cc3@example.org"
           )
         end
       end
@@ -865,7 +865,7 @@ RSpec.describe SanitizeEmail do
         configure_sanitize_email(
           activation_proc: proc { true },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         mail_delivery
       }
@@ -909,7 +909,7 @@ RSpec.describe SanitizeEmail do
       it "adds the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
     end
@@ -919,7 +919,7 @@ RSpec.describe SanitizeEmail do
         {
           activation_proc: proc { true },
           environment: "## CHEW-GRUEL ##",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         }
       end
 
@@ -963,7 +963,7 @@ RSpec.describe SanitizeEmail do
       it "adds the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
     end
@@ -1003,21 +1003,21 @@ RSpec.describe SanitizeEmail do
       it "sets the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "sets the original cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@example.org",
+          "cc@example.org"
         )
       end
 
       it "does not set the bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc",
-          "bcc@sanitize_email.org",
+          "bcc@sanitize_email.org"
         )
       end
     end
@@ -1057,21 +1057,21 @@ RSpec.describe SanitizeEmail do
       it "does not add the original to header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "does not add the original cc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@example.org",
+          "cc@example.org"
         )
       end
 
       it "does not add the original bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc",
-          "bcc@example.org",
+          "bcc@example.org"
         )
       end
     end
@@ -1111,21 +1111,21 @@ RSpec.describe SanitizeEmail do
       it "sets the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "sets the original cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@example.org",
+          "cc@example.org"
         )
       end
 
       it "does not set the bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc",
-          "bcc@sanitize_email.org",
+          "bcc@sanitize_email.org"
         )
       end
     end
@@ -1165,21 +1165,21 @@ RSpec.describe SanitizeEmail do
       it "does not add the original to header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "does not add the original cc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@example.org",
+          "cc@example.org"
         )
       end
 
       it "does not add the original bcc header" do
         expect(@email_message).not_to have_header(
           "X-Sanitize-Email-Bcc",
-          "bcc@example.org",
+          "bcc@example.org"
         )
       end
     end
@@ -1190,14 +1190,14 @@ RSpec.describe SanitizeEmail do
       before do
         configure_sanitize_email(
           environment: "{{serverABC}}",
-          use_actual_environment_prepended_to_subject: true,
+          use_actual_environment_prepended_to_subject: true
         )
         sanitary_mail_delivery
       end
 
       it "prepends the environment to the subject" do
         expect(@email_message).to have_subject(
-          "{{serverABC}} original subject",
+          "{{serverABC}} original subject"
         )
       end
 
@@ -1215,13 +1215,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
     end
@@ -1230,14 +1230,14 @@ RSpec.describe SanitizeEmail do
       before do
         configure_sanitize_email(
           environment: "{{serverABC}}",
-          use_actual_environment_prepended_to_subject: false,
+          use_actual_environment_prepended_to_subject: false
         )
         sanitary_mail_delivery
       end
 
       it "does not prepend the environment to the subject" do
         expect(@email_message).not_to have_subject(
-          "{{serverABC}} original subject",
+          "{{serverABC}} original subject"
         )
       end
 
@@ -1259,13 +1259,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
     end
@@ -1278,7 +1278,7 @@ RSpec.describe SanitizeEmail do
 
       it "prepends every original to address" do
         expect(@email_message).to have_subject(
-          "(to1 at example.org,to2 at example.org,to3 at example.org) original subject",
+          "(to1 at example.org,to2 at example.org,to3 at example.org) original subject"
         )
       end
 
@@ -1296,13 +1296,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
     end
@@ -1315,7 +1315,7 @@ RSpec.describe SanitizeEmail do
 
       it "prepends the original to address" do
         expect(@email_message).to have_subject(
-          "(to at example.org) original subject",
+          "(to at example.org) original subject"
         )
       end
 
@@ -1333,13 +1333,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
     end
@@ -1352,7 +1352,7 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the original to address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at example.org) original subject",
+          "(to at example.org) original subject"
         )
       end
 
@@ -1370,13 +1370,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
     end
@@ -1384,20 +1384,20 @@ RSpec.describe SanitizeEmail do
     context "with :use_actual_email_as_sanitized_user_name when true" do
       before do
         configure_sanitize_email(
-          use_actual_email_as_sanitized_user_name: true,
+          use_actual_email_as_sanitized_user_name: true
         )
         sanitary_mail_delivery
       end
 
       it "adds the original to header" do
         expect(@email_message).to have_sanitized_to_header(
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "uses the original to address as the sanitized username" do
         expect(@email_message).to have_to_username(
-          "to at example.org",
+          "to at example.org"
         )
       end
 
@@ -1415,13 +1415,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
     end
@@ -1429,14 +1429,14 @@ RSpec.describe SanitizeEmail do
     context "with :use_actual_email_as_sanitized_user_name when false" do
       before do
         configure_sanitize_email(
-          use_actual_email_as_sanitized_user_name: false,
+          use_actual_email_as_sanitized_user_name: false
         )
         sanitary_mail_delivery
       end
 
       it "does not use the original to address as the sanitized username" do
         expect(@email_message).not_to have_to_username(
-          "to at example.org <to@sanitize_email.org>",
+          "to at example.org <to@sanitize_email.org>"
         )
       end
 
@@ -1454,13 +1454,13 @@ RSpec.describe SanitizeEmail do
 
       it "does not prepend the sanitized to username" do
         expect(@email_message).not_to have_to_username(
-          "to at sanitize_email.org",
+          "to at sanitize_email.org"
         )
       end
 
       it "does not prepend the sanitized address to the subject" do
         expect(@email_message).not_to have_subject(
-          "(to at sanitize_email.org)",
+          "(to at sanitize_email.org)"
         )
       end
     end
@@ -1471,7 +1471,7 @@ RSpec.describe SanitizeEmail do
           engage: true,
           sanitized_to: "marv@example.org",
           use_actual_email_prepended_to_subject: true,
-          use_actual_email_as_sanitized_user_name: true,
+          use_actual_email_as_sanitized_user_name: true
         )
         mail_delivery
       end
@@ -1513,7 +1513,7 @@ RSpec.describe SanitizeEmail do
           sanitized_cc: "blargh@example.org",
           good_list: ["cc@example.org"],
           use_actual_email_prepended_to_subject: true,
-          use_actual_email_as_sanitized_user_name: true,
+          use_actual_email_as_sanitized_user_name: true
         )
         mail_delivery
       end
@@ -1549,14 +1549,14 @@ RSpec.describe SanitizeEmail do
       it "adds the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "adds the original cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@example.org",
+          "cc@example.org"
         )
       end
     end
@@ -1570,7 +1570,7 @@ RSpec.describe SanitizeEmail do
           good_list: ["to@example.org"],
           bad_list: ["cc@example.org"],
           use_actual_email_prepended_to_subject: true,
-          use_actual_email_as_sanitized_user_name: true,
+          use_actual_email_as_sanitized_user_name: true
         )
         mail_delivery
       end
@@ -1606,14 +1606,14 @@ RSpec.describe SanitizeEmail do
       it "adds the original to header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-To",
-          "to@example.org",
+          "to@example.org"
         )
       end
 
       it "adds the original cc header" do
         expect(@email_message).to have_header(
           "X-Sanitize-Email-Cc",
-          "cc@example.org",
+          "cc@example.org"
         )
       end
     end
@@ -1624,7 +1624,7 @@ RSpec.describe SanitizeEmail do
           engage: false,
           sanitized_to: "marv@example.org",
           use_actual_email_prepended_to_subject: true,
-          use_actual_email_as_sanitized_user_name: true,
+          use_actual_email_as_sanitized_user_name: true
         )
         mail_delivery
       end
@@ -1732,7 +1732,7 @@ RSpec.describe SanitizeEmail do
     context "with deprecated :sanitized_recipients" do
       before do
         configure_sanitize_email(
-          sanitized_recipients: "barney@sanitize_email.org",
+          sanitized_recipients: "barney@sanitize_email.org"
         )
         sanitary_mail_delivery
       end
@@ -1766,7 +1766,7 @@ RSpec.describe SanitizeEmail do
       before do
         configure_sanitize_email(
           activation_proc: proc { true },
-          force_sanitize: false,
+          force_sanitize: false
         )
         mail_delivery
       end

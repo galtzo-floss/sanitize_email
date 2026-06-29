@@ -55,7 +55,7 @@ module SanitizeEmail
       #   while nil ignores this setting and checks activation_proc
       engage: nil,
 
-      activation_proc: proc { false },
+      activation_proc: proc { false }
     }.freeze
 
     INIT_KEYS = [:sanitized_to, :sanitized_cc, :sanitized_bcc, :good_list, :bad_list].freeze
@@ -100,7 +100,7 @@ module SanitizeEmail
         return if force_sanitize.nil?
 
         deprecation_warning_message(
-          <<-DEPRECATION,
+          <<-DEPRECATION
                 SanitizeEmail::Config.config[:force_sanitize] is deprecated.
                 Please use SanitizeEmail.force_sanitize or SanitizeEmail.sanitary instead.
                 Refer to https://github.com/galtzo-floss/sanitize_email/wiki for examples.

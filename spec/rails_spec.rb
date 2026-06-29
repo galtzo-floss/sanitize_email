@@ -76,9 +76,9 @@ RSpec.describe Rails do
             sanitized_bcc: "bcc@sanitize_email.org",
             use_actual_email_prepended_to_subject: true,
             use_actual_environment_prepended_to_subject: true,
-            use_actual_email_as_sanitized_user_name: true,
+            use_actual_email_as_sanitized_user_name: true
           },
-          false,
+          false
         )
       end
 

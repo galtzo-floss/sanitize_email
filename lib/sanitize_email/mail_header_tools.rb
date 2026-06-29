@@ -50,7 +50,7 @@ module SanitizeEmail
         {
           # can be an arrays, so casting it as arrays
           "X-Sanitize-Email-To" => to_decoded,
-          "X-Sanitize-Email-Cc" => cc_decoded,
+          "X-Sanitize-Email-Cc" => cc_decoded
           # Don't write out the BCC, as those addresses should not be visible
           #   in message headers for obvious reasons
         }.each do |header_key, header_value|
@@ -58,7 +58,7 @@ module SanitizeEmail
           SanitizeEmail::MailHeaderTools.update_header(
             header_key,
             header_value,
-            message,
+            message
           )
         end
       end

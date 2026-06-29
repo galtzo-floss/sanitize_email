@@ -80,7 +80,7 @@ module SanitizeEmail
     end
 
     def respond_to_missing?(method_name, include_private = false)
-      method_name ? method_name : super
+      method_name || super
     end
 
     # NOTE: Deprecated method

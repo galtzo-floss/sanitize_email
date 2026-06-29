@@ -99,7 +99,7 @@ module SanitizeEmail
           end,
           bcc: actual_personalization[:bcc]&.map do |bcc|
             bcc.merge(email: override_email(:bcc, bcc[:email]).join(","))
-          end,
+          end
         )
       end
     end
@@ -133,20 +133,19 @@ module SanitizeEmail
       # then just return the default sanitized recipients
       return sanitized_addresses unless SanitizeEmail.use_actual_email_as_sanitized_user_name
 
-      with_user_names = inject_user_names(real_addresses, sanitized_addresses)
+      inject_user_names(real_addresses, sanitized_addresses)
       # puts "real_addresses 2: #{real_addresses}"
       # puts "override_email 6: #{type} - #{with_user_names}"
       # Otherwise inject the email as the "user name"
-      with_user_names
     end
 
     def address_list_filter(list_type, address)
       # TODO: How does this handle email addresses with user names like "Foo Example <foo@example.org>"
       has_address = send(list_type).include?(address)
       case list_type
-      when :good_list then
+      when :good_list
         has_address ? address : nil
-      when :bad_list then
+      when :bad_list
         has_address ? nil : address
       else
         raise ArgumentError, "address_list_filter got unknown list_type: #{list_type}"
@@ -175,11 +174,11 @@ module SanitizeEmail
 
     def sanitize_addresses(type)
       case type
-      when :to then
+      when :to
         Array(sanitized_to)
-      when :cc then
+      when :cc
         Array(sanitized_cc)
-      when :bcc then
+      when :bcc
         Array(sanitized_bcc)
       else
         raise UnknownOverride, "unknown email override"

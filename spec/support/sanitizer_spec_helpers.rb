@@ -4,7 +4,7 @@ module SanitizerSpecHelpers
     sanitized_bcc: "bcc@sanitize_email.org",
     use_actual_email_prepended_to_subject: false,
     use_actual_environment_prepended_to_subject: false,
-    use_actual_email_as_sanitized_user_name: false,
+    use_actual_email_as_sanitized_user_name: false
   }.freeze
 
   def sanitize_spec_dryer(rails_env = "test")
@@ -21,7 +21,7 @@ module SanitizerSpecHelpers
     end
     SanitizeEmail::Config.instance_variable_set(
       :@config,
-      SanitizeEmail::Config::DEFAULTS.dup,
+      SanitizeEmail::Config::DEFAULTS.dup
     )
     allow(Rails).to receive(:env).and_return(rails_env)
     SanitizeEmail::Config.config[:environment] = "[#{rails_env}]"
@@ -173,16 +173,16 @@ module SanitizerSpecHelpers
     @email_message["personalizations"] = [
       {
         to: [{email: "to1@example.org"}],
-        cc: [{email: "cc1@example.org"}],
+        cc: [{email: "cc1@example.org"}]
       },
       {
         to: [{email: "to2@example.org"}],
-        bcc: [{email: "bcc2@example.org"}],
+        bcc: [{email: "bcc2@example.org"}]
       },
       {
         cc: [{email: "cc3@example.org"}],
-        bcc: [{email: "bcc3@example.org"}],
-      },
+        bcc: [{email: "bcc3@example.org"}]
+      }
     ]
     @email_message.deliver
   end

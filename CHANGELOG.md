@@ -32,6 +32,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Root development bundle now includes the default Rails 7.2 test stack so
+  `bundle exec kettle-test` can load `rails_helper` and Combustion.
 - Package configured license files in gem release file lists.
 
 ### Security

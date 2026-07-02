@@ -31,6 +31,9 @@ eval_gemfile "gemfiles/modular/debug.gemfile"
 # Code Coverage (env-switched: KETTLE_RB_DEV=true for local paths)
 eval_gemfile "gemfiles/modular/coverage.gemfile"
 
+# Default Rails test stack
+eval_gemfile "gemfiles/rails_7_2.gemfile"
+
 # Linting
 eval_gemfile "gemfiles/modular/style.gemfile"
 

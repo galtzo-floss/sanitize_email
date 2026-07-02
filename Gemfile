@@ -8,9 +8,8 @@
 
 source "https://gem.coop"
 
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
-
-gem "combustion", "~> 1.5"
+git_source(:codeberg) { |repo_name| "https://codeberg.org/#{repo_name}" }
+git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
 #### IMPORTANT #######################################################
 # Gemfile is for local development ONLY; Gemfile is NOT loaded in CI #
@@ -18,13 +17,6 @@ gem "combustion", "~> 1.5"
 
 # Include dependencies from sanitize_email.gemspec
 gemspec
-
-gem "actionmailer", "~> 7.2.2"
-gem "railties", "~> 7.2.2"
-
-git_source(:codeberg) { |repo_name| "https://codeberg.org/#{repo_name}" }
-
-git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
 # Local workspace dependency wiring for *_local.gemfile overrides
 nomono_requirements = ["~> 1.0", ">= 1.0.7"]

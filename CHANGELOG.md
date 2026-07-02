@@ -20,11 +20,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Added support for JRuby 10.1 and TruffleRuby 34.0.
-
 ### Changed
-
-- Retemplated project metadata and CI/development automation with `kettle-jem` v7.0.0.
 
 ### Deprecated
 
@@ -32,11 +28,28 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [2.0.13] - 2026-07-02
+
+- TAG: [v2.0.13][2.0.13t]
+- COVERAGE: 83.12% -- 320/385 lines in 13 files
+- BRANCH COVERAGE: 76.07% -- 89/117 branches in 13 files
+- 51.14% documented
+
+### Added
+
+- Added support for JRuby 10.1 and TruffleRuby 34.0.
+
+### Changed
+
+- Retemplated project metadata and CI/development automation with `kettle-jem` v7.0.0.
+
+### Fixed
+
 - Root development bundle now includes the default Rails 7.2 test stack so
   `bundle exec kettle-test` can load `rails_helper` and Combustion.
 - Package configured license files in gem release file lists.
-
-### Security
 
 ## [2.0.12] - 2026-06-14
 
@@ -469,7 +482,9 @@ Old version?
 * Fixed require paths
 * added about.yml and this CHANGELOG
 
-[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.12...HEAD
+[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.13...HEAD
+[2.0.13]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.12...v2.0.13
+[2.0.13t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.13
 [2.0.12]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.11...v2.0.12
 [2.0.12t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.12
 [2.0.11]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.10...v2.0.11

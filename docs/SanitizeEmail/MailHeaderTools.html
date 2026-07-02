@@ -335,7 +335,7 @@
   <span class='lbrace'>{</span>
     <span class='comment'># can be an arrays, so casting it as arrays
 </span>    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>X-Sanitize-Email-To</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_to_decoded'>to_decoded</span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>X-Sanitize-Email-Cc</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_cc_decoded'>cc_decoded</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>X-Sanitize-Email-Cc</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_cc_decoded'>cc_decoded</span>
     <span class='comment'># Don&#39;t write out the BCC, as those addresses should not be visible
 </span>    <span class='comment'>#   in message headers for obvious reasons
 </span>  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_header_key'>header_key</span><span class='comma'>,</span> <span class='id identifier rubyid_header_value'>header_value</span><span class='op'>|</span>
@@ -343,7 +343,7 @@
 </span>    <span class='const'><span class='object_link'><a href="../SanitizeEmail.html" title="SanitizeEmail (module)">SanitizeEmail</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="SanitizeEmail::MailHeaderTools (module)">MailHeaderTools</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_header'><span class='object_link'><a href="#update_header-class_method" title="SanitizeEmail::MailHeaderTools.update_header (method)">update_header</a></span></span><span class='lparen'>(</span>
       <span class='id identifier rubyid_header_key'>header_key</span><span class='comma'>,</span>
       <span class='id identifier rubyid_header_value'>header_value</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_message'>message</span>
     <span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -598,7 +598,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu May 28 03:09:54 2026 by
+  Generated on Thu Jul  2 14:16:50 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

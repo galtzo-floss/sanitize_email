@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sanitize_email (2.0.13)
+    sanitize_email (2.0.14)
       mail (~> 2.0)
       version_gem (~> 1.1, >= 1.1.14)
 
@@ -75,8 +75,8 @@ GEM
       bundler (>= 1.14)
       version_gem (~> 1.1, >= 1.1.4)
     geom2d (0.4.1)
-    gitmoji-regex (2.0.4)
-      version_gem (~> 1.1, >= 1.1.13)
+    gitmoji-regex (2.0.5)
+      version_gem (~> 1.1, >= 1.1.14)
     hexapdf (1.9.1)
       cmdparse (~> 3.0, >= 3.0.3)
       geom2d (~> 0.4, >= 0.4.1)
@@ -409,7 +409,7 @@ DEPENDENCIES
   debug (>= 1.1)
   erb (~> 6.0, >= 6.0.6)
   gem_bench (~> 2.0, >= 2.0.5)
-  gitmoji-regex (~> 2.0, >= 2.0.4)
+  gitmoji-regex (~> 2.0, >= 2.0.5)
   irb (~> 1.17)
   kettle-dev (~> 2.3, >= 2.3.7)
   kettle-soup-cover (~> 3.0, >= 3.0.5)

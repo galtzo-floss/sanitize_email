@@ -30,9 +30,6 @@ eval_gemfile "gemfiles/modular/debug.gemfile"
 # Code Coverage (env-switched: KETTLE_DEV_DEV=true for local paths)
 eval_gemfile "gemfiles/modular/coverage.gemfile"
 
-# Rails test harness
-eval_gemfile "gemfiles/rails_7_2.gemfile"
-
 # Linting
 eval_gemfile "gemfiles/modular/style.gemfile"
 

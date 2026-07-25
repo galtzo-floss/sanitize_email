@@ -38,7 +38,7 @@ RSpec.describe "SanitizeEmail coverage surfaces" do
         to "To Person <to@example.com>"
         cc "Cc Person <cc@example.com>"
         bcc "Bcc Person <bcc@example.com>"
-        subject "Subject"
+        subject :Subject
         body "Hello\n  world"
       end
     end

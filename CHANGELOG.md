@@ -47,6 +47,12 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Root development bundle now includes the Rails test harness fragment, so
+  `bundle exec kettle-test` can load the suite outside appraisal-specific
+  Gemfiles.
+- Added coverage for legacy test helper, matcher, and Rails integration shim
+  surfaces so release coverage thresholds pass.
+
 ### Security
 
 ## [2.0.13] - 2026-07-02

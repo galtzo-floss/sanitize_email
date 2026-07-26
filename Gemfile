@@ -42,5 +42,8 @@ eval_gemfile "gemfiles/modular/optional.gemfile"
 ### Std Lib Extracted Gems
 eval_gemfile "gemfiles/modular/x_std_libs.gemfile"
 
+# Current Rails test/runtime matrix for local default bundle
+eval_gemfile "gemfiles/rails_7_2.gemfile"
+
 # See unlocked_deps appraisal for more details on irb inclusion
 gem "irb", "~> 1.17" # ruby >= 2.7

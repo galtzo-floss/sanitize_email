@@ -114,7 +114,6 @@ module SanitizeEmail
     #     subject   "subject"
     #   end
     # end
-    #
     def sanitary(config_options = {})
       raise MissingBlockParameter, "SanitizeEmail.sanitary must be called with a block" unless block_given?
       forcing =
@@ -145,7 +144,6 @@ module SanitizeEmail
     #     subject   "subject"
     #   end
     # end
-    #
     def unsanitary
       raise MissingBlockParameter, "SanitizeEmail.unsanitary must be called with a block" unless block_given?
       janitor(forcing: false) do

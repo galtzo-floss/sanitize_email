@@ -22,8 +22,8 @@ module SanitizeEmail
     @deprecate_in_silence = false
 
     # Define a deprecated alias for a method
-    # @param [Symbol] name - name of method to define
-    # @param [Symbol] replacement - name of method to (alias)
+    # @param name [Symbol] name of method to define
+    # @param replacement [Symbol] name of method to (alias)
     def deprecated_alias(name, replacement)
       # Create a wrapped version
       define_method(name) do |*args, &block|
@@ -33,8 +33,8 @@ module SanitizeEmail
     end
 
     # Deprecate a defined method
-    # @param [Symbol] name - name of deprecated method
-    # @param [Symbol] replacement - name of the desired replacement
+    # @param name [Symbol] name of deprecated method
+    # @param replacement [Symbol] name of the desired replacement
     def deprecated(name, replacement = nil)
       # Replace old method
       old_name = :"#{name}_without_deprecation"

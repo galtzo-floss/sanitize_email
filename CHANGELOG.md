@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.14] - 2026-07-25
+
+- TAG: [v2.0.14][2.0.14t]
+- COVERAGE: 95.58% -- 368/385 lines in 13 files
+- BRANCH COVERAGE: 82.91% -- 97/117 branches in 13 files
+- 51.14% documented
+
+### Changed
+
 - kettle-jem-template-20260716-001 - Shim gemspec manifests now include
   `LICENSE.md` instead of nonexistent `LICENSE.txt`.
 - kettle-jem-template-20260716-002 - Generated gemspec manifests now ship fewer
@@ -47,10 +64,6 @@ Please file a bug if you notice a violation of semantic versioning.
   constants. Managed version specs are removed when `version_gem` is disabled
   or incompatible with the project's runtime Ruby floor.
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - Root development bundle now includes the Rails test harness fragment, so
@@ -58,8 +71,6 @@ Please file a bug if you notice a violation of semantic versioning.
   Gemfiles.
 - Added coverage for legacy test helper, matcher, and Rails integration shim
   surfaces so release coverage thresholds pass.
-
-### Security
 
 ## [2.0.13] - 2026-07-02
 
@@ -513,7 +524,9 @@ Old version?
 * Fixed require paths
 * added about.yml and this CHANGELOG
 
-[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.13...HEAD
+[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.14...HEAD
+[2.0.14]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.13...v2.0.14
+[2.0.14t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.14
 [2.0.13]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.12...v2.0.13
 [2.0.13t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.13
 [2.0.12]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.11...v2.0.12

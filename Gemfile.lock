@@ -234,7 +234,7 @@ GEM
     rspec-mocks (3.13.8)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-pending_for (0.1.22)
+    rspec-pending_for (0.1.23)
       rspec-core (~> 3.0)
       ruby_engine (~> 2.0)
       ruby_version (~> 1.0)
@@ -463,7 +463,7 @@ DEPENDENCIES
   require_bench (~> 1.0, >= 1.0.4)
   rspec (>= 3)
   rspec-block_is_expected (~> 1.0, >= 1.0.5)
-  rspec-pending_for (~> 0.1, >= 0.1.22)
+  rspec-pending_for (~> 0.1, >= 0.1.23)
   rubocop-gradual (~> 0.4, >= 0.4.0)
   rubocop-lts (~> 10.3, >= 10.3.1)
   rubocop-lts-rspec (~> 1.0, >= 1.0.5)
@@ -581,7 +581,7 @@ CHECKSUMS
   rspec-core (3.13.6) sha256=a8823c6411667b60a8bca135364351dda34cd55e44ff94c4be4633b37d828b2d
   rspec-expectations (3.13.5) sha256=33a4d3a1d95060aea4c94e9f237030a8f9eae5615e9bd85718fe3a09e4b58836
   rspec-mocks (3.13.8) sha256=086ad3d3d17533f4237643de0b5c42f04b66348c28bf6b9c2d3f4a3b01af1d47
-  rspec-pending_for (0.1.22) sha256=49dc647473f8c8ea4ccc1a33813537dd94b913ef7ec5a8689896101eaacb71cf
+  rspec-pending_for (0.1.23) sha256=e95fcb52e841a3e5be687c7bd0324d3dc6ded2473d2f84eac4106a332bdb508d
   rspec-stubbed_env (1.0.9) sha256=97c8be588ec44e40b4b5b61281a45c556818e35d3343c4df011a22b5db2c85eb
   rspec-support (3.13.7) sha256=0640e5570872aafefd79867901deeeeb40b0c9875a36b983d85f54fb7381c47c
   rspec_junit_formatter (0.6.0) sha256=40dde674e6ae4e6cc0ff560da25497677e34fefd2338cc467a8972f602b62b15

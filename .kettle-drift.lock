@@ -3,8 +3,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        149,
-        245
+        161,
+        257
       ]
     }
   ],
@@ -12,8 +12,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        148,
-        244
+        160,
+        256
       ]
     }
   ],
@@ -21,12 +21,156 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        299,
-        340
+        311,
+        352
       ]
     }
   ],
   "#   - basic usage\n#   - usage": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        303,
+        344
+      ]
+    }
+  ],
+  "#   - usage\n#   - summary": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        304,
+        345
+      ]
+    }
+  ],
+  "#   dimension   — framework name used in the matrix key and display\n#                 (e.g. activerecord, rails, actionmailer)": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        146,
+        249
+      ]
+    }
+  ],
+  "#   framework    — Ruby × framework-version matrix\n#   legacy-compat — supported / unsupported / ancient workflow split": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        142,
+        245
+      ]
+    }
+  ],
+  "#   howto: basic usage\n#   options: configuration": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        318,
+        359
+      ]
+    }
+  ],
+  "#   modern       — Ruby-only matrix (default when absent)\n#   framework    — Ruby × framework-version matrix": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        141,
+        244
+      ]
+    }
+  ],
+  "#   summary → synopsis, usage → basic usage,\n#   configuration options → configuration, setup → basic usage": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        297,
+        338
+      ]
+    }
+  ],
+  "# ActiveRecord, ActiveSupport, etc.), this section configures how\n# kettle-jem generates the CI matrix strategy and gemfile references.": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        137,
+        240
+      ]
+    }
+  ],
+  "# Built-in aliases (destination → template):\n#   summary → synopsis, usage → basic usage,": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        296,
+        337
+      ]
+    }
+  ],
+  "# Custom section aliases (destination heading → canonical template heading).\n# Merged with built-in aliases above.": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        314,
+        355
+      ]
+    }
+  ],
+  "# Framework matrix workflows.\n# When your gem tests against multiple versions of a framework (Rails,": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        135,
+        238
+      ]
+    }
+  ],
+  "# Glob patterns for additional sections to preserve (e.g. Note:* headings).\n# Default when absent: [\"note:*\"]": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        307,
+        348
+      ]
+    }
+  ],
+  "# Sections to preserve from the destination README during template merging.\n# These section headings (case-insensitive) will keep the destination body": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        289,
+        330
+      ]
+    }
+  ],
+  "# These section headings (case-insensitive) will keep the destination body\n# instead of being overwritten by the template. Default when absent:": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        290,
+        331
+      ]
+    }
+  ],
+  "# When your gem tests against multiple versions of a framework (Rails,\n# ActiveRecord, ActiveSupport, etc.), this section configures how": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        136,
+        239
+      ]
+    }
+  ],
+  "# framework_matrix (only used when preset: framework):\n#   dimension   — framework name used in the matrix key and display": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        145,
+        248
+      ]
+    }
+  ],
+  "# instead of being overwritten by the template. Default when absent:\n#   - synopsis": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
@@ -35,156 +179,12 @@
       ]
     }
   ],
-  "#   - usage\n#   - summary": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        292,
-        333
-      ]
-    }
-  ],
-  "#   dimension   — framework name used in the matrix key and display\n#                 (e.g. activerecord, rails, actionmailer)": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        134,
-        237
-      ]
-    }
-  ],
-  "#   framework    — Ruby × framework-version matrix\n#   legacy-compat — supported / unsupported / ancient workflow split": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        130,
-        233
-      ]
-    }
-  ],
-  "#   howto: basic usage\n#   options: configuration": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        306,
-        347
-      ]
-    }
-  ],
-  "#   modern       — Ruby-only matrix (default when absent)\n#   framework    — Ruby × framework-version matrix": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        129,
-        232
-      ]
-    }
-  ],
-  "#   summary → synopsis, usage → basic usage,\n#   configuration options → configuration, setup → basic usage": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        285,
-        326
-      ]
-    }
-  ],
-  "# ActiveRecord, ActiveSupport, etc.), this section configures how\n# kettle-jem generates the CI matrix strategy and gemfile references.": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        125,
-        228
-      ]
-    }
-  ],
-  "# Built-in aliases (destination → template):\n#   summary → synopsis, usage → basic usage,": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        284,
-        325
-      ]
-    }
-  ],
-  "# Custom section aliases (destination heading → canonical template heading).\n# Merged with built-in aliases above.": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        302,
-        343
-      ]
-    }
-  ],
-  "# Framework matrix workflows.\n# When your gem tests against multiple versions of a framework (Rails,": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        123,
-        226
-      ]
-    }
-  ],
-  "# Glob patterns for additional sections to preserve (e.g. Note:* headings).\n# Default when absent: [\"note:*\"]": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        295,
-        336
-      ]
-    }
-  ],
-  "# Sections to preserve from the destination README during template merging.\n# These section headings (case-insensitive) will keep the destination body": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        277,
-        318
-      ]
-    }
-  ],
-  "# These section headings (case-insensitive) will keep the destination body\n# instead of being overwritten by the template. Default when absent:": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        278,
-        319
-      ]
-    }
-  ],
-  "# When your gem tests against multiple versions of a framework (Rails,\n# ActiveRecord, ActiveSupport, etc.), this section configures how": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        124,
-        227
-      ]
-    }
-  ],
-  "# framework_matrix (only used when preset: framework):\n#   dimension   — framework name used in the matrix key and display": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        133,
-        236
-      ]
-    }
-  ],
-  "# instead of being overwritten by the template. Default when absent:\n#   - synopsis": [
-    {
-      "file": ".structuredmerge/kettle-jem.yml",
-      "lines": [
-        279,
-        320
-      ]
-    }
-  ],
   "# preserve_patterns:\n#   - \"note:*\"": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        298,
-        339
+        310,
+        351
       ]
     }
   ],
@@ -192,8 +192,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        288,
-        329
+        300,
+        341
       ]
     }
   ],
@@ -201,8 +201,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        128,
-        231
+        140,
+        243
       ]
     }
   ],
@@ -210,8 +210,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        305,
-        346
+        317,
+        358
       ]
     }
   ],
@@ -219,9 +219,9 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        207,
-        213,
-        219
+        219,
+        225,
+        231
       ]
     }
   ],
@@ -229,8 +229,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        212,
-        218
+        224,
+        230
       ]
     }
   ],
@@ -296,9 +296,9 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        208,
-        214,
-        220
+        220,
+        226,
+        232
       ]
     }
   ]

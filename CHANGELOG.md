@@ -20,30 +20,61 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Documentation linting now has its generated `yard-lint` dependency and severity config available in the local bundle.
-
-- kettle-jem-template-20260726-001 - Projects now include YARD lint
-  configuration and documentation dependencies so documentation issues fail
-  before generated docs are refreshed.
-
-- kettle-jem-template-20260727-001 - Spec harness documentation now lists the
-  RSpec helpers provided by `kettle-test`.
-
-- kettle-jem-template-20260729-005 - Gemspec metadata now publishes this
-  project's RubyForum tag as `mailing_list_uri`, and support docs link to the
-  tagged RubyForum community alongside Discord.
-
 ### Changed
-
-- kettle-jem-template-20260728-001 - Generated Ruby workflows now use clearer
-  setup-ruby-flash planning and can prepare appraisal-only jobs without
-  installing the main Gemfile bundle.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [2.0.14] - 2026-07-31
+
+- TAG: [v2.0.14][2.0.14t]
+- COVERAGE: 95.58% -- 368/385 lines in 13 files
+- BRANCH COVERAGE: 82.91% -- 97/117 branches in 13 files
+- 53.41% documented
+
+### Changed
+
+- kettle-jem-template-20260716-001 - Shim gemspec manifests now include
+  `LICENSE.md` instead of nonexistent `LICENSE.txt`.
+- kettle-jem-template-20260716-002 - Generated gemspec manifests now ship fewer
+  repository-only files by default to reduce downstream distro packaging churn.
+- kettle-jem-template-20260720-001 - Generated READMEs can now render
+  template-managed corporate sponsor logos from project or family config.
+- kettle-jem-template-20260720-002 - Generated development Gemfiles now use the
+  released `tree_sitter_language_pack` gem 1.13.3 or newer by default.
+- kettle-jem-template-20260720-003 - Generated StructuredMerge Git diff driver
+  config now uses the installed `smorg-rb` Ruby driver name.
+- kettle-jem-template-20260720-004 - Generated multi-engine workflow files now
+  omit JRuby and TruffleRuby jobs when project config declares MRI-only engines.
+- kettle-jem-template-20260720-005 - Generated README Support & Community rows
+  now include a RubyForum help badge.
+- kettle-jem-template-20260725-001 - Generated JRuby and TruffleRuby workflow
+  files now run when pull request head branches start with `feature/release`,
+  so release CI monitoring does not report intentionally skipped engine
+  workflows as failures.
+
+- kettle-jem-template-20260725-002 - Generated gemspec templates now include
+  `anonymous_loader` as a development dependency, and version specs use it to
+  execute generated `version.rb` files for coverage without redefining package
+  constants. Managed version specs are removed when `version_gem` is disabled
+  or incompatible with the project's runtime Ruby floor.
+
+- kettle-jem-template-20260728-001 - Generated Ruby workflows now use clearer
+  setup-ruby-flash planning and can prepare appraisal-only jobs without
+  installing the main Gemfile bundle.
+
+### Fixed
+
+- Root development bundle now includes the Rails test harness fragment, so
+  `bundle exec kettle-test` can load the suite outside appraisal-specific
+  Gemfiles.
+- Added coverage for legacy test helper, matcher, and Rails integration shim
+  surfaces so release coverage thresholds pass.
 
 - Root release bundles now include the default Rails test support, and
   Rails-dependent specs load `rails_helper` explicitly for parallel workers.
@@ -85,49 +116,20 @@ Please file a bug if you notice a violation of semantic versioning.
   relative to the gemspec directory, so packaged template assets are included
   even when the gemspec is loaded from another working directory.
 
-### Security
+### Added
 
-## [2.0.14] - 2026-07-25
+- Documentation linting now has its generated `yard-lint` dependency and severity config available in the local bundle.
 
-- TAG: [v2.0.14][2.0.14t]
-- COVERAGE: 95.58% -- 368/385 lines in 13 files
-- BRANCH COVERAGE: 82.91% -- 97/117 branches in 13 files
-- 51.14% documented
+- kettle-jem-template-20260726-001 - Projects now include YARD lint
+  configuration and documentation dependencies so documentation issues fail
+  before generated docs are refreshed.
 
-### Changed
+- kettle-jem-template-20260727-001 - Spec harness documentation now lists the
+  RSpec helpers provided by `kettle-test`.
 
-- kettle-jem-template-20260716-001 - Shim gemspec manifests now include
-  `LICENSE.md` instead of nonexistent `LICENSE.txt`.
-- kettle-jem-template-20260716-002 - Generated gemspec manifests now ship fewer
-  repository-only files by default to reduce downstream distro packaging churn.
-- kettle-jem-template-20260720-001 - Generated READMEs can now render
-  template-managed corporate sponsor logos from project or family config.
-- kettle-jem-template-20260720-002 - Generated development Gemfiles now use the
-  released `tree_sitter_language_pack` gem 1.13.3 or newer by default.
-- kettle-jem-template-20260720-003 - Generated StructuredMerge Git diff driver
-  config now uses the installed `smorg-rb` Ruby driver name.
-- kettle-jem-template-20260720-004 - Generated multi-engine workflow files now
-  omit JRuby and TruffleRuby jobs when project config declares MRI-only engines.
-- kettle-jem-template-20260720-005 - Generated README Support & Community rows
-  now include a RubyForum help badge.
-- kettle-jem-template-20260725-001 - Generated JRuby and TruffleRuby workflow
-  files now run when pull request head branches start with `feature/release`,
-  so release CI monitoring does not report intentionally skipped engine
-  workflows as failures.
-
-- kettle-jem-template-20260725-002 - Generated gemspec templates now include
-  `anonymous_loader` as a development dependency, and version specs use it to
-  execute generated `version.rb` files for coverage without redefining package
-  constants. Managed version specs are removed when `version_gem` is disabled
-  or incompatible with the project's runtime Ruby floor.
-
-### Fixed
-
-- Root development bundle now includes the Rails test harness fragment, so
-  `bundle exec kettle-test` can load the suite outside appraisal-specific
-  Gemfiles.
-- Added coverage for legacy test helper, matcher, and Rails integration shim
-  surfaces so release coverage thresholds pass.
+- kettle-jem-template-20260729-005 - Gemspec metadata now publishes this
+  project's RubyForum tag as `mailing_list_uri`, and support docs link to the
+  tagged RubyForum community alongside Discord.
 
 ## [2.0.13] - 2026-07-02
 

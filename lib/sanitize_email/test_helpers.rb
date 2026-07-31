@@ -17,7 +17,7 @@ module SanitizeEmail
 
     def string_matching(matcher, part, attribute)
       # Can we match a regex against it?
-      raise UnexpectedMailType, "Cannot match #{matcher} for #{part}" unless attribute.respond_to?(:=~)
+      raise UnexpectedMailType, "Cannot match #{matcher} for #{part}" unless attribute.is_a?(String)
       attribute =~ if matcher.is_a?(Regexp)
         matcher
       else

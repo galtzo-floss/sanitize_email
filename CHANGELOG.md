@@ -28,6 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Legacy test helpers now reject unsupported match values consistently on Ruby
+  2.5, where plain objects still respond to `=~`.
+
 ### Security
 
 ## [2.0.14] - 2026-07-31

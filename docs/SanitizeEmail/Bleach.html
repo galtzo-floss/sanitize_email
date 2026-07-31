@@ -295,12 +295,12 @@
       <pre class="lines">
 
 
-93
-94
-95</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_deprecation_message'>deprecation_message</span> <span class='kw'>unless</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -342,12 +342,12 @@
       <pre class="lines">
 
 
-12
-13
-14</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_overridden_addresses'>overridden_addresses</span>
   <span class='ivar'>@overridden_addresses</span>
@@ -389,6 +389,8 @@
       <pre class="lines">
 
 
+14
+15
 16
 17
 18
@@ -405,12 +407,10 @@
 29
 30
 31
-32
-33
-34</pre>
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delivering_email'>delivering_email</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sanitize_engaged?'>sanitize_engaged?</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -524,6 +524,8 @@ Until configured the defaults leave it turned off.</p>
       <pre class="lines">
 
 
+74
+75
 76
 77
 78
@@ -536,12 +538,10 @@ Until configured the defaults leave it turned off.</p>
 85
 86
 87
-88
-89
-90</pre>
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email/bleach.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sanitize_engaged?'>sanitize_engaged?</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='comment'># Don&#39;t sanitize the message if it will not be delivered

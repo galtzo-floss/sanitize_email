@@ -45,6 +45,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Root release bundles now include the default Rails test support, and
+  Rails-dependent specs load `rails_helper` explicitly for parallel workers.
+
 - kettle-jem-template-20260726-002 - Generated version files now document their
   version namespace and constants, reducing warning-only YARD lint output.
 

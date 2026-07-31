@@ -1,3 +1,5 @@
+require "rails_helper"
+
 RSpec.describe Rails do
   let(:expected_rails_version) { ENV.fetch("RAILS_MAJOR_MINOR", nil) }
   let(:actual_rails_version) { "#{described_class::VERSION::MAJOR}.#{described_class::VERSION::MINOR}" }

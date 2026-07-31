@@ -133,7 +133,7 @@ Released under the MIT license</p>
         <dt id="VERSION-constant" class="">VERSION =
           <div class="docstring">
   <div class="discussion">
-    <p>Traditional Constant Location</p>
+    <p>Current gem version exposed at the traditional constant location.</p>
 
 
   </div>
@@ -588,17 +588,17 @@ Released under the MIT license</p>
       <pre class="lines">
 
 
+154
+155
 156
 157
 158
 159
 160
-161
-162
-163</pre>
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sanitize_email.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_janitor'>janitor</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="SanitizeEmail/MissingBlockParameter.html" title="SanitizeEmail::MissingBlockParameter (class)">MissingBlockParameter</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SanitizeEmail.janitor must be called with a block</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -796,6 +796,7 @@ end</p>
       <pre class="lines">
 
 
+117
 118
 119
 120
@@ -812,11 +813,10 @@ end</p>
 131
 132
 133
-134
-135</pre>
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sanitize_email.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sanitary'>sanitary</span><span class='lparen'>(</span><span class='id identifier rubyid_config_options'>config_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="SanitizeEmail/MissingBlockParameter.html" title="SanitizeEmail::MissingBlockParameter (class)">MissingBlockParameter</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SanitizeEmail.sanitary must be called with a block</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -930,15 +930,15 @@ end</p>
       <pre class="lines">
 
 
+147
+148
 149
 150
 151
-152
-153
-154</pre>
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sanitize_email.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'lib/sanitize_email.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsanitary'>unsanitary</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="SanitizeEmail/MissingBlockParameter.html" title="SanitizeEmail::MissingBlockParameter (class)">MissingBlockParameter</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SanitizeEmail.unsanitary must be called with a block</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>

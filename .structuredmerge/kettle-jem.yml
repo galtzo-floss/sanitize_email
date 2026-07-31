@@ -545,7 +545,7 @@ patterns:
 # Only files that need overrides belong here. Everything else defaults to merge.
 files:
   .rspec:
-    strategy: keep_destination
+    strategy: merge
   AGENTS.md:
     strategy: accept_template
   Appraisal.root.gemfile:

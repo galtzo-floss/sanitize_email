@@ -28,9 +28,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Legacy test helpers now reject unsupported match values consistently on Ruby
-  2.5, where plain objects still respond to `=~`.
-
 ### Security
 
 ## [2.0.14] - 2026-07-31
@@ -118,6 +115,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs
   relative to the gemspec directory, so packaged template assets are included
   even when the gemspec is loaded from another working directory.
+
+- Legacy test helpers now reject unsupported match values consistently on Ruby
+  2.5, where plain objects still respond to `=~`.
 
 ### Added
 

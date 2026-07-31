@@ -183,9 +183,13 @@ cover both <code>version.rb</code> and <code>version_gem.rb</code>.</p>
   <li>kettle-jem-template-20260729-003 - Old-Ruby gems below the VersionGem runtime<br>
 floor now get managed minimal <code>version.rb</code> files and anonymous-loader version<br>
 specs without adding <code>version_gem</code>.</li>
-  <li>kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs<br>
+  <li>
+    <p>kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs<br>
 relative to the gemspec directory, so packaged template assets are included<br>
-even when the gemspec is loaded from another working directory.</li>
+even when the gemspec is loaded from another working directory.</p>
+  </li>
+  <li>Legacy test helpers now reject unsupported match values consistently on Ruby<br>
+2.5, where plain objects still respond to <code>=~</code>.</li>
 </ul>
 
 <h3 id="added-1">Added</h3>

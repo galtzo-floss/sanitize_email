@@ -1,7 +1,8 @@
 --format progress
 --color
 --order random
---require rails_helper
+--require spec_helper
+--exclude-pattern spec/tmp/**/*_spec.rb
 --warnings
 --format html
 --out results/test_results.html

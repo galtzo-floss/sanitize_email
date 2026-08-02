@@ -7,12 +7,12 @@
 require "version_gem"
 
 # This Library
-require_relative "sanitize_email/version"
 require_relative "sanitize_email/deprecation"
 require_relative "sanitize_email/config"
 require_relative "sanitize_email/mail_header_tools"
 require_relative "sanitize_email/overridden_addresses"
 require_relative "sanitize_email/bleach"
+require_relative "sanitize_email/version"
 
 module SanitizeEmail
   FORCE_SANITIZE_MUTEX = Mutex.new

@@ -297,7 +297,7 @@ PATH
   remote: /var/home/pboling/src/my/galtzo-floss/yard-yaml
   specs:
     yard-yaml (0.2.4)
-      version_gem (~> 1.1, >= 1.1.14)
+      version_gem (~> 1.1, >= 1.1.15)
       yaml-converter (~> 0.2)
 
 GEM

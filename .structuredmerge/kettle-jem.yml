@@ -246,39 +246,6 @@ workflows:
         env:
           RAILS_MAJOR_MINOR: "8.0"
 
-# Framework matrix workflows.
-# When your gem tests against multiple versions of a framework (Rails,
-# ActiveRecord, ActiveSupport, etc.), this section configures how
-# kettle-jem generates the CI matrix strategy and gemfile references.
-#
-# preset: controls overall workflow strategy
-#   modern       — Ruby-only matrix (default when absent)
-#   framework    — Ruby × framework-version matrix
-#   legacy-compat — supported / unsupported / ancient workflow split
-#
-# framework_matrix (only used when preset: framework):
-#   dimension   — framework name used in the matrix key and display
-#                 (e.g. activerecord, rails, actionmailer)
-#   versions    — ordered list of versions to test against
-#   gemfile_pattern — pattern for gemfile paths; {version} is replaced
-#                     with each version string (dots replaced by underscores
-#                     when the pattern contains an underscore placeholder).
-#                     Resolved relative to gemfiles/ directory.
-#                     Examples:
-#                       "ar-{version}.x"      → gemfiles/ar-7.0.x
-#                       "rails_{version}"      → gemfiles/rails_7_0.gemfile
-#
-# workflows:
-#   preset: framework
-#   framework_matrix:
-#     dimension: activerecord
-#     versions:
-#       - "7.0"
-#       - "7.1"
-#       - "7.2"
-#       - "8.0"
-#     gemfile_pattern: "ar-{version}.x"
-
 # README top logos.
 # Comma-separated list of optional logo entries for the generated README header.
 # top_logos render above the title; h2_synopsis_logos render inline with the Synopsis H2.
@@ -338,57 +305,6 @@ readme:
     # Example:
     # fossa: git+github.com/pboling/example
     fossa: false
-  # Sections to preserve from the destination README during template merging.
-  # These section headings (case-insensitive) will keep the destination body
-  # instead of being overwritten by the template. Default when absent:
-  #   - synopsis
-  #   - configuration
-  #   - basic usage
-  #
-  # Built-in aliases (destination → template):
-  #   summary → synopsis, usage → basic usage,
-  #   configuration options → configuration, setup → basic usage
-  #
-  # preserve_sections:
-  #   - synopsis
-  #   - configuration
-  #   - basic usage
-  #   - usage
-  #   - summary
-  #
-  # Glob patterns for additional sections to preserve (e.g. Note:* headings).
-  # Default when absent: ["note:*"]
-  #
-  # preserve_patterns:
-  #   - "note:*"
-  #   - "setup*"
-  #
-  # Custom section aliases (destination heading → canonical template heading).
-  # Merged with built-in aliases above.
-  #
-  # section_aliases:
-  #   howto: basic usage
-  #   options: configuration
-
-# SPDX license identifiers for this project.
-# List one or more licenses that apply to the gem. Users may use the software
-# under the terms of any one license listed here (OR semantics, not AND).
-#
-# Accepted values (initial supported set):
-#   MIT                              - MIT License (open source, permissive)
-#   AGPL-3.0-only                    - GNU Affero General Public License v3
-#   PolyForm-Noncommercial-1.0.0     - PolyForm Noncommercial License 1.0.0
-#   PolyForm-Small-Business-1.0.0    - PolyForm Small Business License 1.0.0
-#   LicenseRef-Big-Time-Public-License - Big Time Public License 2.0.2
-#
-# Defaults to spec.licenses from the gemspec when this key is absent.
-#
-# Template behaviour:
-#   - Each listed license is copied as <SPDX-basename>.md into the project.
-#   - A LICENSE.md index file is generated referencing all chosen licenses.
-#   - Any non-MIT license adds a "contact for commercial license" prompt.
-#   - When MIT (or AGPL), a PolyForm variant, AND LicenseRef-Big-Time-Public-License
-#     are all present, a use-case guide table is added to README and LICENSE.md.
 licenses:
   - MIT
 # Apache SkyWalking Eyes dependency license overrides.

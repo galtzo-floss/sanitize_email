@@ -167,7 +167,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("appraisal", "~> 2.5")
   spec.add_development_dependency("jar-dependencies", "~> 0.4.1") if RUBY_ENGINE == "jruby"
   spec.add_development_dependency("psych", "< 5.3")
-  spec.add_development_dependency("rdoc", ">= 3")
   spec.add_development_dependency("rspec", ">= 3")
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.5")
   spec.add_development_dependency("rspec-pending_for", "~> 0.1", ">= 0.1.25")

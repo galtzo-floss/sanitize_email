@@ -1,4 +1,5 @@
 require "anonymous_loader"
+require "sanitize_email"
 RSpec.describe SanitizeEmail::Version do
   it_behaves_like "a Version module", described_class
 

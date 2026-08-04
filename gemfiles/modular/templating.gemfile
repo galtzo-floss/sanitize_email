@@ -3,9 +3,16 @@
 structuredmerge_remote = ENV.fetch("STRUCTUREDMERGE_DEV", "false").casecmp("false").zero?
 kettle_remote = ENV.fetch("KETTLE_DEV_DEV", "false").casecmp("false").zero?
 
+# Parser dependencies for both released and local installs.
+# Do not let Bundler auto-require TSLP before gems that define Parser.
+tslp_dev = ENV.fetch("TSLP_DEV", nil)
+if tslp_dev.to_s.empty?
+  gem "tree_sitter_language_pack", "~> 1.13", ">= 1.13.7", require: false
+else
+  gem "tree_sitter_language_pack", path: tslp_dev, require: false
+end
+
 if structuredmerge_remote
-  # Parser dependencies for released installs.
-  gem "tree_sitter_language_pack", "~> 1.13", ">= 1.13.7"
   # Merge recipes for released installs.
   gem "kettle-jem", ">= 7.0"
 end

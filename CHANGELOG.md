@@ -44,6 +44,8 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260802-001 - Devcontainer JSON files now merge as JSONC,
   preserving comments and trailing commas during template updates.
 
+- Restore the Rails app harness required by the default test bundle.
+
 ### Security
 
 ## [2.0.14] - 2026-07-31

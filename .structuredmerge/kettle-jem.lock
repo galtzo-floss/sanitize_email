@@ -670,7 +670,7 @@ files:
   CHANGELOG.md:
     recipe: template_source_application_CHANGELOG_md
     action: write
-    dest_sha256: dce075cec15048730615c9505feb9d365c5ed3f2f811f60a08f34d2082d1e7d3
+    dest_sha256: add3c1632b8d6b25ec01dac7bfcd7eae93deca2d0578fe295719e25646c59b7a
     input_fingerprint: 152f8841bc39e24651fff5793f6ee5a77313ca5d2c8a8c898c0d34a3bc21e3e3
     template_sources:
     - CHANGELOG.md.example
@@ -1098,7 +1098,7 @@ files:
     recipe: template_source_application_lib_sanitize_email_version_rb
     action: write
     dest_sha256: d865a9f319a4219deb3094c62ad8d096aad45e24d483259aed3ce5802891862b
-    input_fingerprint: 9bde09cdaf900c9d8d678328fd633b113503f8f0dd019a57665c887179ee857f
+    input_fingerprint: 38cd53a30a1416e35ac2a20d4739125d11e6d5a547885aa3d2fb922a886d4ecd
     template_sources:
     - lib/gem/version.rb.example
   mise.toml:
@@ -1119,7 +1119,7 @@ files:
     recipe: template_source_application_sanitize_email_gemspec
     action: write
     dest_sha256: 8c58314a926a4f7e68abb1ce53ea2a2496c306ac5e379b99a79b2ccd2fa396b6
-    input_fingerprint: 04256abc2ffe92862bd4d57407d3b9aeea83cbebce4f36329ac82649ff991e12
+    input_fingerprint: 43813be2b429a57a77f6fba6c79e8788f1f7b9ae5944f9fe5b60be6da2c92d92
     template_sources:
     - gem.gemspec.example
   sig/sanitize_email.rbs:

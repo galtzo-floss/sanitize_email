@@ -4,8 +4,6 @@
 # To retain chunks of comments & code during kettle-jem templating:
 # Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
 # kettle-jem will then preserve content between those markers across template runs.
-# Rails is the library under test and this default bundle must include its app harness.
-eval_gemfile "gemfiles/rails_7_2.gemfile"
 # kettle-jem:unfreeze
 
 source "https://gem.coop"

@@ -96,7 +96,7 @@
 #   keep_both                - retain both declarations when ranges overlap.
 dependency_conflicts:
   # Set true only after every discovered conflict has an intentional action.
-  reviewed: false
+  reviewed: true
   # Review each entry and choose a supported action.
   resolve:
     - gem: rdoc

@@ -149,6 +149,21 @@ This happens in a few different ways, and two of them are in the config below (`
 
 ## 🔧 Basic Usage
 
+Configure the sanitizer during application boot and register the Mail or
+ActionMailer interceptor. For a temporary override, use `SanitizeEmail.sanitary`
+or `SanitizeEmail.unsanitary` around the delivery:
+
+```ruby
+SanitizeEmail::Config.configure do |config|
+  config[:sanitized_to] = "test@example.invalid"
+  config[:environment] = "[staging]"
+end
+
+SanitizeEmail.sanitary do
+  UserMailer.account_notice(user).deliver_now
+end
+```
+
 ## 🦷 FLOSS Funding
 
 While galtzo-floss tools are free software and will always be, the project would benefit immensely from some funding.

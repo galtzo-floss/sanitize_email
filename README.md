@@ -90,7 +90,9 @@ The _amazing_ test matrix is powered by the kettle-dev stack.
 
 </details>
 
-### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/sanitize_email)](https://tidelift.com/subscription/pkg/rubygems-sanitize_email?utm_source=rubygems-sanitize_email&utm_medium=referral&utm_campaign=readme)
+### Enterprise Support
+
+[![Tidelift](https://tidelift.com/badges/package/rubygems/sanitize_email)](https://tidelift.com/subscription/pkg/rubygems-sanitize_email?utm_source=rubygems-sanitize_email&utm_medium=referral&utm_campaign=readme)
 
 Available as part of the Tidelift Subscription.
 
@@ -315,13 +317,10 @@ See [LICENSE.md][📄license] for the official copyright notice.
 <details markdown="1">
 <summary>Copyright holders</summary>
 
-- Copyright (c) 2008 Peter Boling
+- Copyright (c) 2008-2010, 2012-2018, 2022, 2024, 2026 Peter H. Boling
 - Copyright (c) 2009 John Trupiano
-- Copyright (c) 2009-2010 pboling
-- Copyright (c) 2009 Peter H. Boling
 - Copyright (c) 2012 David Morton
 - Copyright (c) 2012 Harry Lascelles
-- Copyright (c) 2012-2018, 2022, 2024, 2026 Peter H. Boling
 - Copyright (c) 2013 Adrien Siami
 - Copyright (c) 2013 Chris Altman
 - Copyright (c) 2014 Scott Rocher

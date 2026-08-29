@@ -263,6 +263,11 @@ workflows:
       - label: "7.2"
         slug: "7_2"
         requirement: "~> 7.2.2"
+        default: true
+        replaces:
+          - combustion
+          - actionmailer
+          - railties
         standard_appraisal: "ruby-3-1"
         env:
           RAILS_MAJOR_MINOR: "7.2"

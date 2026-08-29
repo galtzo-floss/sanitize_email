@@ -59,6 +59,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Restore the Rails app harness required by the default test bundle.
 
+- Restore the Rails integration test dependencies removed by an earlier template pass.
+
 ### Security
 
 ## [2.0.14] - 2026-07-31

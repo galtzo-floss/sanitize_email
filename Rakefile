@@ -6,7 +6,7 @@
 # kettle-jem will then preserve content between those markers across template runs.
 # kettle-jem:unfreeze
 
-# sanitize_email Rakefile v7.1.10 - 2026-08-29
+# sanitize_email Rakefile v7.1.13 - 2026-08-31
 # Ruby 2.3 (Safe Navigation) or higher required
 #
 # See LICENSE.md for license information.

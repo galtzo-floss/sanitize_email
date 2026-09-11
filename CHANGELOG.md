@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.15] - 2026-09-11
+
+- TAG: [v2.0.15][2.0.15t]
+- COVERAGE: 95.58% -- 368/385 lines in 13 files
+- BRANCH COVERAGE: 82.91% -- 97/117 branches in 13 files
+- 53.41% documented
+
+### Changed
+
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
 
@@ -33,10 +50,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - code and tests (1)
   - dependencies (2)
   - other (1)
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -56,8 +69,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - Restore the Rails app harness required by the default test bundle.
 
 - Restore the Rails integration test dependencies removed by an earlier template pass.
-
-### Security
 
 ## [2.0.14] - 2026-07-31
 
@@ -601,7 +612,9 @@ Old version?
 * Fixed require paths
 * added about.yml and this CHANGELOG
 
-[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.14...HEAD
+[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.15...HEAD
+[2.0.15]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.14...v2.0.15
+[2.0.15t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.15
 [2.0.14]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.13...v2.0.14
 [2.0.14t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.14
 [2.0.13]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.12...v2.0.13

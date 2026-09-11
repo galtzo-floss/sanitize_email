@@ -19,6 +19,7 @@ template_state:
     - sanitize_email.gemspec
     kettle-jem/template:
     - ".simplecov"
+    - Rakefile
     - gemfiles/modular/templating.gemfile
     - sanitize_email.gemspec
   checksums:

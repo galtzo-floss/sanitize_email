@@ -3,9 +3,9 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        274,
-        280,
-        286
+        277,
+        283,
+        289
       ]
     }
   ],
@@ -13,8 +13,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        279,
-        285
+        282,
+        288
       ]
     }
   ],
@@ -40,9 +40,9 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        275,
-        281,
-        287
+        278,
+        284,
+        290
       ]
     }
   ]

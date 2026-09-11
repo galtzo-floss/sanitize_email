@@ -111,6 +111,9 @@ dependency_conflicts:
   reviewed: true
   # Review each entry and choose a supported action.
   resolve:
+    # The gemspec defines the released runtime contract. runtime_heads
+    # intentionally resolves version_gem from main to detect upstream changes
+    # before release, so both declarations must remain.
     - gem: rdoc
       direct: sanitize_email.gemspec
       modular: gemfiles/modular/documentation.gemfile

@@ -670,7 +670,7 @@ GEM
     useragent (0.16.11)
     version_gem (1.1.15)
     webrick (1.9.2)
-    yaml-converter (0.2.5)
+    yaml-converter (0.2.6)
       hexapdf (>= 1.8, < 2)
       kramdown (>= 2.4, < 3)
       kramdown-parser-gfm (~> 1.1)
@@ -975,7 +975,7 @@ CHECKSUMS
   useragent (0.16.11) sha256=700e6413ad4bb954bb63547fa098dddf7b0ebe75b40cc6f93b8d54255b173844
   version_gem (1.1.15) sha256=a73241587b29252e3567e0c818ded80730eb754d43b508f6ce4db22ca9ba27d0
   webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
-  yaml-converter (0.2.5) sha256=a5214fe1a6c2df88bd34a35bcded1b1dcd30135548130df2e03b54ca8c0f2423
+  yaml-converter (0.2.6) sha256=f270e8bcf19a20830056c77acf3bf942545e445455f20825af6a6884384611e9
   yaml-merge (7.1.9) sha256=fab35e05ea9905494ff754363ab8173c7528e6b4e0c364ecba11cb1cf974fe25
   yard (0.9.45) sha256=52e211493f7cb8a3ebf7e104a25a1e73937a3103092545d34cb88fafebb3dc51
   yard-fence (0.9.9)

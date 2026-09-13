@@ -71,6 +71,7 @@ end
 appraise "head" do
   eval_gemfile "modular/x_std_libs.gemfile"
   eval_gemfile "rails_7_2.gemfile"
+  eval_gemfile "modular/json/v2.gemfile"
 end
 
 appraise "current" do

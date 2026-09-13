@@ -1,0 +1,7 @@
+# frozen_string_literal: true
+
+# json 3.0 removed the `quirks_mode:` keyword that ActiveSupport < 8.1 still passes to
+# JSON.generate, so appraisals that resolve ActiveSupport < 8.1 must stay on json 2.x.
+# Engine-specific json pins (modular/json/truffleruby_*.gemfile) win when evaluated first.
+declared_gems = instance_variable_get(:@dependencies).to_a.map(&:name)
+gem "json", "< 3" unless declared_gems.include?("json")

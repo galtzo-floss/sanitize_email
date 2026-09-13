@@ -274,12 +274,15 @@ workflows:
         standard_appraisal: "ruby-3-1"
         env:
           RAILS_MAJOR_MINOR: "7.2"
-      - label: "8.0"
-        slug: "8_0"
-        requirement: "~> 8.0.0"
+      # ruby-3-2 is shared by MRI 3.2 and TruffleRuby 23.1, which cannot load ActiveSupport >= 7.2.
+      - label: "7.1"
+        slug: "7_1"
+        requirement: "~> 7.1.5"
         standard_appraisal: "ruby-3-2"
+        appraisal_gemfiles:
+          - modular/minitest/truffleruby_23_1.gemfile
         env:
-          RAILS_MAJOR_MINOR: "8.0"
+          RAILS_MAJOR_MINOR: "7.1"
       - label: "8.0"
         slug: "8_0"
         requirement: "~> 8.0.0"

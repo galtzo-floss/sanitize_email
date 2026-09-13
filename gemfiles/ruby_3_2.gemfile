@@ -8,4 +8,6 @@ eval_gemfile("modular/json/truffleruby_23_1.gemfile")
 
 eval_gemfile("modular/x_std_libs/r3/libs.gemfile")
 
-eval_gemfile("rails_8_0.gemfile")
+eval_gemfile("rails_7_1.gemfile")
+
+eval_gemfile("modular/minitest/truffleruby_23_1.gemfile")

@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.16] - 2026-09-30
+
+- TAG: [v2.0.16][2.0.16t]
+- COVERAGE: 95.58% -- 368/385 lines in 13 files
+- BRANCH COVERAGE: 82.91% -- 97/117 branches in 13 files
+- 53.41% documented
+
+### Added
+
 - kettle-jem-template-20260913-001 - Templating now also surfaces a review
   entry in `dependency_conflicts.resolve` when a direct development
   dependency doesn't support one or more of this project's declared
@@ -37,14 +56,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - dependencies (2)
   - other (2)
   - workflows (30)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [2.0.15] - 2026-09-11
 
@@ -628,7 +639,9 @@ Old version?
 * Fixed require paths
 * added about.yml and this CHANGELOG
 
-[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.15...HEAD
+[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.16...HEAD
+[2.0.16]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.15...v2.0.16
+[2.0.16t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.16
 [2.0.15]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.14...v2.0.15
 [2.0.15t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.15
 [2.0.14]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.13...v2.0.14

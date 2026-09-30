@@ -79,6 +79,8 @@ appraise "head" do
 end
 
 appraise "current" do
+  # Windows has no system zoneinfo database for TZInfo's Rails initialization.
+  gem "tzinfo-data", platforms: %i[windows]
   eval_gemfile "modular/x_std_libs.gemfile"
   eval_gemfile "rails_7_2.gemfile"
 end

@@ -36,6 +36,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- The current Rails appraisal now installs tzinfo-data on Windows, where TZInfo cannot use a system zoneinfo database.
+
 ### Security
 
 ## [2.0.16] - 2026-09-30

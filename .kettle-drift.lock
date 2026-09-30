@@ -1,20 +1,28 @@
 {
+  "- label: \"7.1\"\nslug: \"7_1\"": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        260,
+        278
+      ]
+    }
+  ],
   "- label: \"8.0\"\nslug: \"8_0\"": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        277,
-        283,
-        289
+        286,
+        292
       ]
     }
   ],
-  "RAILS_MAJOR_MINOR: \"8.0\"\n- label: \"8.0\"": [
+  "exec_cmd: \"kettle-test\"\nrubygems: latest": [
     {
-      "file": ".structuredmerge/kettle-jem.yml",
+      "file": ".github/workflows/current.yml",
       "lines": [
-        282,
-        288
+        43,
+        49
       ]
     }
   ],
@@ -22,8 +30,8 @@
     {
       "file": "Appraisals",
       "lines": [
-        198,
-        209
+        199,
+        210
       ]
     }
   ],
@@ -31,8 +39,17 @@
     {
       "file": "Appraisals",
       "lines": [
-        230,
-        240
+        231,
+        241
+      ]
+    }
+  ],
+  "slug: \"7_1\"\nrequirement: \"~> 7.1.5\"": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        261,
+        279
       ]
     }
   ],
@@ -40,9 +57,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        278,
-        284,
-        290
+        287,
+        293
       ]
     }
   ]

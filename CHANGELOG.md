@@ -22,25 +22,15 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/prepare: updated 5 project files:
-  - dependencies (5)
-
-- [kc] kettle-jem/template: updated 32 project files:
-  - code and tests (1)
-  - other (1)
-  - workflows (30)
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
 
-- The current Rails appraisal now installs tzinfo-data on Windows, where TZInfo cannot use a system zoneinfo database.
-
 ### Security
 
-## [2.0.16] - 2026-09-30
+## [2.0.16] - 2026-10-01
 
 - TAG: [v2.0.16][2.0.16t]
 - COVERAGE: 95.58% -- 368/385 lines in 13 files
@@ -58,14 +48,17 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/prepare: updated 14 project files:
-  - dependencies (14)
-
-- [kc] kettle-jem/template: updated 36 project files:
-  - code and tests (2)
+- [kc] kettle-jem/prepare: updated 19 project files:
+  - dependencies (19)
+- [kc] kettle-jem/template: updated 68 project files:
+  - code and tests (3)
   - dependencies (2)
-  - other (2)
-  - workflows (30)
+  - other (3)
+  - workflows (60)
+
+### Fixed
+
+- The current Rails appraisal now installs tzinfo-data on Windows, where TZInfo cannot use a system zoneinfo database.
 
 ## [2.0.15] - 2026-09-11
 

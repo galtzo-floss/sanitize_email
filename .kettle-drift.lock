@@ -1,4 +1,13 @@
 {
+  "- [kc] kettle-jem/template: updated 4 project files:\n- code and tests (1)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        28,
+        88
+      ]
+    }
+  ],
   "- label: \"7.1\"\nslug: \"7_1\"": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
@@ -30,8 +39,8 @@
     {
       "file": "Appraisals",
       "lines": [
-        199,
-        210
+        201,
+        212
       ]
     }
   ],
@@ -39,8 +48,8 @@
     {
       "file": "Appraisals",
       "lines": [
-        231,
-        241
+        233,
+        243
       ]
     }
   ],

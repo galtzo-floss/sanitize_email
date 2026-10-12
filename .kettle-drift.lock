@@ -1,10 +1,19 @@
 {
-  "- [kc] kettle-jem/template: updated 4 project files:\n- code and tests (1)": [
+  "- [kc] kettle-jem/prepare: updated 9 project files:\n- configuration (1)": [
     {
       "file": "CHANGELOG.md",
       "lines": [
-        28,
-        88
+        25,
+        85
+      ]
+    }
+  ],
+  "- configuration (1)\n- dependencies (8)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        26,
+        86
       ]
     }
   ],
@@ -12,8 +21,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        260,
-        278
+        273,
+        291
       ]
     }
   ],
@@ -21,8 +30,26 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        286,
-        292
+        299,
+        305
+      ]
+    }
+  ],
+  "- ruby: \"ruby\"\nappraisal: \"current\"": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        40,
+        46
+      ]
+    }
+  ],
+  "config: .licenserc.yaml\nmode: \"check\"": [
+    {
+      "file": ".github/workflows/license-eye.yml",
+      "lines": [
+        49,
+        62
       ]
     }
   ],
@@ -57,8 +84,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        261,
-        279
+        274,
+        292
       ]
     }
   ],
@@ -66,8 +93,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        287,
-        293
+        300,
+        306
       ]
     }
   ]

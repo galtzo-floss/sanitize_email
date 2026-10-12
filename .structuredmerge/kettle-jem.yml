@@ -114,11 +114,6 @@ dependency_conflicts:
     # The gemspec defines the released runtime contract. runtime_heads
     # intentionally resolves version_gem from main to detect upstream changes
     # before release, so both declarations must remain.
-    - gem: rdoc
-      direct: sanitize_email.gemspec
-      modular: gemfiles/modular/documentation.gemfile
-      action: remove_modular_gem
-      reason: "The gemspec owns the project's documentation dependency."
 # This project's identifying emoji.
 # Used as the leading emoji in the README H1 heading and in the gemspec
 # summary and description. Every gem should have its own unique emoji.

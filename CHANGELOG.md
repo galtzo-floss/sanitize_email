@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.17] - 2026-10-11
+
+- TAG: [v2.0.17][2.0.17t]
+- COVERAGE: 95.58% -- 368/385 lines in 13 files
+- BRANCH COVERAGE: 82.91% -- 97/117 branches in 13 files
+- 53.41% documented
+
+### Changed
+
 - [kc] kettle-jem/prepare: updated 9 project files:
   - configuration (1)
   - dependencies (8)
@@ -31,14 +48,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - documentation (2)
   - other (1)
   - workflows (5)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [2.0.16] - 2026-10-01
 
@@ -652,7 +661,9 @@ Old version?
 * Fixed require paths
 * added about.yml and this CHANGELOG
 
-[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.16...HEAD
+[Unreleased]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.17...HEAD
+[2.0.17]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.16...v2.0.17
+[2.0.17t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.17
 [2.0.16]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.15...v2.0.16
 [2.0.16t]: https://github.com/galtzo-floss/sanitize_email/releases/tag/v2.0.16
 [2.0.15]: https://github.com/galtzo-floss/sanitize_email/compare/v2.0.14...v2.0.15

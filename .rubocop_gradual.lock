@@ -1,4 +1,7 @@
 {
+  "gemfiles/modular/style_local.gemfile:803618203": [
+    [71, 23, 20, "Style/SafeNavigation: Use safe navigation (`&.`) instead of checking if an object exists before calling the method.", 1851388465]
+  ],
   "spec/sanitize_email/coverage_surface_spec.rb:2960820455": [
     [9, 16, 33, "RSpec/DescribeClass: The first argument to describe should be the class or module being tested.", 2285626838],
     [41, 17, 8, "RSpec/VariableName: Use snake_case for variable names.", 1595945059]

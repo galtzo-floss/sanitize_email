@@ -1,4 +1,31 @@
 {
+  "- [kc] kettle-jem/template: updated 4 project files:\n- code and tests (1)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        28,
+        106
+      ]
+    }
+  ],
+  "- code and tests (1)\n- dependencies (2)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        29,
+        107
+      ]
+    }
+  ],
+  "- dependencies (2)\n- other (1)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        30,
+        108
+      ]
+    }
+  ],
   "- label: \"7.1\"\nslug: \"7_1\"": [
     {
       "file": ".structuredmerge/kettle-jem.yml",

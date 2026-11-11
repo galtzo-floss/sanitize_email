@@ -25,9 +25,10 @@ Please file a bug if you notice a violation of semantic versioning.
 - [kc] kettle-jem/prepare: updated 5 project files:
   - dependencies (5)
 
-- [kc] kettle-jem/template: updated 11 project files:
+- [kc] kettle-jem/template: updated 12 project files:
   - code and tests (1)
   - dependencies (2)
+  - documentation (1)
   - other (1)
   - workflows (7)
 
@@ -191,10 +192,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260728-005 - VersionGem bootstrap now creates the
   missing canonical version spec when a project only has shim namespace version
   specs.
-
-- kettle-jem-template-20260729-001 - Generated JRuby 9.4 workflows now use the
-  legacy manual bundle install path, avoiding setup-time Bundler full-index
-  failures against `gem.coop`.
 
 - kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs
   relative to the gemspec directory, so packaged template assets are included

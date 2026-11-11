@@ -14,6 +14,13 @@ template_state:
     - gemfiles/modular/templating.gemfile
     - sanitize_email.gemspec
     kettle-jem/template:
+    - ".github/workflows/jruby-9.2.yml"
+    - ".github/workflows/jruby-9.3.yml"
+    - ".github/workflows/jruby-9.4.yml"
+    - ".github/workflows/truffleruby-22.3.yml"
+    - ".github/workflows/truffleruby-23.1.yml"
+    - ".github/workflows/truffleruby-24.2.yml"
+    - ".github/workflows/truffleruby-25.0.yml"
     - ".simplecov"
     - Rakefile
     - gemfiles/modular/coverage_local.gemfile
@@ -368,27 +375,6 @@ files:
     input_fingerprint: 782a10a22ad2b6cd6c82e2aba1b029ae6de304cbbb1455dacd9e72fe6d4539b5
     template_sources:
     - ".github/workflows/jruby-10.0.yml.example"
-  ".github/workflows/jruby-9.2.yml":
-    recipe: template_source_application_github_workflows_jruby_9_2_yml
-    action: write
-    dest_sha256: 66007ecb001695f4ae0d199227d76a13cc466bd9fe0a264e6416da5bdd011dab
-    input_fingerprint: e3f7680388369a2a0091416564af61a2af4a0b78796ea3729f9f2352156d9bf8
-    template_sources:
-    - ".github/workflows/jruby-9.2.yml.example"
-  ".github/workflows/jruby-9.3.yml":
-    recipe: template_source_application_github_workflows_jruby_9_3_yml
-    action: write
-    dest_sha256: 0e5ec6557bf0b5f5918b0d85fc5b05180fefe23bcf6504ec2118b507c0cbd8c7
-    input_fingerprint: caf96f2e5eefa65f294494abd7273afecfa11d6ccbd8f69314b1d5ad2c2bc3ac
-    template_sources:
-    - ".github/workflows/jruby-9.3.yml.example"
-  ".github/workflows/jruby-9.4.yml":
-    recipe: template_source_application_github_workflows_jruby_9_4_yml
-    action: write
-    dest_sha256: b152678ea876cce109aac4178cfbab2583b0c77c9720e826ff79285f1f81ad25
-    input_fingerprint: cc8afcdacf4d2c7c1c1d061d91c590cab04beb6e9695f7008d5e9a3fe82c7b84
-    template_sources:
-    - ".github/workflows/jruby-9.4.yml.example"
   ".github/workflows/jruby.yml":
     recipe: template_source_application_github_workflows_jruby_yml
     action: write
@@ -501,34 +487,6 @@ files:
     input_fingerprint: 603bc1fa4b4056d9d1847976d873b5356844d3945955f54ccf16755513685b60
     template_sources:
     - ".github/workflows/truffle.yml.example"
-  ".github/workflows/truffleruby-22.3.yml":
-    recipe: template_source_application_github_workflows_truffleruby_22_3_yml
-    action: write
-    dest_sha256: 3966f95e46521cecc36171be716b3d5b19db693485fe31917a5525cbd3ba57eb
-    input_fingerprint: c2b298b230103036a3230feec7045d5bcbf5118362b7c0c3b26460e58e63b74d
-    template_sources:
-    - ".github/workflows/truffleruby-22.3.yml.example"
-  ".github/workflows/truffleruby-23.1.yml":
-    recipe: template_source_application_github_workflows_truffleruby_23_1_yml
-    action: write
-    dest_sha256: 40405fab1516e2c9fce1f44cbdd31267e55d2700544ca2b764af8ae986819077
-    input_fingerprint: 50cc17aaf57aac055fd764f246138b52a7a52287c7babb9da21082ef7fd5b38f
-    template_sources:
-    - ".github/workflows/truffleruby-23.1.yml.example"
-  ".github/workflows/truffleruby-24.2.yml":
-    recipe: template_source_application_github_workflows_truffleruby_24_2_yml
-    action: write
-    dest_sha256: 928280dbdd0647cb0b39a4dd9b1b29111a7a9c383c88889e08ed34c54ad92f9c
-    input_fingerprint: ce43637d4b280dc4cc4bcecbd5703abaf608bae39a7ef7029d32452d8611237b
-    template_sources:
-    - ".github/workflows/truffleruby-24.2.yml.example"
-  ".github/workflows/truffleruby-25.0.yml":
-    recipe: template_source_application_github_workflows_truffleruby_25_0_yml
-    action: write
-    dest_sha256: 60f1467702d3b15af003a9a4c7c013a037e1fc6cfbc4b1f4ca012c36e1a8a2b2
-    input_fingerprint: 6db6501a27f5194de5741fbf5acbf3c0508f173c3f86243adefa68fb71b6d279
-    template_sources:
-    - ".github/workflows/truffleruby-25.0.yml.example"
   ".github/workflows/truffleruby-33.0.yml":
     recipe: template_source_application_github_workflows_truffleruby_33_0_yml
     action: write

@@ -40,6 +40,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Security
 
+- Default development bundle moved from Rails 7.2 to Rails 8.0 (actionpack/actionview/activesupport 8.0.5.2). No fixed 7.2.x exists (7.2.4 is the last 7.2 release), so `bundle:audit` failed on GHSA-2586-8ghr-69fj, GHSA-gmj8-hvj3-49mw, GHSA-r9jg-fmfx-2gv6, GHSA-rwvh-fw6r-pwvp, GHSA-rq8q-p985-fjq7, GHSA-v6rj-xm57-3p59, GHSA-8474-xrp6-wh69 and others. Rails 7.2 is still exercised via `gemfiles/rails_7_2.gemfile`; the audit was not weakened and no ignore was added.
+
 ## [2.0.17] - 2026-11-09
 
 - TAG: [v2.0.17][2.0.17t]

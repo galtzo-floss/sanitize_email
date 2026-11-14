@@ -4,34 +4,28 @@ RSpec.describe Rails do
   let(:expected_rails_version) { ENV.fetch("RAILS_MAJOR_MINOR", nil) }
   let(:actual_rails_version) { "#{described_class::VERSION::MAJOR}.#{described_class::VERSION::MINOR}" }
 
+  # Expected Rails major.minor comes from RAILS_MAJOR_MINOR for ruby_* appraisals, otherwise from the
+  # gemfiles/rails_X_Y.gemfile fragment that the loaded Gemfile actually evals, e.g. the main
+  # Gemfile (8.0) vs. the "current" appraisal (7.2).
+  let(:bundle_gemfile) { ENV.fetch("BUNDLE_GEMFILE", "") }
+  let(:loaded_gemfile) { bundle_gemfile.empty? ? File.expand_path("../Gemfile", __dir__) : bundle_gemfile }
+  let(:declared_rails_version) do
+    if expected_rails_version && bundle_gemfile.include?("/gemfiles/ruby_")
+      expected_rails_version
+    else
+      File.read(loaded_gemfile).scan(/rails_(\d+)_(\d+)\.gemfile/).last&.join(".")
+    end
+  end
+
   before do
     sanitize_spec_dryer
   end
 
-  env_rails_version = ENV.fetch("RAILS_MAJOR_MINOR", nil)
-  desc_rails_version = "#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}"
-  bundle_gemfile = ENV.fetch("BUNDLE_GEMFILE", "")
-  appraisal_gemfile = bundle_gemfile.include?("/gemfiles/ruby_")
-  if env_rails_version && appraisal_gemfile
-    it "has Rails Version (custom from ENV, #{env_rails_version}) matching actual #{desc_rails_version}" do
-      expect(actual_rails_version).to eq(expected_rails_version)
-    end
-  else
-    # Assert against the Rails fragment (gemfiles/rails_X_Y.gemfile) that the loaded Gemfile
-    # actually evals, e.g. the main Gemfile (8.0) vs. the "current" appraisal (7.2).
-    loaded_gemfile = bundle_gemfile.empty? ? File.expand_path("../Gemfile", __dir__) : bundle_gemfile
-    fragment = File.file?(loaded_gemfile) ? File.read(loaded_gemfile).scan(/rails_(\d+)_(\d+)\.gemfile/).last : nil
-    if fragment
-      declared = fragment.join(".")
-      it "has Rails Version (declared by #{File.basename(loaded_gemfile)}, #{declared}) matching actual #{desc_rails_version}" do
-        expect(actual_rails_version).to eq(declared)
-      end
-    else
-      it "has a Rails Version (#{desc_rails_version}) when the loaded gemfile declares no rails_X_Y fragment" do
-        expect(actual_rails_version).to match(/\A\d+\.\d+\z/)
-      end
-    end
+  it "has the Rails Version declared by the loaded gemfile" do
+    skip "loaded gemfile declares no Rails version" if declared_rails_version.nil?
+    expect(actual_rails_version).to eq(declared_rails_version)
   end
+
   describe "in App" do
     it "has a mailer configured" do
       expect(HelloMailer < ActionMailer::Base).to be(true)

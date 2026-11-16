@@ -74,6 +74,7 @@ end
 
 appraise "head" do
   eval_gemfile "modular/x_std_libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3.3/v0.8.gemfile"
   eval_gemfile "rails_7_2.gemfile"
   eval_gemfile "modular/json/v2.gemfile"
 end
@@ -82,6 +83,7 @@ appraise "current" do
   # Windows has no system zoneinfo database for TZInfo's Rails initialization.
   gem "tzinfo-data", platforms: %i[windows]
   eval_gemfile "modular/x_std_libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3.3/v0.8.gemfile"
   eval_gemfile "rails_7_2.gemfile"
 end
 
@@ -92,21 +94,25 @@ end
 
 appraise "ruby-2-4" do
   eval_gemfile "modular/x_std_libs/r2.4/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
   eval_gemfile "rails_5_2.gemfile"
 end
 
 appraise "ruby-2-5" do
   eval_gemfile "modular/x_std_libs/r2.6/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
   eval_gemfile "rails_6_0.gemfile"
 end
 
 appraise "ruby-2-6" do
   eval_gemfile "modular/x_std_libs/r2.6/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
   eval_gemfile "rails_6_1.gemfile"
 end
 
 appraise "ruby-2-7" do
   eval_gemfile "modular/x_std_libs/r2/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
   eval_gemfile "rails_7_0.gemfile"
 end
 
@@ -114,28 +120,33 @@ appraise "ruby-3-0" do
   eval_gemfile "modular/json/truffleruby_22_3.gemfile"
   eval_gemfile "modular/json/truffleruby_23_0.gemfile"
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
   eval_gemfile "rails_7_1.gemfile"
 end
 
 appraise "ruby-3-1" do
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
   eval_gemfile "rails_7_2.gemfile"
 end
 
 appraise "ruby-3-2" do
   eval_gemfile "modular/json/truffleruby_23_1.gemfile"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
   eval_gemfile "rails_7_1.gemfile"
   eval_gemfile "modular/minitest/truffleruby_23_1.gemfile"
 end
 
 appraise "ruby-3-3" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3.3/v0.8.gemfile"
   eval_gemfile "rails_8_0.gemfile"
 end
 
 appraise "ruby-3-4" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3.3/v0.8.gemfile"
   eval_gemfile "rails_8_0.gemfile"
 end
 

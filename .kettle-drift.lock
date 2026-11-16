@@ -1,13 +1,4 @@
 {
-  "- code and tests (1)\n- dependencies (2)": [
-    {
-      "file": "CHANGELOG.md",
-      "lines": [
-        29,
-        109
-      ]
-    }
-  ],
   "- label: \"7.1\"\nslug: \"7_1\"": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
@@ -57,8 +48,8 @@
     {
       "file": "Appraisals",
       "lines": [
-        201,
-        212
+        212,
+        223
       ]
     }
   ],
@@ -66,8 +57,8 @@
     {
       "file": "Appraisals",
       "lines": [
-        233,
-        243
+        244,
+        254
       ]
     }
   ],

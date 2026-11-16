@@ -77,18 +77,18 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 <h3 id="changed">Changed</h3>
 
 <ul>
-  <li>[kc] kettle-jem/prepare: updated 5 project files:
+  <li>[kc] kettle-jem/prepare: updated 8 project files:
     <ul>
-      <li>dependencies (5)</li>
+      <li>dependencies (8)</li>
     </ul>
   </li>
-  <li>[kc] kettle-jem/template: updated 12 project files:
+  <li>[kc] kettle-jem/template: updated 14 project files:
     <ul>
       <li>code and tests (1)</li>
-      <li>dependencies (2)</li>
+      <li>dependencies (3)</li>
       <li>documentation (1)</li>
       <li>other (1)</li>
-      <li>workflows (7)</li>
+      <li>workflows (8)</li>
     </ul>
   </li>
 </ul>
@@ -100,6 +100,10 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 <h3 id="fixed">Fixed</h3>
 
 <h3 id="security">Security</h3>
+
+<ul>
+  <li>Default development bundle moved from Rails 7.2 to Rails 8.0 (actionpack/actionview/activesupport 8.0.5.2). No fixed 7.2.x exists (7.2.4 is the last 7.2 release), so <code>bundle:audit</code> failed on GHSA-2586-8ghr-69fj, GHSA-gmj8-hvj3-49mw, GHSA-r9jg-fmfx-2gv6, GHSA-rwvh-fw6r-pwvp, GHSA-rq8q-p985-fjq7, GHSA-v6rj-xm57-3p59, GHSA-8474-xrp6-wh69 and others. Rails 7.2 is still exercised via <code>gemfiles/rails_7_2.gemfile</code>; the audit was not weakened and no ignore was added.</li>
+</ul>
 
 <h2 id="2017---2026-11-09">
 <a href="https://github.com/galtzo-floss/sanitize_email/compare/v2.0.16...v2.0.17">2.0.17</a> - 2026-11-09</h2>

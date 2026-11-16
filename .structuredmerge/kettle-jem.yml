@@ -274,11 +274,6 @@ workflows:
       - label: "7.2"
         slug: "7_2"
         requirement: "~> 7.2.2"
-        default: true
-        replaces:
-          - combustion
-          - actionmailer
-          - railties
         standard_appraisal: "ruby-3-1"
         env:
           RAILS_MAJOR_MINOR: "7.2"
@@ -294,6 +289,14 @@ workflows:
       - label: "8.0"
         slug: "8_0"
         requirement: "~> 8.0.0"
+        # Default local test bundle: bundle audit runs against the root
+        # Gemfile.lock, so the default must be a patched Rails. Rails 7.2 is
+        # EOL and will never be patched; it stays in the appraisal matrix.
+        default: true
+        replaces:
+          - combustion
+          - actionmailer
+          - railties
         standard_appraisal: "ruby-3-3"
         env:
           RAILS_MAJOR_MINOR: "8.0"

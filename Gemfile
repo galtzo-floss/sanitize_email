@@ -35,7 +35,7 @@ gem "nomono", "~> 1.1", ">= 1.1.18", require: false # ruby >= 3.2.0
 
 eval_gemfile "gemfiles/modular/templating.gemfile" if
 # Default local test bundle
-eval_gemfile "gemfiles/rails_7_2.gemfile"
+eval_gemfile "gemfiles/rails_8_0.gemfile"
 
 ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero? ||
   ENV.fetch("STRUCTUREDMERGE_DEV", "false").casecmp("false") != 0 ||

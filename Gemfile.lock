@@ -10,7 +10,7 @@ GIT
 PATH
   remote: .
   specs:
-    sanitize_email (2.0.17)
+    sanitize_email (2.0.18)
       mail (~> 2.0)
       version_gem (~> 1.1, >= 1.1.17)
 
@@ -305,7 +305,7 @@ GEM
       version_gem (~> 1.1, >= 1.1.17)
     kettle-wash (0.1.14)
       version_gem (~> 1.1, >= 1.1.17)
-    kramdown (2.5.2)
+    kramdown (2.6.1)
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -736,7 +736,7 @@ DEPENDENCIES
   require_bench (~> 1.0, >= 1.0.4)
   rspec (>= 3)
   rspec-block_is_expected (~> 1.0, >= 1.0.5)
-  rspec-pending_for (~> 0.1, >= 0.1.25)
+  rspec-pending_for (~> 0.1, >= 0.1.29)
   rubocop-gradual (~> 0.4, >= 0.4.0)
   rubocop-lts (~> 10.3, >= 10.3.3)
   rubocop-lts-rspec (~> 1.0, >= 1.0.8)
@@ -747,7 +747,7 @@ DEPENDENCIES
   ruby-progressbar (~> 1.13)
   sanitize_email!
   standard (~> 1.57, >= 1.57.0)
-  stone_checksums (~> 1.0, >= 1.0.10)
+  stone_checksums (~> 1.0, >= 1.0.11)
   stringio (>= 3.2.0)
   tree_sitter_language_pack (~> 1.16, >= 1.16.2)
   turbo_tests2 (~> 4.0, >= 4.0.2)
@@ -839,7 +839,7 @@ CHECKSUMS
   kettle-soup-cover (3.0.16) sha256=674edad40b454c6c21e6323f8918cb563a3edd2b956b87f03ed73ad4e6bd7dd7
   kettle-test (2.0.30) sha256=9865770add5c9e93b83ab780fc9443a7a4a3fd27a258790e1f40021668170f1f
   kettle-wash (0.1.14) sha256=b3ae515c1068f3eb4e41cdaf00a9c94defaf0584980be415871d8619b37fcafc
-  kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
+  kramdown (2.6.1) sha256=fbef3479b69c875aacb118dde77a40d6cc3a91e2c1d505a4c3f3f9e92d142641
   kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
   language_server-protocol (3.17.0.6) sha256=5ef2c0c138f8267e1bc631d3328347d354f96724b0af22f2c79516120443b7f0
   lint_roller (1.1.0) sha256=2c0c845b632a7d172cb849cc90c1bce937a28c5c8ccccb50dfd46a485003cc87
@@ -929,7 +929,7 @@ CHECKSUMS
   ruby_engine (2.0.3) sha256=ca2ae7def8cfcdc2bfb6a186d36d5d59c8b403245dc0256c3802b767fa278aaa
   ruby_version (1.0.3) sha256=5930f9950746b7e6c973184398ee364ee7440b170fef7922b9f5cdf317f1ccb5
   runtime_groups (0.1.5) sha256=67ec26ded158b9ae80371b4342a346aad79d904d1245cd579fb7e06d874b2432
-  sanitize_email (2.0.17)
+  sanitize_email (2.0.18)
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   service_actor (3.9.4) sha256=e63b523630b9a7e62959b2a90113b08d2565b5de9c148557b281ef847c9539ce
   silent_stream (1.0.12) sha256=377c43aa10033fe90c33b39ea8cd97d79f2d1c4856df598efc56f3091f3ae782

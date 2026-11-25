@@ -6,26 +6,11 @@
 # kettle-jem will then preserve content between those markers across template runs.
 # kettle-jem:unfreeze
 
-# HOW TO UPDATE APPRAISALS (Appraisal2 RuboCop plugin normalizes generated gemfiles on modern Ruby):
-#   bin/rake appraisal:update
+# HOW TO GENERATE APPRAISALS (Appraisal2 RuboCop plugin normalizes generated gemfiles on modern Ruby):
+#   bin/rake appraisal:generate
+# Use bin/rake appraisal:update only when refreshing appraisal locks is intentional.
 
 plugin "appraisal2-rubocop", require: "appraisal2/rubocop", optional: true
-
-# HOW TO UPDATE APPRAISALS (Appraisal2 RuboCop hooks normalize generated gemfiles on modern Ruby):
-
-begin
-  require "appraisal2/rubocop"
-rescue LoadError
-end
-
-# kettle-jem:freeze
-# To retain chunks of comments & code during sanitize_email templating:
-# Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
-# sanitize_email will then preserve content between those markers across template runs.
-# kettle-jem:unfreeze
-
-# HOW TO UPDATE APPRAISALS (will run rubocop_gradual's autocorrect afterward):
-#   bin/rake appraisal:update
 
 # Lock/Unlock Deps Pattern
 #

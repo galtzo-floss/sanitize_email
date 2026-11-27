@@ -333,6 +333,7 @@ GEM
       markly (~> 0.9)
       version_gem (~> 1.1, >= 1.1.17)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.9)
     minitest (6.1.0)
       drb (~> 2.0)
       prism (>= 1.5, < 3)
@@ -350,6 +351,9 @@ GEM
       timeout
     net-smtp (0.5.2)
       net-protocol
+    nokogiri (1.19.7)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.19.7-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.7-aarch64-linux-musl)
@@ -644,6 +648,9 @@ GEM
       structuredmerge-core (~> 0.2, >= 0.2.2)
       tree_sitter_language_pack (>= 1.17.0, < 2.0)
       version_gem (~> 1.1, >= 1.1.17)
+    tree_sitter_language_pack (1.27.3)
+      rb_sys (>= 0.9.130, < 0.10)
+      sorbet-runtime (~> 0.6)
     tree_sitter_language_pack (1.27.3-aarch64-linux)
       sorbet-runtime (~> 0.6)
     tree_sitter_language_pack (1.27.3-arm64-darwin)
@@ -797,7 +804,7 @@ CHECKSUMS
   benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bigdecimal (4.1.3) sha256=61ebe1e5e559bdc3cc6f2c0ee7f427321fc838f59611c294356eb04d6e21cf66
   builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
-  bundler (4.0.23) sha256=407ba8a1d928f412847f819aa5f8b6aef7c59fb51feb517112af8a165487287b
+  bundler (4.1.1) sha256=7a76aebebc2e476cbc1e11314200d7fe83c7398d6930f1d048e4d3dd2d0e93e3
   bundler-audit (0.9.3) sha256=81c8766c71e47d0d28a0f98c7eed028539f21a6ea3cd8f685eb6f42333c9b4e9
   cgi (0.5.2) sha256=61ca30298171190fd4fa0d8018e57ada456eae9b7a2b78526debf7f0a0e6f8bb
   citrus (3.0.2) sha256=4ec2412fc389ad186735f4baee1460f7900a8e130ffe3f216b30d4f9c684f650
@@ -862,6 +869,7 @@ CHECKSUMS
   markly (0.19.0) sha256=cd2c0e86eaf3660ed2a3a94104877f8bd41adda78e7c295c017d03de0d4044ca
   markly-merge (7.1.19) sha256=7cd2807626638da136a2cb9b13926a253f06f975ced0217f86ddc7a0f703b21b
   mini_mime (1.1.5) sha256=8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef
+  mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
   minitest (6.1.0) sha256=ff373595aa8888631e8a5463986a76b3845346ae6d7fa46e139c1633d418076e
   mister_bin (0.9.0) sha256=624fe401db4faf1978e84c17e0b320827697a13a6cba4fe656001269079be7d3
   mutex_m (0.3.0) sha256=cfcb04ac16b69c4813777022fdceda24e9f798e48092a2b817eb4c0a782b0751
@@ -869,6 +877,7 @@ CHECKSUMS
   net-pop (0.1.2) sha256=848b4e982013c15b2f0382792268763b748cce91c9e91e36b0f27ed26420dff3
   net-protocol (0.4.0) sha256=f9f90c8c6f64794a45160bf422177a336db12809de3beeeaa26b88fcd2e8c853
   net-smtp (0.5.2) sha256=35103cc04d6b2d94632f9928ede07483c24b70b9c0db1f231fea43909b678f3c
+  nokogiri (1.19.7) sha256=abe94507c54cb18f872777b16bdca4aad32b1abdc4c52fe843f1c80fbdf992b8
   nokogiri (1.19.7-aarch64-linux-gnu) sha256=8f5e15d299602456406e1f03a9f3456cceb33a0722811e818d2ee2214eb4c84a
   nokogiri (1.19.7-aarch64-linux-musl) sha256=efe0c3602e6e54521bc21c681930ce5568e2d11203de17400710b2b3ca2e4cb4
   nokogiri (1.19.7-arm64-darwin) sha256=f27d7f25f4873fbc3aa35a2cc2fb680c98555fec1925348da439d0869d541142
@@ -972,6 +981,7 @@ CHECKSUMS
   toml-merge (7.1.19) sha256=37b9567ecb16858bbed04ae3e5845ad12e84638b557eb2e4dd5b45cabe9a7f54
   toml-rb (4.2.2) sha256=b41cf36117bafab84c72017697ab49fe49a065e2bcfa6dffb704389fb7b0a60a
   tree_haver (7.1.19) sha256=5cbe4555c93a7b9d1e44ea29a2a147a6f3b6088d87589e1e10a567255e586ea2
+  tree_sitter_language_pack (1.27.3) sha256=fd48d817d53f01543c3ffaebc4f9a6f50bfab47e8178f8d3fa8134769e27c049
   tree_sitter_language_pack (1.27.3-aarch64-linux) sha256=5d899edf637e02e36d101cc8f21c47882c8ae4799266d9bf3f6b4fa1f3be6c76
   tree_sitter_language_pack (1.27.3-arm64-darwin) sha256=73255207b296b58cad1f74c17fe38d4aab56ffc72bec8a661466514d61a30f86
   tree_sitter_language_pack (1.27.3-x86_64-darwin) sha256=0d84bace5e2c2b2534bc97032bacbf6e4b715e85f08b5abd26bae3a00394852a
@@ -999,4 +1009,4 @@ CHECKSUMS
   zeitwerk (2.8.3) sha256=2c85125a8467ce069e20123d1e709a08955c9d29c118c25b46b7b7fafdbb92e5
 
 BUNDLED WITH
-  4.0.23
+  4.1.1

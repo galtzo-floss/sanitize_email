@@ -6,14 +6,19 @@ require "rails_helper"
 # Released under the MIT license
 
 RSpec.describe SanitizeEmail do
-  # Cleanup, so tests don't bleed
+  # Cleanup, so tests don't bleed.
+  # Restore the exact set of global Mail interceptors instead of popping the last one:
+  # examples that register no interceptor of their own (e.g. configure_sanitize_email(..., false))
+  # would otherwise pop the one the Rails app registered at boot, breaking spec/rails_spec.rb
+  # whenever both files run in the same process.
   after do
     SanitizeEmail::Config.config = SanitizeEmail::Config::DEFAULTS
     described_class.force_sanitize = nil
-    Mail.class_variable_get(:@@delivery_interceptors).pop
+    Mail.class_variable_get(:@@delivery_interceptors).replace(@original_mail_interceptors)
   end
 
   before do
+    @original_mail_interceptors = Mail.class_variable_get(:@@delivery_interceptors).dup
     SanitizeEmail::Deprecation.deprecate_in_silence = true
     sanitize_spec_dryer
   end
